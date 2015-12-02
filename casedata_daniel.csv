@@ -1,0 +1,48 @@
+;arbaminch
+Description;Rural town in southern Ethiopia
+Inhabitants;95000
+attr1;coliform
+;req.range
+;lower=-Inf, upper=400
+attr2;toxicmetals
+;req.range
+;lower=-Inf, upper=15
+attr3;totsolids
+;req.range
+;lower=-Inf, upper=50
+attr4;bod
+;req.range
+;lower=-Inf, upper=60
+attr5;cod
+;req.range
+;lower=-Inf, upper=250
+attr6;totp
+;req.range
+;lower=-Inf, upper=5
+attr7;totn
+;req.range
+;lower=-Inf, upper=40
+attr8;water
+;dtriangle
+;a=0, b=912.5, c=1825
+attr9;energy
+;dtriangle
+;a=0, b=5, c=10
+attr10;temp
+;dtriangle
+;a=15, b=25, c=30
+attr11;popn
+;req.range
+;lower=95000, upper=95000
+attr12;popdensity
+;req.range
+;lower=13580, upper=13580
+attr13;waterdisrupt
+;dtriangle
+;a=0, b=24, c=4
+attr14;energydisrupt
+;dtriangle
+;a=0, b=24, c=4
+attr15;annualcosts
+;req.range
+;lower=0, upper=9
