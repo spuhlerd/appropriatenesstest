@@ -99,7 +99,7 @@ applist[[1]]$tech.app.profile$bod # to get the bod of an item in the list, 1 ist
 caselist_daniel<- build.list("casedata_daniel.csv",2)
 techlist_daniel<- build.list("techdata_daniel.csv",3)
 applist_daniel<-compute.applist(caselist_daniel,techlist_daniel,lsort=TRUE)
-
+                                
 caselist_test<- build.list("casedata_test.csv",2)
 techlist_test<- build.list("techdata_test.csv",3)
 applist_test<-compute.applist(caselist_test,techlist_test,lsort=TRUE)
