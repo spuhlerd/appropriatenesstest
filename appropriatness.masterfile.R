@@ -1,10 +1,5 @@
 rm(list=ls())
 ## ==============================================================================================
-# To dos:
-# - loop for all tech in all caselist
-# - include ranking
-
-## ==============================================================================================
 setwd("/Users/dorotheespuhler/Dropbox\ (Personal)/PHD\ Dropbox/1\ MODELLING/R/Appropriateness/")
 #command: cd Dropbox/PHD\ Dropbox/1\ MODELLING/R/Appropriateness
 
@@ -23,13 +18,11 @@ source("applist.write.r") # function(applist, listsep=" ", filename="") writes a
 
 ## ==============================================================================================
 # Create the list of technology appropriateness functions and the list of case appropriateness functions
-
-techlist<- build.list("techdata.csv",3)
-techlist_daniel<- build.list("techdata_daniel.csv",3)
-#str(techlist)
 caselist<- build.list("casedata.csv",2)
-caselist_daniel<- build.list("casedata_daniel.csv",2)
 #str(caselist)
+techlist<- build.list("techdata.csv",3)
+#str(techlist)
+
 #-------------------------------------------
 # Some guidelines to fill in the data files:
 #------------------------------------------
@@ -100,3 +93,13 @@ sub.applist=list.filter(applist,case=="arbaminch", tech=="single.pit")
 sub.applist[[1]]$tech.app.profile$bod
 # using $ instead of list.filter
 applist[[1]]$tech.app.profile$bod # to get the bod of an item in the list, 1 ist the list id
+
+## ==============================================================================================
+# Use data from Daniel
+caselist_daniel<- build.list("casedata_daniel.csv",2)
+techlist_daniel<- build.list("techdata_daniel.csv",3)
+applist_daniel<-compute.applist(caselist_daniel,techlist_daniel,lsort=TRUE)
+
+caselist_test<- build.list("casedata_test.csv",2)
+techlist_test<- build.list("techdata_test.csv",3)
+applist_test<-compute.applist(caselist_test,techlist_test,lsort=TRUE)
