@@ -10,7 +10,7 @@ attr2;helminth;coliform.sludge;coliform.sludge;helminths;helminths;totsolids.eff
 ;lower=10, upper=650;a=4E+10, b=1E+11, c=7E+10;a=1000, b=100000, c=1000;lower=2500, upper=60000;lower=0, upper=Inf;lower=8, upper=53
 attr3;totsolids;totsolids;helminths.sludge;totsolids;totsolids;bod.effluent
 ;dtriangle;dtriangle;req.range;dtriangle;dtriangle;req.range
-;a=0, b=80, c=41.5;a=0, b=80, c=41.5;lower=60, upper=16000;a=30000, b=52000, c=40000;a=0, b=60, c=140, c=200;lower=5.4, upper=19
+;a=0, b=80, c=41;a=0, b=80, c=41.5;lower=60, upper=16000;a=30000, b=52000, c=40000;a=0, b=60, c=140, c=200;lower=5.4, upper=19
 attr4;bod;bod.effluent;totsolids.effluent;bod;totp;totn
 ;dtriangle;dtriangle;dtriangle;dtriangle;req.range;req.range
 ;a=0, b=14508, c=7254;a=0, b=14508, c=7254;a=0, b=2000, c=295;a=0, b=7600, c=7600;lower=0, upper=6;lower=8.9, upper=11.6

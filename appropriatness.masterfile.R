@@ -6,23 +6,19 @@ setwd("/Users/dorotheespuhler/Dropbox\ (Personal)/PHD\ Dropbox/1\ MODELLING/R/Ap
 library(gridExtra)
 library(ColorPalette)
 
+# Load required library packages
+library(triangle) # extra package for triangular distribution
+library (trapezoid) # extra package for trapezoidial distribution
+library(rlist)  # extra package to manupulate/filter app list
 # Load required functions
-library(triangle)
-library (trapezoid)
-library(rlist)  #to manupulate/filter app list
 source("listread.r") # reads the csv data files for technologies and cases descriptions
 source("req.functions.r") # contains functions that are not provided in R such as ranges
-source("compute.app.r") # functions(tech, case) returning app.profile and app.score
+source("compute.app.r") # functions(tech, case,lshowplot=FALSE) returning app.profile and app.score
 source("compute.applist.r") # function(techlist, caselist, listsep=" ", filename="") making all the app profiles for a techlist and applist
 source("applist.write.r") # function(applist, listsep=" ", filename="") writes applist
 
 ## ==============================================================================================
 # Create the list of technology appropriateness functions and the list of case appropriateness functions
-caselist<- build.list("casedata.csv",2)
-#str(caselist)
-techlist<- build.list("techdata.csv",3)
-#str(techlist)
-
 #-------------------------------------------
 # Some guidelines to fill in the data files:
 #------------------------------------------
@@ -42,6 +38,11 @@ techlist<- build.list("techdata.csv",3)
 # dunif(x, min, max)
 # dnorm, dlnorm, dbeta, dweibull, dgamma, dlogis, etc.
 
+# read the normal data files
+caselist<- build.list("casedata.csv",2)
+#str(caselist)
+techlist<- build.list("techdata.csv",3)
+#str(techlist)
 
 ## ==============================================================================================
 # Compute appropriateness profiles (app.profile(tech, case)) and apppropriateness scores (app.scores(tech, case))
@@ -98,8 +99,8 @@ applist[[1]]$tech.app.profile$bod # to get the bod of an item in the list, 1 ist
 # Use data from Daniel
 caselist_daniel<- build.list("casedata_daniel.csv",2)
 techlist_daniel<- build.list("techdata_daniel.csv",3)
-applist_daniel<-compute.applist(caselist_daniel,techlist_daniel,lsort=TRUE)
-                                
+compute.app(caselist_daniel$arbaminch,techlist_daniel$pour.flush, lshowplot=FALSE)
+
 caselist_test<- build.list("casedata_test.csv",2)
 techlist_test<- build.list("techdata_test.csv",3)
 applist_test<-compute.applist(caselist_test,techlist_test,lsort=TRUE)
