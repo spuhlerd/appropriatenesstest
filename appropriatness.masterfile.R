@@ -138,12 +138,11 @@ applist.write(applist_daniel, listsep=";", filename="applist_daniel.csv")
 caselist_test<- build.list("casedata_ex.csv",2)
 techlist_test<- build.list("techdata_ex.csv",3)
 # Test one by one
-compute.app(caselist_test$arbaminch,techlist_test$uddt, lshowplot=TRUE)
-compute.app(caselist_test$arbaminch,techlist_test$dry.toilet, lshowplot=TRUE)
-compute.app(caselist_test$arbaminch,techlist_test$pour.flush, lshowplot=TRUE)
-compute.app(caselist_test$arbaminch,techlist_test$urine.storagetank, lshowplot=TRUE)
-compute.app(caselist_test$arbaminch,techlist_test$dehydration.vaults, lshowplot=TRUE)
-compute.app(caselist_test$arbaminch,techlist_test$double.vip, lshowplot=TRUE)
+techops<-c('uddt','dry.toilet','pour.flush','urine.storagetank','dehydration.vaults','double.vip','septic.tank','motorized.emptying','conventional.sewer','T1.empty','T1.unplanted.dryingbed','T1.wsp','T2.empty','T2.unplanted.dryingbed','T2.wsp','application.urine','application.faeces','application.humus','application.sluldge','irrigation')
+for(i in 1:length(techops)){
+compute.app(caselist_test$arbaminch,techlist_test$techops[i], lshowplot=TRUE)
+compute.app(caselist_test$arbaminch,techlist_test[i], lshowplot=TRUE)
+} 
 # Compute entire list
 applist_test<-compute.applist(caselist_test,techlist_test,lsort=TRUE)
 # Write to screen
