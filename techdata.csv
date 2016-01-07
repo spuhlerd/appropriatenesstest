@@ -11,6 +11,6 @@ attr2;water;omskil;water
 attr3;temp;;temp
 ;req.range;;req.range
 ;lower=5, upper=Inf;;lower=-5, upper=Inf
-attr4;omskil;;omskil
+attr4;blackwater, urine, greywater;;omskil
 ;req.range;;req.range
 ;lower=3, upper=Inf;;lower=1, upper=Inf

@@ -1,48 +1,27 @@
-;arbaminch;thimi
-Description;Rural town in southern Ethiopia;Periurban area close to Kathmandu, Nepal
-Inhabitants;95000;84000
-attr1;coliform;bod
-;req.range;req.range
-;lower=-Inf, upper=400;lower=-Inf, upper=50
-attr2;toxicmetals;water
-;req.range;dtriangle
-;lower=-Inf, upper=15;a=0,b=150,c=5
-attr3;totsolids;temp
-;req.range;dtriangle
-;lower=-Inf, upper=50;a=0, b=50, c=40
-attr4;bod;omskil
-;req.range;dtriangle
-;lower=-Inf, upper=60;a=0, b=5, c=3
-attr5;cod;
-;req.range;
-;lower=-Inf, upper=250;
-attr6;totp;
-;req.range;
-;lower=-Inf, upper=5;
-attr7;totn;
-;req.range;
-;lower=-Inf, upper=40;
-attr8;water;
-;dtriangle;
-;a=0, b=1825, c=912.5;
-attr9;energy;
-;dtriangle;
-;a=0, b=10, c=5;
-attr10;temp;
-;dtriangle;
-;a=15, b=30, c=25;
-attr11;popn;
-;req.range;
-;lower=95000, upper=95000;
-attr12;popdensity;
-;req.range;
-;lower=13580, upper=13580;
-attr13;waterdisrupt;
-;dtriangle;
-;a=0, b=24, c=4;
-attr14;energydisrupt;
-;dtriangle;
-;a=0, b=24, c=4;
-attr15;annualcosts;
-;req.range;
-;lower=0, upper=9;
+;arbaminch
+Descripton;Rural town in southern Ethiopia
+Inhabitants;121000
+attr1;coliform.liquid
+;req.range
+;lower=-Inf, upper=400
+attr2;totsolids.liquid
+;req.range
+;lower=-Inf, upper=50
+attr3;bod.liquid
+;req.range
+;lower=-Inf, upper=60
+attr4;cod.liquid
+;req.range
+;lower=-Inf, upper=250
+attr5;totp.liquid
+;req.range
+;lower=-Inf, upper=5
+attr6;totn.liquid
+;req.range
+;lower=-Inf, upper=40
+attr7;totn.solids
+;req.range
+;lower=-Inf, upper=40
+attr8;annual.costs
+;req.range
+;lower=0, upper=9

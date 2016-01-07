@@ -1,48 +1,24 @@
 ;arbaminch
-Description;Rural town in southern Ethiopia
-Inhabitants;95000
-attr1;coliform
+Descripton;Rural town in southern Ethiopia
+Inhabitants;121000
+attr1;coliform.liquid
 ;req.range
 ;lower=-Inf, upper=400
-attr2;toxicmetals
-;req.range
-;lower=-Inf, upper=15
-attr3;totsolids
+attr2;totsolids.liquid
 ;req.range
 ;lower=-Inf, upper=50
-attr4;bod
+attr3;bod.liquid
 ;req.range
 ;lower=-Inf, upper=60
-attr5;cod
+attr4;cod.liquid
 ;req.range
 ;lower=-Inf, upper=250
-attr6;totp
+attr5;totp.liquid
 ;req.range
 ;lower=-Inf, upper=5
-attr7;totn
+attr6;totn.liquid
 ;req.range
 ;lower=-Inf, upper=40
-attr8;water
-;dtriangle
-;a=0, b=1825, c=912
-attr9;energy
-;dtriangle
-;a=0, b=10, c=5
-attr10;temp
-;dtriangle
-;a=15, b=30, c=25
-attr11;popn
-;req.range
-;lower=95000, upper=95000
-attr12;popdensity
-;req.range
-;Lower=13579, upper=Inf
-attr13;waterdisrupt
-;dtriangle
-;a=0, b=24, c=4
-attr14;energydisrupt
-;dtriangle
-;a=0, b=24, c=4
-attr15;annualcosts
+attr7;annual.costs
 ;req.range
 ;lower=0, upper=9

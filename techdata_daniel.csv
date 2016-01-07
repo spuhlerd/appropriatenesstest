@@ -1,49 +1,25 @@
 ;pour.flush;UDDT;septic.tank;single.pit;wsp;surface.flow.CW
-functional.group;U;U;S,T;S;T;T
-products.in;urine, faeces, flushwater, anal cleansing material;urine, faeces, dry cleansing materials, anal cleansing water;blackwater, brownwater, greywater;faeces, excreta, blackwater, dry cleansing materials, anal cleansing water;blackwater, brownwater, greywater, sludge;blackwater, brownwater, greywater, effluent
-products.out;blackwater;urine, faeces, dry cleansing materials, anal cleansing water;effluent, sludge;sludge;effluent, sludge;effluent, biomass
-attr1;coliform;coliform.effluent;coliform.effluent;coliform;coliform;coliform.effluent
+functional.group;S,T;U;S,T;S;T;T
+products.in;blackwater, urine, greywater;urine, faeces, dry cleansing materials, anal cleansing water;blackwater, brownwater, greywater;faeces, excreta, blackwater, dry cleansing materials, anal cleansing water;blackwater, brownwater, greywater, sludge;blackwater, brownwater, greywater, effluent
+products.out;sludge, effluent;urine, faeces, dry cleansing materials, anal cleansing water;effluent, sludge;sludge;effluent, sludge;effluent, biomass
+attr1;coliform.liquid;coliform.liquid;coliform.liquid;coliform.liquid;coliform.liquid;coliform.liquid
 ;dtriangle;dtriangle;dtriangle;dtriangle;dtriangle;req.range
 ;a=38000, b=900000, c=470000;a=0, b=260, c=130;a=0, b=4000, c=800;a=0, b=4000, c=1000;a=1, b=3600, c=1000;lower=1, upper=43
-attr2;helminth;coliform.sludge;coliform.sludge;helminths;helminths;totsolids.effluent
-;req.range;dtriangle;dtriangle;req.range;req.range;req.range
-;lower=10, upper=650;a=4E+10, b=1E+11, c=7E+10;a=1000, b=100000, c=1000;lower=2500, upper=60000;lower=0, upper=Inf;lower=8, upper=53
-attr3;totsolids;totsolids;helminths.sludge;totsolids;totsolids;bod.effluent
-;dtriangle;dtriangle;req.range;dtriangle;dtriangle;req.range
-;a=0, b=80, c=41;a=0, b=80, c=41.5;lower=60, upper=16000;a=30000, b=52000, c=40000;a=0, b=60, c=140, c=200;lower=5.4, upper=19
-attr4;bod;bod.effluent;totsolids.effluent;bod;totp;totn
+attr2;totsolids.liquid;totsolids.liquid;totsolids.liquid;totsolids.liquid;totsolids.liquid;totsolids.liquid
 ;dtriangle;dtriangle;dtriangle;dtriangle;req.range;req.range
-;a=0, b=14508, c=7254;a=0, b=14508, c=7254;a=0, b=2000, c=295;a=0, b=7600, c=7600;lower=0, upper=6;lower=8.9, upper=11.6
-attr5;cod;bod.sludge;totsolids.sludge;cod;temp;temp
+;a=0, b=80, c=41.5;a=0, b=80, c=41.5;a=0, b=2000, c=295;a=30000, b=52000, c=40000;lower=60, upper=140;lower=8, upper=53
+attr3;bod.liquid;bod.liquid;bod.liquid;bod.liquid;bod.liquid;bod.liquid
 ;dtriangle;dtriangle;dtriangle;dtriangle;req.range;req.range
-;a=6270, b=17500, c=11800;a=0, b=1400, c=700;a=12000, b=35000, c=23500;a=20000, b=49000, c=34500;lower=12, upper=Inf;lower=10, upper=32
-attr6;totp;cod.effluent;bod.effluent;totp;plot.area;plot.area
+;a=0, b=14508, c=7254;a=0, b=14508, c=7254;a=0, b=7600, c=3800;a=0, b=7600, c=3800;lower=36, upper=730;lower=5.4, upper=19
+attr4;cod.liquid;cod.liquid;cod.liquid;cod.liquid;cod.liquid;cod.liquid
 ;dtriangle;dtriangle;dtriangle;dtriangle;req.range;req.range
-;a=350, b=2500, c=1425;a=6270, b=17500, c=11800;a=0, b=7600, c=7600;a=0, b=500, c=450;lower=4, upper=25;lower=5, upper=30
-attr7;totn;cod.sludge;bod.sludge;totn;ground.water;excavation
+;a=6270, b=17500, c=11800;a=6270, b=17500, c=11800;a=0, b=2000, c=646;a=20000, b=49000, c=34500;lower=89, upper=1323;lower=5.94, upper=77
+attr5;totp.liquid;totp.liquid;totp.liquid;totp.liquid;totp.liquid;totp.liquid
 ;dtriangle;dtriangle;dtriangle;dtriangle;req.range;req.range
-;a=5000, b=13900, c=9450;a=46, b=1668, c=811;a=840, b=2600, c=1720;a=2000, b=3400, c=2700;lower=2, upper=Inf;lower=0.6, upper=0.8
-attr8;water;totp.effluent;cod.effluent;popdensity;excavation;Slope
+;a=350, b=2500, c=1425;a=230, b=2500, c=1140;a=0, b=200, c=150;a=0, b=500, c=450;lower=0, upper=6;lower=0.53, upper=2.2
+attr6;totn.liquid;totn.liquid;totn.liquid;totn.liquid;totn.liquid;totn.liquid
 ;dtriangle;dtriangle;dtriangle;dtriangle;req.range;req.range
-;a=1460, b=24090, c=12780;a=230, b=2500, c=1140;a=0, b=2000, c=646;a=250, b=600, c=300;lower=0.9, upper=4.0;lower=0, upper=3
-attr9;energy;totp.sludge;cod.sludge;plot.area;veh.acess;permeability
-;req.range;dtriangle;dtriangle;req.range;req.range;req.range
-;lower=-Inf, upper=0;a=0.35, b=2.7, c=1.5;a=646, b=10000, c=5320;lower=1.7, upper=Inf;lower=0.8, upper=2.6;lower=0, upper=0.5
-attr10;popdensity;totn.effluent;totp.sludge;ground.water;Slope;
-;dtriangle;dtriangle;dtriangle;req.range;req.range;
-;a=250, b=600, c=300;a=2500, b=13900, c=8200;a=0, b=200, c=150;lower=2, upper=Inf;lower=1.1, upper=9.0;
-attr11;plot.area;totn.sludge;totn.sludge;excavation;investment.costs;
-;req.range;dtriangle;dtriangle;req.range;req.range;
-;lower=0.8, upper=Inf;a=0.9, b=4.9, c=3.0;a=150, b=2000, c=1200;lower=3, upper=Inf;lower=170, upper=340;
-attr12;investment.costs;water;water;investment.costs;annualcosts;
-;req.range;dtriangle;dtriangle;req.range;req.range;
-;lower=5.5, upper=30;a=730, b=8030, c=4380;a=5, b=40, c=23;lower=5, upper=12;lower=10, upper=20;
-attr13;annual.costs;temp;plot.area;annualcosts;;
-;dtriangle;req.range;req.range;req.trapez;;
-;a=5, b=9, c=7;lower=5, upper=Inf;lower=0.5, upper=Inf;a=0, b=4, c=7, d=9;;
-;;popdensity;excavation;;;
-;;dtriangle;req.range;;;
-;;a=250, b=600, c=300;lower=1.5, upper=2.5;;;
-;;annualcosts;annualcosts;;;
-;;dtriangle;dtriangle;;;
-;;a=1, b=5, c=3;a=0, b=33, c=7;;;
+;a=5000, b=13900, c=9450;a=2500, b=13900, c=8200;a=9, b=240, c=125;a=2000, b=3400, c=2700;lower=14, upper=105;lower=8.9, upper=11.6
+attr7;annual.costs;annual.costs;annual.costs;annual.costs;annual.costs;annual.costs
+;dtriangle;dtriangle;dtriangle;req.trapez;req.range;req.range
+;a=5, b=9, c=7;a=1, b=5, c=3;a=0, b=33, c=7;a=0, b=4, c=7, d=9;lower=10, upper=20;lower=0.60, upper=2.85
