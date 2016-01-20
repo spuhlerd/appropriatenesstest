@@ -51,6 +51,8 @@ source("techapplist.write.r") # function(applist, listsep=" ", filename="") writ
 # Recommended functions are:
 # req.range(x, lower=-Inf, upper=Inf)
 # req.trapez(x, a, b, c, d),
+# prange(x, lower=-Inf, upper=Inf)
+# ptrapez(x, a, b, c, d),
 # dtriangle(x, a, b, c)
 # dtrapezoid(x, min, mode1, mode2, max)
 # dunif(x, min, max)

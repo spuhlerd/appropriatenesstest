@@ -6,7 +6,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   # tech.app.profile: all the attr.app.core of a given tech & case
   # tech.app.score: product of tech.app.profile(i)
   # Usage
-  # compute.app(technology,case, [lshowplot=FALSE])
+  # compute.techapp(technology,case, [lshowplot=FALSE])
   # Input:
   # tech: a technology from the technology list, e.g. techlist$septic.tank
   # case: a case from the case list, e.g. arbaminch

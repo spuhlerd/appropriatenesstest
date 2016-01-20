@@ -18,8 +18,8 @@ attr5;totp.liquid;totp.liquid;totp.liquid;totp.liquid;totp.liquid;totp.liquid
 ;dtriangle;dtriangle;dtriangle;dtriangle;req.range;req.range
 ;a=350, b=2500, c=1425;a=230, b=2500, c=1140;a=0, b=200, c=150;a=0, b=500, c=450;lower=0, upper=6;lower=0.53, upper=2.2
 attr6;totn.liquid;totn.liquid;totn.liquid;totn.liquid;totn.liquid;totn.liquid
-;dtriangle;dtriangle;dtriangle;dtriangle;req.range;req.range
-;a=5000, b=13900, c=9450;a=2500, b=13900, c=8200;a=9, b=240, c=125;a=2000, b=3400, c=2700;lower=14, upper=105;lower=8.9, upper=11.6
+;dtriangle;dtriangle;dtriangle;dtriangle;dtriangle;dtriangle
+;a=5000, b=13900, c=9450;a=2500, b=13900, c=8200;a=9, b=240, c=125;a=2000, b=3400, c=2700;a=14, b=105;a=8.9, b=11.6
 attr7;annual.costs;annual.costs;annual.costs;annual.costs;annual.costs;annual.costs
 ;dtriangle;dtriangle;dtriangle;req.trapez;req.range;req.range
 ;a=5, b=9, c=7;a=1, b=5, c=3;a=0, b=33, c=7;a=0, b=4, c=7, d=9;lower=10, upper=20;lower=0.60, upper=2.85
