@@ -30,12 +30,15 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   }
   
   for(attr in names(tech$app.fun)){
+   
+     # Calculate app.score
     f1 = tech$app.fun[[attr]]
     f2 = case$app.fun[[attr]]
     fprod = function(x) {f1(x) * f2(x)}
-    # calculate app.score
-    attr.app.score = integrate(fprod, -Inf, Inf)$value
+    #attr.app.score = integrate(fprod, -Inf, Inf)$value
+    attr.app.score = mc.integrate(f1,f2)
     tech.app.profile = c(tech.app.profile, attr.app.score)
+    
     # Plot tech.app.profile
     if(lshowplot){
       plot(tech$app.fun[[attr]], main=attr, xlab="", ylab=ylabel1, xlim=c(0,2000), col=12)
@@ -45,6 +48,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
       ylabel1=''
       ylabel2=''
       ylabel3=''
+      
     }
   }
   
@@ -54,37 +58,23 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
     techname=tech$techname
     casename=case$casename
   }else{
-    # Form the function call argument otherwise (assuming call with case$casename)
+  # Form the function call argument otherwise (assuming call with case$casename)
     techname=unlist(strsplit(deparse(substitute(tech)),"\\$"))
     techname=techname[2]
-    #techname=trimws(techname)
     casename=unlist(strsplit(deparse(substitute(case)),"\\$"))
     casename=casename[2]
-    #casename=trimws(casename)
   }
-
   
   ## Make graph title
   if(lshowplot) mtext(paste(techname,", ",casename), outer = TRUE )
   
   # Compute total score
-  tech.app.score=prod(tech.app.profile)
-  
-  # Create data frame
-  # app.data=data.frame(techname, casename, tech.app.score, t(unlist(tech.app.profile)), stringsAsFactors = FALSE)
-  # colnames(app.data)=t(c("tech","case","tech.app.score", unlist(names(tech$app.fun))))
-  # app.data
-  
-  # Create datalist
-  #app.list=c()
-  #app <- list(techname, casename, tech.app.score,t(unlist(tech.app.profile)), stringsAsFactors = FALSE)
-  #app.list = rbind(app.list, app)
-  #colnames(app.list) <- t(c("tech","case","app.score", unlist(names(tech$app.fun))))
-  #app.list
+  l=length(tech.app.profile)
+  tech.app.score=(prod(tech.app.profile))^(1/l)
   
   ## Create datalist
   tech.app.profile=setNames(tech.app.profile,names(tech$app.fun))
-  app.data=list(tech=techname, case=casename, tech.app.score=tech.app.score, tech.app.profile=as.list(tech.app.profile))
+  app.data=list(case=casename, tech=techname, tech.app.score=tech.app.score, tech.app.profile=as.list(tech.app.profile))
   app.data
 }
 

@@ -20,7 +20,8 @@ library (trapezoid) # extra package for trapezoidial distribution
 library(rlist)  # extra package to manupulate/filter app list
 # Load required functions
 source("build.list.r") # reads the csv data files for technologies and cases descriptions
-source("req.functions.r") # contains functions that are not provided in R such as ranges
+source("pfunctions.r") # contains functions that are not provided in R such as ranges
+source("mc.integrate.r") # function(case.app.fun, tech.app.fun, n.sample=10000) used to integrate by sampling
 source("compute.techapp.r") # functions(tech, case,lshowplot=FALSE) returning app.profile and app.score
 source("compute.techapplist.r") # function(techlist, caselist, listsep=" ", filename="") making all the app profiles for a techlist and applist
 source("techapplist.write.r") # function(applist, listsep=" ", filename="") writes applist
@@ -49,15 +50,14 @@ source("techapplist.write.r") # function(applist, listsep=" ", filename="") writ
 # 2 Name of function of function (see below) describing the technology/case requirement/capactiy 
 # 3 Parameters required for this function
 # Recommended functions are:
-# req.range(x, lower=-Inf, upper=Inf)
-# req.trapez(x, a, b, c, d),
 # prange(x, lower=-Inf, upper=Inf)
 # ptrapez(x, a, b, c, d),
 # dtriangle(x, a, b, c)
 # dtrapezoid(x, min, mode1, mode2, max)
 # dunif(x, min, max)
 # dnorm, dlnorm, dbeta, dweibull, dgamma, dlogis, etc.
-
+# Each attriute is described by a pair of functions, one for the case and one for the tech.
+# You have to make sure, that this pair consists of one density function ('d...') and one distribution function ('p...')
 ## ==============================================================================================
 # Create the list of technology appropriateness functions and the list of case appropriateness functions
 caselist<- build.list("casedata.csv",2)
@@ -117,8 +117,11 @@ applist[[1]]$tech.app.profile$bod # to get the bod of an item in the list, 1 ist
 ## ==============================================================================================
 # Test data from Daniel
 # Read data
-caselist_daniel<- build.list("casedata_daniel.csv",2)
-techlist_daniel<- build.list("techdata_daniel.csv",3)
+#caselist_daniel<- build.list("casedata_daniel.csv",2)
+#techlist_daniel<- build.list("techdata_daniel.csv",3)
+caselist_daniel<- build.list("casedata_daniel-250116.csv",2)
+techlist_daniel<- build.list("techdata_daniel-250116.csv",3)
+
 # Test one by one
 compute.techapp(caselist_daniel$arbaminch,techlist_daniel$pour.flush, lshowplot=TRUE)
 compute.techapp(caselist_daniel$arbaminch,techlist_daniel$UDDT, lshowplot=TRUE)
@@ -127,11 +130,11 @@ compute.techapp(caselist_daniel$arbaminch,techlist_daniel$single.pit, lshowplot=
 compute.techapp(caselist_daniel$arbaminch,techlist_daniel$wsp, lshowplot=TRUE)
 compute.techapp(caselist_daniel$arbaminch,techlist_daniel$surface.flow.CW, lshowplot=TRUE)
 # Compute entire list
-applist_daniel<-compute.techapplist(caselist_daniel,techlist_daniel,lsort=TRUE)
+techapplist_daniel<-compute.techapplist(caselist_daniel,techlist_daniel,lsort=TRUE)
 # Write to screen
-techapplist.write(applist_daniel)
+techapplist.write(techapplist_daniel)
 # Write to file
-techapplist.write(applist_daniel, listsep=";", filename="applist_daniel.csv")
+techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
 
 ## ==============================================================================================
 # Testing data
@@ -140,18 +143,13 @@ caselist_test<- build.list("casedata_ex.csv",2)
 techlist_test<- build.list("techdata_ex.csv",3)
 
 # Test one by one
-compute.techapp(caselist_test$arbaminch,techlist_test$T2.wsp, lshowplot=TRUE)
+compute.techapp(caselist_test$arbaminch,techlist_test$T1.wsp, lshowplot=TRUE)
 compute.techapp(caselist_test$arbaminch,techlist_test$septic.tank, lshowplot=TRUE)
-# Make loop to test one by one
-#techops<-c('uddt','dry.toilet','pour.flush','urine.storagetank','dehydration.vaults','double.vip','septic.tank','motorized.emptying','conventional.sewer','T1.empty','T1.unplanted.dryingbed','T1.wsp','T2.empty','T2.unplanted.dryingbed','T2.wsp','application.urine','application.faeces','application.humus','application.sluldge','irrigation')
-#for(i in 1:length(techops)){
-#for(i in 1:21){
-#compute.techapp(caselist_test$arbaminch,techlist_test$techops[[i]], lshowplot=TRUE)
-#compute.techapp(caselist_test$arbaminch,techlist_test[[i]], lshowplot=TRUE)} 
 
 # Compute entire list
-applist_test<-compute.techapplist(caselist_test,techlist_test,lsort=TRUE)
+techapplist_test<-compute.techapplist(caselist_test,techlist_test,lsort=TRUE)
 # Write to screen
-techapplist.write(applist_test)
+techapplist.write(techapplist_test)
 # Write to file
-techapplist.write(applist_test, listsep=";", filename="applist_test.csv")
+techapplist.write(techapplist_test, listsep=";", filename="techapplist_test.csv")
+

@@ -12,7 +12,6 @@ req.trapez <- Vectorize (function(x, a, b=(d-a)/2+a, c=b, d){
   approx(x=c(a,b,c,d), y=c(0,1,1,0), xout=x, rule=2)$y
 }, 'x')
 
-
 prange <- Vectorize (function(x, lower=-Inf, upper=Inf){
   # a uniform function being 1 for lower>x>upper, else 0
   ifelse(x>=lower & x<=upper, 1, 0)
