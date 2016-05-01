@@ -36,21 +36,21 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
 ## ==============================================================================================
 # SOME GUIDELINES TO FILL IN DATA LIST FILES
 #------------------------------------------
-# Each data files contines a list of items (either techs or cases in the columns)
+# Each data files contains a list of items (either techs or cases in the columns)
 # Each items has a few information attributes (info.row).
 # This is followed by a list of appropriateness attributes are listed.
 #------------------------------------------
 # PREDEFINED OPTIONS FOR TECHs
 # Functional groups:
-  # User interface (U), Collectiona nd Storage (S), Conveyance (C), (Semi-)centralized Treatement (T), Reuse and Disposal (D)
+  # User interface (U), Collection and Storage (S), Conveyance (C), (Semi-)centralized Treatement (T), Reuse and Disposal (D)
 # Products:
   # urine, faeces, excreta, blackwater, greywater, stormwater, storedurine, driedfaeces, pit humus, compost, sludge, effluent, stabilizedsludge, secondaryeffluent, biogas
 #------------------------------------------
 # APPROPRIATENESS ATTRIBUTES
 # Contains three rows:
   # 1 Name of the attributes to be used: bod, water, temp, omskil, etc.
-    # 2 Name of function of function (see below) describing the technology/case requirement/capactiy 
-# 3 Parameters required for this function
+  # 2 Name of function (see below) describing the technology/case requirement/capactiy 
+  # 3 Parameters required for this function
 # Recommended functions are:
 # p or drange(x, lower=-Inf, upper=Inf)
 # p or dtrapez(x, a, b, c, d),
@@ -59,7 +59,7 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
 # Other that might work are: dnorm, dlnorm, dbeta, dweibull, dgamma, dlogis, etc.
 # Each attriute is described by a pair of functions, one for the case and one for the tech.
 # !!! A pair has always to consits of one density function ('d...') and one distribution function ('p...')
-# Wich of the two functions is used to describe the case or the technology attribute value can vary
+# Which of the two functions is used to describe the case or the technology attribute value can vary
 # Generally density functions are used to describe probability that the attribute takes a certain value (e.g. temperature)
 # ... and distribution functions are used to describe the performance given the attribute (e.g. the performance of a technology given a certain temperature)
 

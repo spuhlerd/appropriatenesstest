@@ -22,9 +22,13 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   ## Prepare plot
   if(lshowplot){
     # Create multiple plot table
-    par(mfcol=c(n.app.fun,1)) # dimensions of plot, the raw number is equal
+    n.plot.row=3 #number of rows
+    par(mfcol=c(n.plot.row, n.app.fun)) # dimensions of plot, the col number is equal
     #   to the number of appropriateness functions
-    par(mar = c(2, 4, 4, 2), oma = c(2, 1, 2, 4))
+    par(mar = c(1, 4, 2, 1), oma = c(2, 1, 2, 1))
+    ylabel1='Tech' 
+    ylabel2='Case'
+    ylabel3='Product'
   }
   
   for(attr in names(tech$app.fun)){
@@ -32,25 +36,21 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
      # Calculate app.score
     f1 = tech$app.fun[[attr]]
     f2 = case$app.fun[[attr]]
-    attrapp.score = mc.integrate(f1,f2)
+    fprod = function(x) {f1(x) * f2(x)}
+    #attrapp.score = integrate(fprod, -Inf, Inf)$value
+    attrapp.score = mc.integrate(f1,f2,1000)
     techapp.profile = c(techapp.profile, attrapp.score)
     
     # Plot techapp.profile
     if(lshowplot){
-      # define plot xlim using max value
-      maxxlim=10000 #max possible vaule
-      xval=c(1:maxxlim)
-      techval=tech$app.fun[[attr]](xval)
-      caseval=case$app.fun[[attr]](xval)
-      Xmaxtech=max(which(techval>0)) #find the largest x absisse corresponding to the max
-      Xmaxcase=max(which(caseval>0)) #find the largest x absisse corresponding to the max
-      Xmaxplot=max(Xmaxtech,Xmaxcase)+10
+      plot(tech$app.fun[[attr]], main=attr, xlab="", ylab=ylabel1, xlim=c(0,2000), col=12)
+      plot(case$app.fun[[attr]], xlab="", ylab=ylabel2, xlim=c(0,2000), col=475)
+      plot(fprod, xlab="", ylab=ylabel3, xlim=c(0,2000), col=642)
+      # Erase ylabel o that they do not appear for the other attr
+      ylabel1=''
+      ylabel2=''
+      ylabel3=''
       
-      plot(tech$app.fun[[attr]], main=attr, xlab="x", ylab="tech.app.fun", xlim=c(0,Xmaxplot), col="green")
-      par(new = T)
-      plot(case$app.fun[[attr]], col="red", axes = FALSE, xlab = "x", ylab = "",xlim=c(0,Xmaxplot))
-      axis(side = 4)
-      mtext("case.app.fun", side = 4, line=3,cex = 0.7)
     }
   }
   
