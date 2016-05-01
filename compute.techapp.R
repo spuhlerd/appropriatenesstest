@@ -1,19 +1,21 @@
 compute.techapp= function(case, tech, lshowplot=FALSE){
-  # Description
-  # Attr: attribute
-  # This function computes:
-  # attr.app.score for all attr: the integral of tech$app.fun*case.app.fun
-  # tech.app.profile: all the attr.app.core of a given tech & case
-  # tech.app.score: product of tech.app.profile(i)
+  # This functions computes the attrapp.scores and the techapp.score for a tech in a given case
   # Usage
-  # compute.techapp(technology,case, [lshowplot=FALSE])
+  # compute.techapp(case,tech, [lshowplot=FALSE])
   # Input:
   # tech: a technology from the technology list, e.g. techlist$septic.tank
   # case: a case from the case list, e.g. arbaminch
+  # app.fun: both tech and cases contain app.fun, functions for each appropriateness attribute
+  # Variables:
+  # attrapp.score: the mc.intrgrate(tech$app.fun*caseapp.fun)
+  # techapp.profile: all the attrapp.core of a given tech & case
+  # techapp.score: normalized product of all attrapp.scores
+  # lshowplot: 
   # Output:
-  # app.data: list containing tech, case, tech.app.score, tech.app.profile (containing names(tech$app.fun), values)
+  # app.data: list containing tech, case, techapp.score, techapp.profile (containing names(tech$app.fun), values)
   
-  tech.app.profile = c() # create empty vector to store intermediat result
+  
+  techapp.profile = c() # create empty vector to store intermediat result
   
   n.app.fun=length(names(tech$app.fun)) # number of attributes
   
@@ -35,11 +37,11 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
     f1 = tech$app.fun[[attr]]
     f2 = case$app.fun[[attr]]
     fprod = function(x) {f1(x) * f2(x)}
-    #attr.app.score = integrate(fprod, -Inf, Inf)$value
-    attr.app.score = mc.integrate(f1,f2)
-    tech.app.profile = c(tech.app.profile, attr.app.score)
+    #attrapp.score = integrate(fprod, -Inf, Inf)$value
+    attrapp.score = mc.integrate(f1,f2)
+    techapp.profile = c(techapp.profile, attrapp.score)
     
-    # Plot tech.app.profile
+    # Plot techapp.profile
     if(lshowplot){
       plot(tech$app.fun[[attr]], main=attr, xlab="", ylab=ylabel1, xlim=c(0,2000), col=12)
       plot(case$app.fun[[attr]], xlab="", ylab=ylabel2, xlim=c(0,2000), col=475)
@@ -69,12 +71,12 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   if(lshowplot) mtext(paste(techname,", ",casename), outer = TRUE )
   
   # Compute total score
-  l=length(tech.app.profile)
-  tech.app.score=(prod(tech.app.profile))^(1/l)
+  l=length(techapp.profile)
+  techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
   
   ## Create datalist
-  tech.app.profile=setNames(tech.app.profile,names(tech$app.fun))
-  app.data=list(case=casename, tech=techname, tech.app.score=tech.app.score, tech.app.profile=as.list(tech.app.profile))
+  techapp.profile=setNames(techapp.profile,names(tech$app.fun))
+  app.data=list(case=casename, tech=techname, techapp.score=techapp.score, techapp.profile=as.list(techapp.profile))
   app.data
 }
 
