@@ -45,8 +45,10 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
       xval=c(1:maxxlim)
       techval=tech$app.fun[[attr]](xval)
       caseval=case$app.fun[[attr]](xval)
-      Xmaxtech=max(which(techval>0)) #find the largest x absisse corresponding to the max
-      Xmaxcase=max(which(caseval>0)) #find the largest x absisse corresponding to the max
+      Xmaxtech=max(which(techval>0))   #find the largest x absisse corresponding to the max
+      if (Xmaxtech==maxxlim) Xmaxtech=1 # special treatment for step function const until inf
+      Xmaxcase=max(which(caseval>0))   #find the largest x absisse corresponding to the max
+      if (Xmaxcase==maxxlim) Xmaxcase=1 # special treatment for step function const until inf
       Xmaxplot=max(Xmaxtech,Xmaxcase)+10
       
       plot(tech$app.fun[[attr]], main=attr, xlab="x", ylab="tech.app.fun", xlim=c(0,Xmaxplot), col=techcolor)
