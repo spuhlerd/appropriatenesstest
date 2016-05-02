@@ -16,15 +16,18 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   
   
   techapp.profile = c() # create empty vector to store intermediat result
-  
   n.app.fun=length(names(tech$app.fun)) # number of attributes
+  
+  # parameter
+  techcolor="green"
+  casecolor="red"
   
   ## Prepare plot
   if(lshowplot){
     # Create multiple plot table
     par(mfcol=c(n.app.fun,1)) # dimensions of plot, the raw number is equal
     #   to the number of appropriateness functions
-    par(mar = c(2, 4, 4, 2), oma = c(2, 1, 2, 4))
+    par(mar = c(4, 4, 4, 2), oma = c(2, 1, 2, 4))
   }
   
   for(attr in names(tech$app.fun)){
@@ -46,11 +49,12 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
       Xmaxcase=max(which(caseval>0)) #find the largest x absisse corresponding to the max
       Xmaxplot=max(Xmaxtech,Xmaxcase)+10
       
-      plot(tech$app.fun[[attr]], main=attr, xlab="x", ylab="tech.app.fun", xlim=c(0,Xmaxplot), col="green")
+      plot(tech$app.fun[[attr]], main=attr, xlab="x", ylab="tech.app.fun", xlim=c(0,Xmaxplot), col=techcolor)
+      cex_label= par("cex")*par("cex.lab")
       par(new = T)
-      plot(case$app.fun[[attr]], col="red", axes = FALSE, xlab = "x", ylab = "",xlim=c(0,Xmaxplot))
+      plot(case$app.fun[[attr]], col=casecolor, axes = FALSE, xlab = "x", ylab = "",xlim=c(0,Xmaxplot))
       axis(side = 4)
-      mtext("case.app.fun", side = 4, line=3,cex = 0.7)
+      mtext("case.app.fun", side = 4, line=3,cex = cex_label)
     }
   }
   
@@ -67,9 +71,13 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
     casename=casename[2]
   }
   
-  ## Make graph title
-  if(lshowplot) mtext(paste(techname,", ",casename), outer = TRUE )
-  
+  ## Make graph title and legend
+  if(lshowplot) {
+    mtext(paste(techname,", ",casename), outer = TRUE )
+    #place text in the lower right corner of the graphic
+    mtext("- tech.app.fun                             ", col=techcolor, outer=TRUE, side=1, adj=1, line=-1, cex=cex_label)
+    mtext("- case.app.fun", col=casecolor, outer=TRUE, side=1, adj=1, line=-1, cex=cex_label)
+   }
   # Compute total score
   l=length(techapp.profile)
   techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
