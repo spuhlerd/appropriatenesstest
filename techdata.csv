@@ -9,7 +9,7 @@ attr2;water;omskil;water
 ;ptrapez;prange;prange
 ;a = 8, b = 10, c = 5000, d=5000;lower=1, upper=Inf;lower=1, upper=Inf
 attr3;temp;;temp
-;req.range;;req.range
+;prange;;prange
 ;lower=5, upper=Inf;;lower=-5, upper=Inf
 attr4;omskil;;omskil
 ;prange;;prange
