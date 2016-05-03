@@ -42,7 +42,7 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
 #------------------------------------------
 # PREDEFINED OPTIONS FOR TECHs
 # Functional groups:
-  # User interface (U), Collection and Storage (S), Conveyance (C), (Semi-)centralized Treatement (T), Reuse and Disposal (D)
+  # User interface (U), Collection and Storage (S), Conveyance (C), (Semi-)centralized Treatement (T), Reuse and/or Disposal (D) (see also http://ecompendium.sswm.info)
 # Products:
   # urine, faeces, excreta, blackwater, greywater, stormwater, storedurine, driedfaeces, pit humus, compost, sludge, effluent, stabilizedsludge, secondaryeffluent, biogas
 #------------------------------------------
