@@ -21,9 +21,9 @@ mc.integrate<-function(case.app.fun, tech.app.fun, n.sample=10000){
   ff2=deparse(tech.app.fun)[3]
   ff1<-sub("[[:space:]]+", "",ff1) # remove spaces from the string
   ff2<-sub("[[:space:]]+", "",ff2)
-  if (substring(ff1, 1, 1)=="d"){ # check wich of the functions is the density one
+  if (substring(ff1, 1, 1)=="d"){ # check wich of the functions is the density function
     samples<-sample.fun(ff1,n.sample) # make samples from the density function
-    score=mean(tech.app.fun(samples)) # 
+    score=mean(tech.app.fun(samples)) # cumpute the distribution function with the evaluation of random funcitons from the density function
   }else{
     samples<-sample.fun(ff2,n.sample) 
     score=mean(case.app.fun(samples))}

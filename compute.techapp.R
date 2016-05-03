@@ -1,16 +1,16 @@
 compute.techapp= function(case, tech, lshowplot=FALSE){
   # This functions computes the attrapp.scores and the techapp.score for a tech in a given case
   # Usage
-  # compute.techapp(case,tech, [lshowplot=FALSE])
+  # compute.techapp(case, tech, [lshowplot=FALSE])
   # Input:
   # tech: a technology from the technology list, e.g. techlist$septic.tank
-  # case: a case from the case list, e.g. arbaminch
+  # case: a case from the case list, e.g. caselist$arbaminch
   # app.fun: both tech and cases contain app.fun, functions for each appropriateness attribute
   # Variables:
-  # attrapp.score: the mc.intrgrate(tech$app.fun*caseapp.fun)
+  # attrapp.score: the mc.intrgrate(tech$app.fun, case$app.fun)
   # techapp.profile: all the attrapp.core of a given tech & case
   # techapp.score: normalized product of all attrapp.scores
-  # lshowplot: 
+  # lshowplot: if TRUE plots are generated to illustrate the overall of the case and tech$app.fun
   # Output:
   # app.data: list containing tech, case, techapp.score, techapp.profile (containing names(tech$app.fun), values)
   
@@ -45,9 +45,9 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
       xval=c(1:maxxlim)
       techval=tech$app.fun[[attr]](xval)
       caseval=case$app.fun[[attr]](xval)
-      Xmaxtech=max(which(techval>=0))   #find the largest x absisse corresponding to the max
+      Xmaxtech=max(which(techval>0))   #find the largest x absisse corresponding to the max
       if (Xmaxtech>=maxxlim) Xmaxtech=1 # special treatment for step function const until inf
-      Xmaxcase=max(which(caseval>=0))   #find the largest x absisse corresponding to the max
+      Xmaxcase=max(which(caseval>0))   #find the largest x absisse corresponding to the max
       if (Xmaxcase>=maxxlim) Xmaxcase=1 # special treatment for step function const until inf
       Xmaxplot=max(Xmaxtech,Xmaxcase)+10
       
