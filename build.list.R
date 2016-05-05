@@ -1,4 +1,4 @@
-build.list <- function(filename,n.info.row){ 
+build.list <- function(filename,n.info.row=NULL){ 
   # This function reads the technology and case input data stored in a csv file...
   # filename: csv name containing input data for technologies/cases
   # n.info.row: Number of information rows in 'data.csv'.
@@ -9,6 +9,15 @@ build.list <- function(filename,n.info.row){
   dat <- read.table(filename, sep=";", stringsAsFactors=FALSE)
   
   ll <- list()                          # list of technologies or cases
+  
+  # determine n.inf.row if not specified as argument
+  if (is.null(n.info.row)){
+    if ("attr1" %in% dat[,1]){
+      n.info.row=which(dat[,1] %in% "attr1")-2 #number of info line is the number of line until attr1 minus 1, we substract again minus 1 for the title line 
+    }else{
+      stop("No attr1 string in first column")
+    }
+  }
   
   ## loop over all tech/cases
   for(i in 2:ncol(dat)){
