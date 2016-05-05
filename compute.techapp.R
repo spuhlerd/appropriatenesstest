@@ -15,8 +15,11 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   # app.data: list containing tech, case, techapp.score, techapp.profile (containing names(tech$app.fun), values)
   
   
-  techapp.profile = c() # create empty vector to store intermediat result
-  n.app.fun=length(names(tech$app.fun)) # number of attributes
+  techapp.profile  = c() # create empty vector to store intermediat result
+  attr.names = c() # create empty vectore to store names of used attributes
+  n.tech.app.fun=length(names(tech$app.fun)) # number of attributes
+  n.case.app.fun=length(names(case$app.fun)) # number of attributes
+  n.app.fun=min(n.tech.app.fun,n.case.app.fun)
   
   # parameter
   techcolor="darksalmon"
@@ -33,6 +36,8 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   for(attr in names(tech$app.fun)){
     #check that this attribute also exist in case$app.fun
     if (attr %in% names(case$app.fun)){
+      # Store attribute names
+      attr.names=c(attr.names,attr)
       # Calculate app.score
       f1 = tech$app.fun[[attr]]
       f2 = case$app.fun[[attr]]
@@ -91,7 +96,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
   
   ## Create datalist
-  techapp.profile=setNames(techapp.profile,names(tech$app.fun))
+  techapp.profile=setNames(techapp.profile,attr.names)
   app.data=list(case=casename, tech=techname, techapp.score=techapp.score, techapp.profile=as.list(techapp.profile))
   app.data
 }
