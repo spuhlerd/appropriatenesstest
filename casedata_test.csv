@@ -1,15 +1,15 @@
-;arbaminch;thimi
-Descripton;Rural town in southern Ethiopia;Periurban area close to Kathmandu, Nepal
-Inhabitants;95000;84000
-attr1;bod;bod
-;prange;prange
-;lower=-Inf, upper=100;lower=-Inf, upper=50
-attr2;water;water
-;dtriangle;dtriangle
-;a=0, b=150, c=15;a=0,b=150,c=5
-attr3;temp;temp
-;dtriangle;dtriangle
-;a=0, b=50, c=40;a=0, b=50, c=40
-attr4;omskil;
-;dtriangle;
-;a=0, b=5, c=1;
+;arbaminch;thimi;testcase
+Descripton;Rural town in southern Ethiopia;Periurban area close to Kathmandu, Nepal;Periurban area close to Kathmandu, Nepal
+Inhabitants;95000;84000;84000
+attr1;bod;bod;bod
+;prange;prange;prange
+;lower=-Inf, upper=100;lower=-Inf, upper=50;lower=-Inf, upper=50
+attr2;water;water;
+;dtriangle;dtriangle;
+;a=0, b=150, c=15;a=0,b=150,c=5;
+attr3;temp;temp;
+;dtriangle;dtriangle;
+;a=0, b=50, c=40;a=0, b=50, c=40;
+attr4;omskil;;
+;dtriangle;;
+;a=0, b=5, c=1;;

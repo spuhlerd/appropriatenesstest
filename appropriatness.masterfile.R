@@ -71,8 +71,8 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
 
 ## ==============================================================================================
 # Create the list of technology appropriateness functions and the list of case appropriateness functions
-caselist<- build.list("casedata_test.csv",2)
-techlist<- build.list("techdata_test.csv",3)
+caselist<- build.list("casedata_test.csv")
+techlist<- build.list("techdata_test.csv")
 
 ## ==============================================================================================
 # COMPUTE app.proiles FOR A PAIR OF TECH AND CASE (caselist$case, techlist$tech)
