@@ -1,4 +1,4 @@
-compute.techapplist= function(caselist, techlist, lsort=FALSE){
+compute.techapplist= function(caselist, techlist, lsort=FALSE,lshowplot=FALSE){
   # This function computes for each pair of caselist$case and techlist$case:
   # Usage
   # compute.techapplist(caselist,techlist, [lshowplot=FALSE])
@@ -21,7 +21,11 @@ compute.techapplist= function(caselist, techlist, lsort=FALSE){
     for (techname in names(techlist)){
       tech=techlist[[techname]]
       tech$techname=techname #add techname to the list
-      app.item.tmp <- compute.techapp(case, tech)
+      if (lshowplot){
+        app.item.tmp <- compute.techapp(case, tech,lshowplot=TRUE)
+      } else {
+        app.item.tmp <- compute.techapp(case, tech,lshowplot=FALSE)
+      }
       appsublist=append(appsublist,list(app.item.tmp))
     }
     if (lsort){

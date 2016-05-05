@@ -71,42 +71,43 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
 
 ## ==============================================================================================
 # Create the list of technology appropriateness functions and the list of case appropriateness functions
-caselist<- build.list("casedata.csv",2)
-techlist<- build.list("techdata.csv",3)
+caselist<- build.list("casedata_test.csv",2)
+techlist<- build.list("techdata_test.csv",3)
 
 ## ==============================================================================================
 # COMPUTE app.proiles FOR A PAIR OF TECH AND CASE (caselist$case, techlist$tech)
 # Using compute.techapp
-
-# Create empty list
-applist1=list()
-# Compute examples
+applist_test=list()
 app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$septic.tank,lshowplot = TRUE)
-applist1=append(applist1,list(app.item.tmp))
+applist_test=append(applist_test,list(app.item.tmp))
 app.item.tmp <- compute.techapp(caselist$thimi, techlist$septic.tank,lshowplot = TRUE)
-applist1=append(applist1,list(app.item.tmp))
+applist_test=append(applist_test,list(app.item.tmp))
 app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$single.pit, lshowplot = TRUE)
-applist1=append(applist1,list(app.item.tmp))
+applist_test=append(applist_test,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$single.pit, lshowplot = TRUE)
+applist_test=append(applist_test,list(app.item.tmp))
 app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$double.pit, lshowplot = TRUE)
-applist1=append(applist1,list(app.item.tmp))
-# Print examples
+applist_test=append(applist_test,list(app.item.tmp))
+#Print example
 print(t(app.item.tmp), digits=4)  #optionally app.septic.tank[1:3] for tech, case, score, can't print the tech.app.profile as it is list in list
+# Write to screen
+techapplist.write(applist_test)
 
 ## ==============================================================================================
 # COMPUTE app.proiles FOR A PAIR OF TECH AND CASE (caselist$case, techlist$tech)
 # Using compute.techapplist
 
-applist2<-compute.techapplist(caselist,techlist,lsort=TRUE)
+applist_test2<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
 
 ## ==============================================================================================
 # WRITE APPLIST
 # Using applist.write
 
 # Write to screen
-techapplist.write(applist2)
+techapplist.write(applist_test2)
 
 # Write to file
-techapplist.write(applist2, listsep=";", filename="app_list2.csv")
+techapplist.write(applist_test2, listsep=";", filename="app_list_test.csv")
 
 ## ==============================================================================================
 # USE rlist to FILTER

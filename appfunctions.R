@@ -9,18 +9,16 @@ prange <- Vectorize (function(x, lower=-Inf, upper=Inf){
 }, 'x')
 
 drange <- Vectorize (function(x, lower=-Inf, upper=Inf){
-  ifelse(x>=lower & x<=upper, 1, 0)
+  # a uniform function being 1 for lower>x>upper, else 0
+  #ifelse(x>=lower & x<=upper, 1, 0)
+  dunif(x, min = lower, max = upper, log = FALSE)
 }, 'x')
 
 rrange <- Vectorize (function(x, lower=-Inf, upper=Inf){
-  ifelse(x>=lower & x<=upper, 1, 0)
+  #ifelse(x>=lower & x<=upper, 1, 0)
+  runif(x, min = lower, max = upper)
 }, 'x')
 
-# old
-req.range <- Vectorize (function(x, lower=-Inf, upper=Inf){
-  # a uniform function being 1 for lower>x>upper, else 0
-  ifelse(x>=lower & x<=upper, 1, 0)
-}, 'x')
 
 ## ==============================================================================================
 # Trapez function
@@ -35,26 +33,19 @@ ptrapez <- Vectorize (function(x, a, b=(d-a)/2+a, c=b, d){
 }, 'x')
 
 dtrapez <- Vectorize (function(x, a, b=(d-a)/2+a, c=b, d){
-  if (c==d){d=d+0.0001}
-  if (a==b){b=b+0.0001}
-  approx(x=c(a,b,c,d), y=c(0,1,1,0), xout=x, rule=2)$y
+  #if (c==d){d=d+0.0001}
+  #if (a==b){b=b+0.0001}
+  #approx(x=c(a,b,c,d), y=c(0,1,1,0), xout=x, rule=2)$y
+  dtrapezoid(x, min = a, mode1 = b, mode2 = c, max = d)
 }, 'x')
 
 rtrapez <- Vectorize (function(x, a, b=(d-a)/2+a, c=b, d){
-  if (c==d){d=d+0.0001}
-  if (a==b){b=b+0.0001}
-  approx(x=c(a,b,c,d), y=c(0,1,1,0), xout=x, rule=2)$y
+  #if (c==d){d=d+0.0001}
+  #if (a==b){b=b+0.0001}
+  #approx(x=c(a,b,c,d), y=c(0,1,1,0), xout=x, rule=2)$y
+  rtrapezoid(n=x, min = a, mode1 = b, mode2 = c, max = d)
 }, 'x')
 
-#old
-req.trapez <- Vectorize (function(x, a, b=(d-a)/2+a, c=b, d){
-  # a trapezoidal function of max 1 starting at a, ending at d and having mode1=b, mode2=c
-  #if c is not defined, it is equal to a traiangual function
-  #if either b or c are defined, it defines a triangular distribution around the mean
-  if (c==d){d=d+0.0001}
-  if (a==b){b=b+0.0001}
-  approx(x=c(a,b,c,d), y=c(0,1,1,0), xout=x, rule=2)$y
-}, 'x')
 
 ## ==============================================================================================
 # Category function, for instance for has electricity / has not

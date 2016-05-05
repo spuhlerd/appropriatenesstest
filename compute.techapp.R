@@ -19,38 +19,41 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   n.app.fun=length(names(tech$app.fun)) # number of attributes
   
   # parameter
-  techcolor="green"
-  casecolor="red"
+  techcolor="darksalmon"
+  casecolor="darkgreen"
   
   ## Prepare plot
   if(lshowplot){
     # Create multiple plot table
     par(mfcol=c(n.app.fun,1)) # dimensions of plot, the raw number is equal
-    #   to the number of appropriateness functions
-    par(mar = c(4, 4, 4, 2), oma = c(2, 1, 2, 4))
+                               #   to the number of appropriateness functions
+    par(mar = c(4, 4, 4, 2), oma = c(2, 1, 2, 4)) # margins for plot window
   }
   
   for(attr in names(tech$app.fun)){
-   
-     # Calculate app.score
+    # Calculate app.score
     f1 = tech$app.fun[[attr]]
     f2 = case$app.fun[[attr]]
     attrapp.score = mc.integrate(f1,f2)
     techapp.profile = c(techapp.profile, attrapp.score)
     
-    # Plot techapp.profile
+    # Plots
     if(lshowplot){
       # define plot xlim using max value
-      maxxlim=20000 #max possible vaule
-      xval=c(1:maxxlim)
-      techval=tech$app.fun[[attr]](xval)
-      caseval=case$app.fun[[attr]](xval)
-      Xmaxtech=max(which(techval>0))   #find the largest x absisse corresponding to the max
-      if (Xmaxtech>=maxxlim) Xmaxtech=1 # special treatment for step function const until inf
-      Xmaxcase=max(which(caseval>0))   #find the largest x absisse corresponding to the max
-      if (Xmaxcase>=maxxlim) Xmaxcase=1 # special treatment for step function const until inf
-      Xmaxplot=max(Xmaxtech,Xmaxcase)+10
-      
+      maxxlim=40000 # max possible value
+      xval=seq(0,maxxlim,1) # vector of values to evaluate the last non-zero point in the intevall 1:maxxlim
+                        # only used for plotting as not precise because uses only integer values
+                        # for functions with max smaller than 1, put 0.1 as intervall in seq
+      techval=tech$app.fun[[attr]](xval) # computing tech$app.fun for xval
+      caseval=case$app.fun[[attr]](xval) # computing case$app.fun for xval
+      Xmaxtech=xval[max(which(techval>0))]   # find the highest xval for which techval is nonzero
+                                             # in case of warning message "In max(which(techval > 0)) : no non-missing arguments to max; returning -Inf", you need to increase maxlim
+      if (Xmaxtech>=maxxlim) Xmaxtech=0.0001 # if tech$app.fun is const until Inf set Xmaxtech to very small in order not to be considered
+      Xmaxcase=xval[max(which(caseval>0))]   # find the highest xval for which caseval is nonzero
+                                             # in case of warning message "In max(which(caseval > 0)) : no non-missing arguments to max; returning -Inf", you need to increase maxlim
+      if (Xmaxcase>=maxxlim) Xmaxcase=0.0001 # if tech$app.fun is const until Inf set Xmaxcase to very small in order not to be considered
+      Xmaxplot=max(Xmaxtech,Xmaxcase)+1 # set the higher of Xmaxcase and Xmactech as Xmax for plots
+      # plot
       plot(tech$app.fun[[attr]], main=attr, xlab="x", ylab="tech.app.fun", xlim=c(0,Xmaxplot), col=techcolor)
       cex_label= par("cex")*par("cex.lab")
       par(new = T)
@@ -66,20 +69,20 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
     techname=tech$techname
     casename=case$casename
   }else{
-  # Form the function call argument otherwise (assuming call with case$casename)
+    # Form the function call argument otherwise (assuming call with case$casename)
     techname=unlist(strsplit(deparse(substitute(tech)),"\\$"))
     techname=techname[2]
     casename=unlist(strsplit(deparse(substitute(case)),"\\$"))
     casename=casename[2]
   }
-  
-  ## Make graph title and legend
+  ## Make multiplot title and legend
   if(lshowplot) {
     mtext(paste(techname,", ",casename), outer = TRUE )
-    #place text in the lower right corner of the graphic
+    #place text in the lower right corner of the graphic ("legend")
     mtext("- tech.app.fun                             ", col=techcolor, outer=TRUE, side=1, adj=1, line=-1, cex=cex_label)
     mtext("- case.app.fun", col=casecolor, outer=TRUE, side=1, adj=1, line=-1, cex=cex_label)
-   }
+  }
+  
   # Compute total score
   l=length(techapp.profile)
   techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
