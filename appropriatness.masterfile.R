@@ -107,12 +107,12 @@ applist_test2<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
 techapplist.write(applist_test2)
 
 # Write to file
-techapplist.write(applist_test2, listsep=";", filename="app_list_test.csv")
+techapplist.write(applist_test2, listsep=";", filename="app_list_test2.csv")
 
 ## ==============================================================================================
 # USE rlist to FILTER
 
-applist<-applist2
+applist<-applist_test2
 
 # Example only arbaminch
 sub.applist=list.filter(applist,case=="arbaminch")
