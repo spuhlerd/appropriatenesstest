@@ -14,3 +14,6 @@ attr3;temp;;temp;
 attr4;omskil;;omskil;
 ;prange;;prange;
 ;lower=3, upper=Inf;;lower=1, upper=Inf;
+attr5;electricity;;;
+;pcat;;;
+;c(no=0.5,yes=1);;;

@@ -9,10 +9,10 @@ compute.techapplist= function(caselist, techlist, lsort=FALSE,lshowplot=FALSE){
   # Variables:
   # See 'compute.techapp(case, tech)': attrapp.score, techapp.profile: all the attrapp.core of a given tech & case, techapp.score
   # Output:
-  # applist: list containing case,tech, techapp.score, techapp.profile (containing names(tech$app.fun), values)
+  # techapplist: list containing case,tech, techapp.score, techapp.profile (containing names(tech$app.fun), values)
   
   # Create empty list
-  applist=list()
+  techapplist=list()
   # llop over all case and tech
   for (casename in names(caselist)){
     case=caselist[[casename]]
@@ -31,8 +31,8 @@ compute.techapplist= function(caselist, techlist, lsort=FALSE,lshowplot=FALSE){
     if (lsort){
       appsublist=list.sort(appsublist,(techapp.score)) # parenthesis are telling to sort in descending order
     }
-    applist=append(applist,appsublist)
+    techapplist=append(techapplist,appsublist)
   }
-  #return applist
-  applist
+  #return techapplist
+  techapplist
   }

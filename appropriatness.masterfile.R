@@ -19,10 +19,10 @@ source("appfunctions.r") # contains functions that are not provided in R but can
   # ptrapez(x, a, b=(d-a)/2+a, c=b, d)
   # dtrapez(x, a, b=(d-a)/2+a, c=b, d)
   # rtrapez(x, a, b=(d-a)/2+a, c=b, d)
-  # dcat(x, probs), probs is the vector of categories and respective probabilities. E.g. c(no=0.4,yes=0.6)
-    # !!! the som of probs has to be =1
-  # rcat(x, probs)
   # pcat(x, probs)
+  # dcat(x, probs), probs is the vector of categories and respective probabilities. E.g. c(no=0.4,yes=0.6)
+    # !!! the sum of probs has to be =1
+  # rcat(x, probs)
 source("mc.integrate.r") # This functions computes a monte carlo integration of two continous functions
   # mc.integrate(case.app.fun, tech.app.fun, n.sample=10000)
 source("compute.techapp.r") # Returns app.profile and app.score (aggregated profile)

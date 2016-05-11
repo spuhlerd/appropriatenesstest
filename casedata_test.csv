@@ -13,3 +13,6 @@ attr3;temp;temp;
 attr4;omskil;;
 ;dtriangle;;
 ;a=0, b=5, c=1;;
+attr5;electricity;;
+;dcat;;
+;c(no=0.6,yes=0.4);;
