@@ -1,19 +1,20 @@
-;septic.tank;single.pit;double.pit;testtech
-functional.group;S,T;S;S;S
-products.in;blackwater, urine, greywater;excreta, urine;excreta, urine;excreta, urine
-products.out;sludge, effluent;sludge;sludge;sludge
-attr1;bod;bod;bod;bod
-;dtriangle;dtriangle;dtriangle;dtriangle
-;a=40,  b=1900,   c=600;a=10, b=400, c=100;a=10, b=400, c=40;a=10, b=400, c=40
-attr2;water;omskil;water;
-;ptrapez;prange;prange;
-;a = 8, b = 10, c = 5000, d=5000;lower=1, upper=Inf;lower=1, upper=Inf;
-attr3;temp;;temp;
-;prange;;prange;
-;lower=5, upper=Inf;;lower=-5, upper=Inf;
-attr4;omskil;;omskil;
-;prange;;prange;
-;lower=3, upper=Inf;;lower=1, upper=Inf;
-attr5;electricity;;;
-;pcat;;;
-;c(no=0.5,yes=1);;;
+;uddt;dry.toilet;pour.flush;urine.storagetank;dehydration.vault;septic.tank;single.vip;double.vip;application.urine;application.faeces;testtech;application.compost
+functional.group;U;U;U;S;S;S;S;S;D;D;D;D
+products; -> urine, faeces; -> excreta; -> blackwater;urine -> storedurine;faeces -> driedfaeces;blackwater, greywater -> sludge, effluent;excreta -> sludge;excreta -> pithumus;storedurine -> ;driedfaeces -> ;sludge, effluent -> ;compost, pithumus -> 
+;;;;;;blackwater -> sludge, effluent;;;;;effluent -> ;pithumus -> 
+;;;;;;greywater -> sludge, effluent;;;;;sludge -> ;compost -> 
+attr1;temp;water;omskil;temp;temp;bod;bod;bod;bod;temp;temp;temp
+;prange;prange;prange;prange;prange;dtriangle;dtriangle;dtriangle;dtriangle;prange;prange;prange
+;lower=-10, upper=Inf;lower=3, upper=Inf;lower=2, upper=Inf;lower=5, upper=Inf;lower=5, upper=Inf;a=40,  b=1900,   c=600;a=10, b=400, c=100;a=10, b=400, c=40;a=10, b=400, c=40;lower=10, upper=Inf;lower=0, upper=Inf;lower=5, upper=Inf
+attr2;omskil;temp;;;;water;omskil;water;;;;
+;prange;prange;;;;ptrapez;prange;prange;;;;
+;lower=2, upper=Inf;lower=5, upper=Inf;;;;a = 8, b = 10, c = 5000, d=5000;lower=1, upper=Inf;lower=1, upper=Inf;;;;
+attr3;;omskil;;;;temp;;temp;;;;
+;;prange;;;;prange;;prange;;;;
+;;lower=3, upper=Inf;;;;lower=5, upper=Inf;;lower=-5, upper=Inf;;;;
+attr4;;;;;;omskil;;omskil;;;;
+;;;;;;prange;;prange;;;;
+;;;;;;lower=3, upper=Inf;;lower=1, upper=Inf;;;;
+attr5;;;;;;electricity;;;;;;
+;;;;;;pcat;;;;;;
+;;;;;;c(no=0.5,yes=1);;;;;;
