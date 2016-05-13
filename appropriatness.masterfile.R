@@ -139,20 +139,6 @@ techapplist.write(applist_test)
 applist_test2<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
 applist_test2<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=F)
 
-# Examples dcat functions
-compute.techapp(caselist$thimi, techlist$septic.tank,lshowplot = TRUE)
-caselist$thimi$app.fun$electricity
-techlist$septic.tank$app.fun$electricity
-# mc.integrate for negative functions
-caselist$arbaminch$app.fun$temp
-techlist$double.pit$app.fun$temp
-mc.integrate(caselist$arbaminch$app.fun$temp, techlist$double.pit$app.fun$temp)
-par(mfrow=c(2,1))
-curve(caselist$arbaminch$app.fun$temp(x), xlim=c(-10, 100))
-curve(techlist$double.pit$app.fun$temp(x), xlim=c(-10, 100))
-
-
-
 ## ==============================================================================================
 # WRITE APPLIST
 # Using applist.write

@@ -12,7 +12,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   # techapp.score: normalized product of all attrapp.scores
   # lshowplot: if TRUE plots are generated to illustrate the overall of the case and tech$app.fun
   # Output:
-  # app.data: list containing tech, case, techapp.score, techapp.profile (containing names(tech$app.fun), values)
+  # tech.app.data: list containing tech, case, techapp.score, techapp.profile (containing names(tech$app.fun), values)
   
   
   techapp.profile  = c() # create empty vector to store intermediat result
@@ -97,7 +97,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   
   ## Create datalist
   techapp.profile=setNames(techapp.profile,attr.names)
-  app.data=list(case=casename, tech=techname, techapp.score=techapp.score, techapp.profile=as.list(techapp.profile))
-  app.data
+  techapp.data=list(case=casename, tech=techname, techapp.score=techapp.score, techapp.profile=as.list(techapp.profile))
+  techapp.data
 }
 
