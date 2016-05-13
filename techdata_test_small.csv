@@ -67,9 +67,9 @@ products; -> excreta;blackwater, greywater -> sludge, effluent;excreta -> sludge
 ;;;;;
 ;;;;;
 ;;;;;
-attr1;water;bod;bod;bod;
-;prange;dtriangle;dtriangle;dtriangle;
-;lower=3, upper=Inf;a=40,  b=1900,   c=600;a=10, b=400, c=100;a=10, b=400, c=40;
+attr1;water;bod;bod;bod;temp
+;prange;dtriangle;dtriangle;dtriangle;prange
+;lower=3, upper=Inf;a=40,  b=1900,   c=600;a=10, b=400, c=100;a=10, b=400, c=40;lower=0, upper=Inf
 attr2;temp;water;omskil;water;
 ;prange;ptrapez;prange;prange;
 ;lower=5, upper=Inf;a = 8, b = 10, c = 5000, d=5000;lower=1, upper=Inf;lower=1, upper=Inf;
