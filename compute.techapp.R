@@ -21,6 +21,30 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   n.case.app.fun=length(names(case$app.fun)) # number of attributes
   n.app.fun=min(n.tech.app.fun,n.case.app.fun)
   
+  ## Get tech name and case name
+  # From the list if it exists
+  if ( ("casename" %in% names(case)) && ("techname" %in% names(tech) ) ){
+    techname=tech$techname
+    casename=case$casename
+  }else{
+    # Form the function call argument otherwise (assuming call with case$casename)
+    techname=unlist(strsplit(deparse(substitute(tech)),"\\$"))
+    techname=techname[2]
+    casename=unlist(strsplit(deparse(substitute(case)),"\\$"))
+    casename=casename[2]
+  }
+  
+  # in case there are no attribute, n.app.fun is 0.
+  # in this case the function retruns a score of 1
+  if (n.app.fun==0){
+    techapp.data=list()
+    techapp.data$tech=techname
+    techapp.data$case=casename
+    techapp.data$techapp.score=1
+    techapp.data$techapp.profile=as.list(c("NA"="NULL"))
+    return(techapp.data)
+  }
+  
   # parameter
   techcolor="darksalmon"
   casecolor="darkgreen"
@@ -71,18 +95,6 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
     }
   }
   
-  ## Get tech name and case name
-  # From the list if it exists
-  if ( ("casename" %in% names(case)) && ("techname" %in% names(tech) ) ){
-    techname=tech$techname
-    casename=case$casename
-  }else{
-    # Form the function call argument otherwise (assuming call with case$casename)
-    techname=unlist(strsplit(deparse(substitute(tech)),"\\$"))
-    techname=techname[2]
-    casename=unlist(strsplit(deparse(substitute(case)),"\\$"))
-    casename=casename[2]
-  }
   ## Make multiplot title and legend
   if(lshowplot) {
     mtext(paste(techname,", ",casename), outer = TRUE )
