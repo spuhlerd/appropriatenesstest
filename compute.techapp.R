@@ -41,7 +41,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
     techapp.data$tech=techname
     techapp.data$case=casename
     techapp.data$techapp.score=1
-    techapp.data$techapp.profile=as.list(c("attr"="empty"))
+    techapp.data$techapp.profile=as.list(c("attr"="NULL"))
     return(techapp.data)
   }
   
