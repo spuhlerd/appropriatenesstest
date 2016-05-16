@@ -1,4 +1,4 @@
-compute.sysapp= function(sys, applist){
+compute.sysapp= function(sys, case, applist){
   # This function calculates the appropriateness score of a system
   # Usage:
   #
@@ -10,7 +10,8 @@ compute.sysapp= function(sys, applist){
   # 
   # Output:
   # sysapp.data: list containing case, sys, sysapp.score, techs, techapp.scores
-  
-  a=list.filter(test1,case=="arbaminch",tech=="dry.toilet")
+  sys1
+  tech
+  a=list.filter(applist_test2,case=="arbaminch",tech=="dry.toilet")
   a[[1]]$techapp.score
 }
