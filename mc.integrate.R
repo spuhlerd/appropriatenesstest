@@ -27,6 +27,6 @@ mc.integrate<-function(case.app.fun, tech.app.fun, n.sample=10000){
     samples<-sample.fun(ff2,n.sample) 
     score=mean(case.app.fun(samples))} # the samples from the tech functions are evaluate in tech case function
  
-   return(score) # used as attrapp.score in compute.techapp.R
+   return(score) # used as attrapp.score in compute.techapp()
 }
 
