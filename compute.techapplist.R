@@ -13,11 +13,11 @@ compute.techapplist= function(caselist, techlist, lsort=FALSE,lshowplot=FALSE){
   
   # Create empty list
   techapplist=list()
-  # llop over all case and tech
+  # Loop over all case and tech
   for (casename in names(caselist)){
     case=caselist[[casename]]
-    case$casename=casename #add casename to the list
-    appsublist=list() #store all tech for a given case in a list
+    case$casename=casename # add casename to the list
+    appsublist=list() # store all tech for a given case in a list
     for (techname in names(techlist)){
       tech=techlist[[techname]]
       tech$techname=techname #add techname to the list

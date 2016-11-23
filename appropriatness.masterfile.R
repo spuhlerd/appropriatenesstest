@@ -34,146 +34,154 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
  # function(applist, listsep=" ", filename="") 
 
 ## ==============================================================================================
-# SOME GUIDELINES TO FILL IN DATA LIST FILES
+# MANAGMENT OF THE MODEL
+#------------------------------------------
+# I use bitbucket to store the model as well as to share it and manage edits.
+# The adress is: https://spuhler@bitbucket.org/spuhler/dspuhler-appropriateness.git
+#------------------------------------------
+# USING BITBUCKET
+#...
+
+## ==============================================================================================
+# SOME GUIDELINES TO FILL IN DATA LIST FILES (techdata and casedata)
 #------------------------------------------
 # Each data files contains a list of items (either techs or cases in the columns)
-# Each items has a few information attributes (info.row).
-# This is followed by a list of appropriateness attributes are listed.
-#------------------------------------------
-# PREDEFINED OPTIONS FOR TECHs
-# Functional groups:
+# Each items has a few information attributes (info.rows), build.list automatically detects the number of info rows, so you do not need to provide this.
+# This is followed by a list of appropriateness attributes (attr1,...., attrn).
+# Info rows can be used to provide comments about the case or the technology.
+# For Technologies, the info.rows are also used to provide the functional groups and the products which are used to generate sanitation systems by a different model module.
+# Predefined functional groups:
   # User interface (U), Collection and Storage (S), Conveyance (C), (Semi-)centralized Treatement (T), Reuse and/or Disposal (D) (see also http://ecompendium.sswm.info)
-# Products:
+# Pre-defined poducts:
   # urine, faeces, excreta, blackwater, greywater, stormwater, storedurine, driedfaeces, pit humus, compost, sludge, effluent, stabilizedsludge, secondaryeffluent, biogas
-#------------------------------------------
-# APPROPRIATENESS ATTRIBUTES
-# Contains three rows:
-  # 1 Name of the attributes to be used: bod, water, temp, omskil, etc.
-  # 2 Name of function (see below) describing the technology/case requirement/capactiy 
+# Appropriateness attributes are defined by three rows:
+  # 1 Name of the attributes: e.g. bod, water, temp, omskil, etc.
+  # 2 Name of attribute appropriateness function describing the technology/case requirement/capactiy 
   # 3 Parameters required for this function
-# Recommended functions are:
-# p or drange(x, lower=-Inf, upper=Inf)
-# p or dtrapez(x, a, b, c, d),
-# dtriangle(x, a, b, c)
-# dunif(x, min, max)
-# Other that might work are: dnorm, dlnorm, dbeta, dweibull, dgamma, dlogis, etc.
-# Each attriute is described by a pair of functions, one for the case and one for the tech.
+# Each distinct attriute is described by a pair of functions, one for the case and one for the tech.
 # !!! A pair has always to consits of one density function ('d...') and one distribution function ('p...')
 # Which of the two functions is used to describe the case or the technology attribute value can vary
 # Generally density functions are used to describe probability that the attribute takes a certain value (e.g. temperature)
 # ... and distribution functions are used to describe the performance given the attribute (e.g. the performance of a technology given a certain temperature)
-
+# Recommended functions are:
+# p or drange(x, lower=-Inf, upper=Inf) 
+# p or dtrapez(x, a, b, c, d),
+# dtriangle(x, a, b, c)
+# dunif(x, min, max)
+# dcat(x, probs)  # probs is the vector of categories and respective probabilities. E.g. c(no=0.4,yes=0.6)
+# Other that might work are: dnorm, dlnorm, dbeta, dweibull, dgamma, dlogis, etc.
 
 ## ==============================================================================================
 ## ==============================================================================================
-## EXAMPLES ON HOW TO USE THE CODE
-## Compute appropriateness profiles (app.profile(tech, case)) and apppropriateness scores (app.scores(tech, case))
-
+## EXAMPLES ON HOW TO USE THE MODEL TO EVALUATE TE APPROPRIATENESS OF TECHNOLOGIES IN SPEC.CASES
 ## ==============================================================================================
-# Create the list of technology appropriateness functions and the list of case appropriateness functions
-caselist<- build.list("casedata_test.csv")
-techlist<- build.list("techdata_test.csv")
-#techlist<- build.list("techdata_test_small.csv")
+# READ THE DATA INPUT FILES USING Bbuild.list TO GENERATE A TECHNOLOGY AND A CASE LIST
+caselist<- build.list("casedata_demo.csv")
+techlist<- build.list("techdata_demo.csv")
+
 ## ==============================================================================================
 # COMPUTE app.proiles FOR A PAIR OF TECH AND CASE (caselist$case, techlist$tech)
 # Using compute.techapp
-applist_test=list()
+applist_demo=list()
 #arbaminch
 app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$uddt,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
+applist_demo=append(applist_demo,list(app.item.tmp))
 app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$dry.toilet,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
+applist_demo=append(applist_demo,list(app.item.tmp))
 app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$pour.flush,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
+applist_demo=append(applist_demo,list(app.item.tmp))
 app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$urine.storagetank,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$dehydration.vault,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$septic.tank,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$single.vip,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$double.vip,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$application.urine,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$application.faeces,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$testtech,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$application.compost,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
+applist_demo=append(applist_demo,list(app.item.tmp))
+#...
 #thimi
 app.item.tmp <- compute.techapp(caselist$thimi, techlist$uddt,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
+applist_demo=append(applist_demo,list(app.item.tmp))
 app.item.tmp <- compute.techapp(caselist$thimi, techlist$pour.flush,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$urine.storagetank,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$dehydration.vault,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$septic.tank,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$single.vip,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$double.vip,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$application.urine,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$application.faeces,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$testtech,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$application.compost,lshowplot = TRUE)
-applist_test=append(applist_test,list(app.item.tmp))
-
-#Print example
-print(t(app.item.tmp), digits=4)  #optionally app.septic.tank[1:3] for tech, case, score, can't print the tech.app.profile as it is list in list
-# Write to screen
-techapplist.write(applist_test)
+applist_demo=append(applist_demo,list(app.item.tmp))
+#...
 
 ## ==============================================================================================
-# COMPUTE app.proiles FOR A PAIR OF TECH AND CASE (caselist$case, techlist$tech)
-# Using compute.techapplist
-
-applist_test2<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
-applist_test2<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=F)
+# COMPUTE ENTIRE apppropriateness proiles FOR A LIST OF TECHNOLOGIES AND A LIST OF CASES IN ONE GO
+# Using compute.techapplist 
+applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE) # use lshowplot=F if
+#you are only interested in the results; the plots (displaying the appropriateness functions for each attribute) only help to understand what happens
 
 ## ==============================================================================================
-# WRITE APPLIST
-# Using applist.write
-
+# WRITE A applist TO THE SCREEN OR A CSV FILE
 # Write to screen
-techapplist.write(applist_test2)
+techapplist.write(applist_demo)
 # Write to file
-techapplist.write(applist_test2, listsep=";", filename="app_list_test2.csv")
+techapplist.write(applist_demo, listsep=";", filename="app_list_demo.csv") #giving a list separation charachter and a filename creates a csv file with the results
 
 ## ==============================================================================================
-# USE rlist to FILTER
-
-applist<-applist_test2
-
-# Example only arbaminch
+# USE list TO FILTER FOR SPECIFIC RESULTS OF INTEREST
+applist<-applist_demo
+# Example only arbaminch: filtering and subssequently writing to screen
 sub.applist=list.filter(applist,case=="arbaminch")
-cat("====================== \n")
-cat("Only arbaminch  \n")
-techapplist.write(sub.applist)
+cat("====================== \n") # Insert line for better lisibility
+cat("Only arbaminch  \n") # Provide a title to the table
+techapplist.write(sub.applist) # Write the sublist to the screen with techapplist.write
 
 # Example only arbaminch and score > 0
-sub.applist=list.filter(applist,case=="arbaminch", tech.app.score>0)
+sub.applist=list.filter(applist,case=="arbaminch", techapp.score>0)
 cat("====================== \n")
 cat("Only arbaminch and score > 0 \n")
 techapplist.write(sub.applist)
 
-# Examples of manipulations
-sub.applist=list.filter(applist,case=="arbaminch", tech=="single.pit")
-sub.applist[[1]]$tech.app.profile$bod
-# using $ instead of list.filter
-applist[[1]]$tech.app.profile$bod # to get the bod of an item in the list, 1 ist the list id
+# Further examples of possible filter
+sub.applist=list.filter(applist,case=="arbaminch", tech=="dry.toilet") # provides only the results
+# for dry toilest in arbaminch
+sub.applist[[1]]$techapp.profile$temp # [[1]] stands for the first instance of the sublist for dry 
+# toilet, however, this sublist is anyhow only contained of one item
+sub.applist=list.filter(applist, tech=="dry.toilet") # if we filter for dry toilet only, we get a list of to items:
+sub.applist[[1]]$techapp.profile$temp 
+sub.applist[[2]]$techapp.profile$temp
+
 
 ## ==============================================================================================
 ## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
+## ==============================================================================================
 ## APPLICATIONS
+
+## ==============================================================================================
+# TESTING DATA
+# Read data
+caselist_test<- build.list("casedata_test.csv")
+techlist_test<- build.list("techdata_test.csv")
+# Test one by one
+compute.techapp(caselist_test$arbaminch,techlist_test$uddt, lshowplot=FALSE)
+compute.techapp(caselist_test$arbaminch,techlist_test$dry.toilet, lshowplot=FALSE)
+# Test entire lists
+techapplist_test<-compute.techapplist(caselist_test,techlist_test,lsort=FALSE) # use lshowplot=TRUE for visual analysis of the results
+# Write to see
+techapplist.write(techapplist_test)
+techapplist.write(techapplist_test, listsep=";", filename="techapplist_daniel.csv")
+
+## ==============================================================================================
+# Testing data (RANDOM NOTES DOROTHEE)
+# Read data
+caselist_ex<- build.list("casedata_ex.csv")
+techlist_ex<- build.list("techdata_ex.csv")
+
+# Test one by one
+compute.techapp(caselist_test$arbaminch,techlist_test$T1.wsp, lshowplot=TRUE)
+compute.techapp(caselist_test$arbaminch,techlist_test$septic.tank, lshowplot=TRUE)
+
+# Compute entire list
+techapplist_ex<-compute.techapplist(caselist_test,techlist_test,lsort=TRUE)
+# Write to screen
+techapplist.write(techapplist_ex)
+# Write to file
+techapplist.write(techapplist_ex, listsep=";", filename="techapplist_ex.csv")
 ## ==============================================================================================
 # Test data from Daniel
 # Read data
@@ -196,31 +204,8 @@ techapplist.write(techapplist_daniel)
 # Write to file
 techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
 
-## ==============================================================================================
-# Testing data
-# Read data
-caselist_test<- build.list("casedata_ex.csv",2)
-techlist_test<- build.list("techdata_ex.csv",3)
 
-# Test one by one
-compute.techapp(caselist_test$arbaminch,techlist_test$T1.wsp, lshowplot=TRUE)
-compute.techapp(caselist_test$arbaminch,techlist_test$septic.tank, lshowplot=TRUE)
 
-# Compute entire list
-techapplist_test<-compute.techapplist(caselist_test,techlist_test,lsort=TRUE)
-# Write to screen
-techapplist.write(techapplist_test)
-# Write to file
-techapplist.write(techapplist_test, listsep=";", filename="techapplist_test.csv")
 
-## ==============================================================================================
-# Testing yes no
-# Read data
-caselist_test<- build.list("casedata_ex_yn.csv",2)
-techlist_test<- build.list("techdata_ex_yn.csv",3)
 
-# Test one by one
-compute.techapp(caselist_test$arbaminch,techlist_test$uddt, lshowplot=FALSE)
-compute.techapp(caselist_test$arbaminch,techlist_test$dry.toilet, lshowplot=FALSE)
-yesnotest<-compute.techapplist(caselist_test,techlist_test,lsort=FALSE)
-techapplist.write(yesnotest)
+

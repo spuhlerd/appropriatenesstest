@@ -15,4 +15,4 @@ attr4;omskil;omskil
 ;a=0, b=5, c=1;a=0, b=4, c=1
 attr5;electricity;electricity
 ;dcat;dtriangle
-;c(no=0.6,yes=0.4);a=0, b=3, c=0.9
+;c(no=0.6,yes=0.4);a=0, b=50, c=40
