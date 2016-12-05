@@ -188,15 +188,17 @@ techapplist.write(techapplist_test, listsep=";", filename="techapplist_daniel.cs
 ## ==============================================================================================
 # Testing data (RANDOM NOTES DOROTHEE)
 # Read data
-caselist_ex<- build.list("casedata_ex.csv")
-techlist_ex<- build.list("techdata_ex.csv")
+caselist_test<- build.list("casedata_test.csv")
+techlist_test<- build.list("techdata_test.csv")
 
 # Test one by one
 compute.techapp(caselist_test$arbaminch,techlist_test$T1.wsp, lshowplot=TRUE)
 compute.techapp(caselist_test$arbaminch,techlist_test$septic.tank, lshowplot=TRUE)
 
 # Compute entire list
-techapplist_ex<-compute.techapplist(caselist_test,techlist_test,lsort=TRUE)
+techapplist_test<-compute.techapplist(caselist_test,techlist_test,lsort=TRUE,lshowplot=TRUE)
+compute.techapplist(caselist_ex,techlist,lshowplot=TRUE)
+
 # Write to screen
 techapplist.write(techapplist_ex)
 # Write to file
