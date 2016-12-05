@@ -14,5 +14,5 @@ attr4;omskil;omskil
 ;dtriangle;dtriangle
 ;a=0, b=5, c=1;a=0, b=4, c=1
 attr5;electricity;electricity
-;dcat;dtriangle
-;c(no=0.6,yes=0.4);a=0, b=50, c=40
+;dcat;dcat
+;c(no=0.6,yes=0.4);c(no=0.2,yes=0.8)
