@@ -1,6 +1,6 @@
 rm(list=ls())
 ## ==============================================================================================
-setwd("/Users/dorotheespuhler/Dropbox\ (Personal)/PHD\ Dropbox/1\ MODELLING/R/Appropriateness/")
+setwd("C:/Users/gundlajo/Code/appropriateness_joel")
 
 # Load required library packages
 library(triangle) # extra package for triangular distribution
@@ -32,6 +32,7 @@ source("compute.techapplist.r") # Returns a list of app.profiles & app.score for
   # compute.techapplist(techlist, caselist, listsep=" ", filename="")
 source("techapplist.write.r") # writes applist either to screen or to a file if listsep and filename are provided
  # function(applist, listsep=" ", filename="") 
+source("build.syslist_joel.r")   # This function reads the technology and case input data stored in a csv file...
 
 ## ==============================================================================================
 # MANAGMENT OF THE MODEL
@@ -97,7 +98,6 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
 # READ THE DATA INPUT FILES USING Bbuild.list TO GENERATE A TECHNOLOGY AND A CASE LIST
 caselist<- build.list("casedata_demo.csv")
 techlist<- build.list("techdata_demo.csv")
-
 ## ==============================================================================================
 # COMPUTE app.proiles FOR A PAIR OF TECH AND CASE (caselist$case, techlist$tech)
 # Using compute.techapp
@@ -226,6 +226,37 @@ techapplist.write(techapplist_daniel)
 techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
 
 
+
+##@@@@@@@@@@@@@@@@@@@@@@@@ joel test
+library(triangle) 
+library (trapezoid) 
+library(rlist)  
+library(gridExtra)
+library(ColorPalette)
+source("build.list.r")   
+source("appfunctions.r")
+source("mc.integrate.r") 
+source("compute.techapp.r") 
+source("compute.techapplist.r") 
+source("techapplist.write.r") 
+source("build.syslist_joel.r")  
+caselist<- build.list("casedata_demo.csv")
+techlist<- build.list("techdata_demo.csv")
+sysliste_demo <- build.syslist("sysdata_demo.csv")
+applist_demo=list()
+applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
+source("compute.sysapp.by.product_joel.r")
+sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
+source("compute.sysapp.by.mean_joel.r")
+sysapplist_demo.mean<-compute.sysapp.by.mean(sysliste_demo,applist_demo)
+
+
+################   Joel sesitivity
+sensitivity=list()
+for (i in 1:10){
+  sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
+  sensitivity[[i]]=sysapplist_demo.prod
+}
 
 
 
