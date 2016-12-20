@@ -12,6 +12,7 @@ library(ColorPalette)
 # Load required functions
 source("build.list.r")   # This function reads the technology and case input data stored in a csv file...
 # build.list(filename,n.info.row)
+source("build.syslist.r") 
 source("appfunctions.r") # contains functions that are not provided in R but can be used to compute attribute values
   # prange(x, lower=-Inf, upper=Inf)
   # drange(x, lower=-Inf, upper=Inf)
@@ -159,7 +160,7 @@ applist_demo=append(applist_demo,list(app.item.tmp))
 ## ==============================================================================================
 # COMPUTE ENTIRE apppropriateness proiles FOR A LIST OF TECHNOLOGIES AND A LIST OF CASES IN ONE GO
 # Using compute.techapplist 
-applist_demo<-compute.techapplist(caselist_demo,techlist_demo,lsort=TRUE,lshowplot=TRUE) # use lshowplot=F if
+applist_demo<-compute.techapplist(caselist_demo,techlist_demo,lsort=TRUE,lshowplot=F) # use lshowplot=F if
 #you are only interested in the results; the plots (displaying the appropriateness functions for each attribute) only help to understand what happens
 
 ## ==============================================================================================
@@ -265,6 +266,8 @@ techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.
 
 
 
-
+## ==============================================================================================
+# Test sysappscores
+syslist_test<-build.syslist("sysdata_test.csv")
 
 
