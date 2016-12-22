@@ -13,8 +13,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   # lshowplot: if TRUE plots are generated to illustrate the overall of the case and tech$app.fun
   # Output:
   # tech.app.data: list containing tech, case, techapp.score, techapp.profile (containing names(tech$app.fun), values)
-
-  tech
+  
   
   techapp.profile  = c() # create empty vector to store intermediate result
   attr.names = c() # create empty vectore to store names of used attributes
@@ -47,22 +46,17 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   
   ## Prepare plot for visual interpreataion of results if lshowplot=TRUE
   # parameters
-  techcolor="darkorange"
-  casecolor="dodgerblue"
+  techcolor="darksalmon"
+  casecolor="darkgreen"
   if(lshowplot){
     # Create multiple plot table
     par(mfcol=c(n.app.fun,1)) # dimensions of plot, the raw number is equal
-                               # to the number of appropriateness functions
-    par(mar = c(3, 3, 3, 2), oma = c(2, 1, 2, 4)) # margins for plot window
+                               #   to the number of appropriateness functions
+    par(mar = c(4, 4, 4, 2), oma = c(2, 1, 2, 4)) # margins for plot window
   }
   
   # ****Finally its gowing to becoming interesting: Compute the attribute appropriateness scores and profiles
   # This loup provides the techapp.profiles using a function to integrate the tech and case app functions by sampling (see mc.integrate.R)
-  
-  #initiating a pdf plot
-  pdf(file=paste("C:/Users/gundlajo/Code/plots/","techapp.score - ",casename,", ",techname,".pdf"),width=7,height=9)
-  par(mfrow=(c(3,1)), oma=c(2,1,2,4))
-  
   for(attr in names(tech$app.fun)){
     # Check that this attribute also exist in case$app.fun, otherwise skip
     if (attr %in% names(case$app.fun)){
@@ -73,7 +67,6 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
       f2 = case$app.fun[[attr]]
       attrapp.score = mc.integrate(f1,f2)
       techapp.profile = c(techapp.profile, attrapp.score)
-
       
   # Now create the plots for visual analysis of the results (only if lshowplot=TRUE)
     if(lshowplot){
@@ -92,29 +85,22 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
       if (Xmaxcase>=maxxlim) Xmaxcase=0.0001 # if tech$app.fun is const until Inf set Xmaxcase to very small in order not to be considered
       Xmaxplot=max(Xmaxtech,Xmaxcase)+1 # set the higher of Xmaxcase and Xmactech as Xmax for plots
       # plot
-      plot(tech$app.fun[[attr]], main=paste(attr,"-","attrapp.score",attrapp.score), xlab=" ", ylab=" ", xlim=c(0,Xmaxplot), col=techcolor)
+      plot(tech$app.fun[[attr]], main=attr, xlab="x", ylab="tech.app.fun", xlim=c(0,Xmaxplot), col=techcolor)
       cex_label= par("cex")*par("cex.lab")
-      axis(side = 2,col=techcolor)
       par(new = T)
-      plot(case$app.fun[[attr]], col=casecolor, axes = FALSE, xlab = " ", ylab = " ",xlim=c(0,Xmaxplot))
-      axis(side = 4,col=casecolor)
-      legend(x="topleft",legend=c("caseapp.fun","techapp.fun"),col=c(casecolor,techcolor),
-             inset=.02, lwd=4, lty=c(1,1))
-      
-      
-      # Compute total technology appropriatness score 
-      l=length(techapp.profile)
-      techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
-      
-
-    }
-    
+      plot(case$app.fun[[attr]], col=casecolor, axes = FALSE, xlab = "x", ylab = "",xlim=c(0,Xmaxplot))
+      axis(side = 4)
+      mtext("case.app.fun", side = 4, line=3,cex = cex_label)
+      }
     }
   }
-
-  
-  title(paste(techname,", ",casename,"- techapp.score",techapp.score), outer=TRUE)
-  dev.off() #beenden des pdf plots
+    ## Make multiplot title and legend
+    if(lshowplot) {
+      mtext(paste(techname,", ",casename), outer = TRUE )
+      #place text in the lower right corner of the graphic ("legend")
+      mtext("- tech.app.fun                             ", col=techcolor, outer=TRUE, side=1, adj=1, line=-1, cex=cex_label)
+      mtext("- case.app.fun", col=casecolor, outer=TRUE, side=1, adj=1, line=-1, cex=cex_label)
+    }
   
   # Compute total technology appropriatness score 
   l=length(techapp.profile)
@@ -124,7 +110,5 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   techapp.profile=setNames(techapp.profile,attr.names)
   techapp.data=list(case=casename, tech=techname, techapp.score=techapp.score, techapp.profile=as.list(techapp.profile))
   techapp.data
-  
-
 }
 
