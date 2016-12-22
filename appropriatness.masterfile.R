@@ -33,33 +33,8 @@ source("compute.techapplist.r") # Returns a list of app.profiles & app.score for
   # compute.techapplist(techlist, caselist, listsep=" ", filename="")
 source("techapplist.write.r") # writes applist either to screen or to a file if listsep and filename are provided
  # function(applist, listsep=" ", filename="") 
-
-## ==============================================================================================
-# MANAGMENT OF THE MODEL
-#------------------------------------------
-# I use bitbucket to store the model as well as to share it and manage edits.
-# The adress is: https://spuhler@bitbucket.org/spuhler/appropriateness.git
-#------------------------------------------
-# USING BITBUCKET
-#...To install
-# - Make an account and send the username to Dorothee
-# - Get invited by Dorothee to the repository
-# - Make fork (under "Actions" in Overview)
-# - Go to the copy of the repository in the fork
-# - Copy the https string "https:..."
-# - Open the terminal
-# - Go to the folder where you want to work in the future (e.g. cd User/Modelling)
-# - Create a local clone: git clone "https..." -> this will create a folder with all the required documents. This will create a folder with the "originalname" of the repository (e.g. "Appropriateness")
-# - Got to the folder: cd originalname
-# - Create your branch to work on e.g. git branch newname (e.g. "AppropriatnessJoel")
-# - Go to your branch: git checkout  branchnewname
-
-# During work with fork:
-# - Open the terminal and go to your working directory (e,g, cd User/Modelling/Appropriatness).
-# - Check if there are any updates: git status
-# - Commit the changes you made git commit filename -m "message" (-a for "all")
-# - Push the changes you made to the repository only git push origin branchnewname (e.g. AppropriatenessJoel)
-# - If you would like to update your files to the changes on bitbucket, use: git pull origin branchnewman - This will replace the content of your folder with the one online, so only pull if this is what you want to do
+source("compute.sysapp.by.product.r")
+source("compute.sysapp.by.mean.r")
 
 
 ## ==============================================================================================
@@ -265,9 +240,17 @@ techapplist.write(techapplist_daniel)
 techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
 
 
-
 ## ==============================================================================================
 # Test sysappscores
-syslist_test<-build.syslist("sysdata_test.csv")
+source("build.syslist.r")  
+caselist<- build.list("casedata_demo.csv")
+techlist<- build.list("techdata_demo.csv")
+sysliste_demo <- build.syslist("sysdata_demo.csv")
+applist_demo=list()
+applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
+
+sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
+
+sysapplist_demo.mean<-compute.sysapp.by.mean(sysliste_demo,applist_demo)
 
 
