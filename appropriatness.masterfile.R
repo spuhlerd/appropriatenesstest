@@ -160,7 +160,7 @@ applist_demo=append(applist_demo,list(app.item.tmp))
 ## ==============================================================================================
 # COMPUTE ENTIRE apppropriateness proiles FOR A LIST OF TECHNOLOGIES AND A LIST OF CASES IN ONE GO
 # Using compute.techapplist 
-applist_demo<-compute.techapplist(caselist_demo,techlist_demo,lsort=TRUE,lshowplot=F) # use lshowplot=F if
+applist_demo<-compute.techapplist(caselist_demo,techlist_demo,lsort=TRUE,lshowplot=T) # use lshowplot=F if
 #you are only interested in the results; the plots (displaying the appropriateness functions for each attribute) only help to understand what happens
 
 ## ==============================================================================================
