@@ -45,7 +45,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
     return(techapp.data)
   }
   
-  ## Prepare plot for visual interpretaion of results if lshowplot=TRUE
+  ## Prepare plot for visual interpretation of results if lshowplot=TRUE
   # parameters
   techcolor="darkorange"
   casecolor="dodgerblue"
@@ -60,7 +60,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   # This loup provides the techapp.profiles using a function to integrate the tech and case app functions by sampling (see mc.integrate.R)
   
   #initiating a pdf plot
-  pdf(file=paste("/Users/dorotheespuhler/Dropbox\ (Personal)/PHD\ Dropbox/1\ MODELLING/R/Appropriateness/plots/","techapp.score - ",casename,", ",techname,".pdf"),width=7,height=9)
+  pdf(file=paste("C:/Users/Joel/Desktop/Joel model/Plots/","techapp.score - ",casename,", ",techname,".pdf"),width=7,height=9)
   par(mfrow=(c(3,1)), oma=c(2,1,2,4))
   
   for(attr in names(tech$app.fun)){
@@ -116,9 +116,9 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   title(paste(techname,", ",casename,"- techapp.score",techapp.score), outer=TRUE)
   dev.off() #beenden des pdf plots
   
-  # Compute total technology appropriatness score 
-  l=length(techapp.profile)
-  techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
+#  # Compute total technology appropriatness score 
+#  l=length(techapp.profile)
+#  techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
   
   ## Create a list with the results
   techapp.profile=setNames(techapp.profile,attr.names)
