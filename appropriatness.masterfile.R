@@ -12,6 +12,7 @@ library(ColorPalette)
 # Load required functions
 source("build.list.r")   # This function reads the technology and case input data stored in a csv file...
 # build.list(filename,n.info.row)
+source("build.syslist.r") 
 source("appfunctions.r") # contains functions that are not provided in R but can be used to compute attribute values
   # prange(x, lower=-Inf, upper=Inf)
   # drange(x, lower=-Inf, upper=Inf)
@@ -32,33 +33,8 @@ source("compute.techapplist.r") # Returns a list of app.profiles & app.score for
   # compute.techapplist(techlist, caselist, listsep=" ", filename="")
 source("techapplist.write.r") # writes applist either to screen or to a file if listsep and filename are provided
  # function(applist, listsep=" ", filename="") 
-
-## ==============================================================================================
-# MANAGMENT OF THE MODEL
-#------------------------------------------
-# I use bitbucket to store the model as well as to share it and manage edits.
-# The adress is: https://spuhler@bitbucket.org/spuhler/appropriateness.git
-#------------------------------------------
-# USING BITBUCKET
-#...To install
-# - Make an account and send the username to Dorothee
-# - Get invited by Dorothee to the repository
-# - Make fork (under "Actions" in Overview)
-# - Go to the copy of the repository in the fork
-# - Copy the https string "https:..."
-# - Open the terminal
-# - Go to the folder where you want to work in the future (e.g. cd User/Modelling)
-# - Create a local clone: git clone "https..." -> this will create a folder with all the required documents. This will create a folder with the "originalname" of the repository (e.g. "Appropriateness")
-# - Got to the folder: cd originalname
-# - Create your branch to work on e.g. git branch newname (e.g. "AppropriatnessJoel")
-# - Go to your branch: git checkout  branchnewname
-
-# During work with fork:
-# - Open the terminal and go to your working directory (e,g, cd User/Modelling/Appropriatness).
-# - Check if there are any updates: git status
-# - Commit the changes you made git commit filename -m "message" (-a for "all")
-# - Push the changes you made to the repository only git push origin branchnewname (e.g. AppropriatenessJoel)
-# - If you would like to update your files to the changes on bitbucket, use: git pull origin branchnewman - This will replace the content of your folder with the one online, so only pull if this is what you want to do
+source("compute.sysapp.by.product.r")
+source("compute.sysapp.by.mean.r")
 
 
 ## ==============================================================================================
@@ -95,34 +71,71 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
 ## EXAMPLES ON HOW TO USE THE MODEL TO EVALUATE TE APPROPRIATENESS OF TECHNOLOGIES IN SPEC.CASES
 ## ==============================================================================================
 # READ THE DATA INPUT FILES USING Bbuild.list TO GENERATE A TECHNOLOGY AND A CASE LIST
-caselist<- build.list("casedata_demo.csv")
-techlist<- build.list("techdata_demo.csv")
+caselist_demo<- build.list("casedata_demo.csv")
+techlist_demo<- build.list("techdata_demo.csv")
 
 ## ==============================================================================================
 # COMPUTE app.proiles FOR A PAIR OF TECH AND CASE (caselist$case, techlist$tech)
 # Using compute.techapp
 applist_demo=list()
 #arbaminch
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$uddt,lshowplot = TRUE)
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$uddt,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$dry.toilet,lshowplot = TRUE)
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$dry.toilet,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$pour.flush,lshowplot = TRUE)
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$pour.flush,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$arbaminch, techlist$urine.storagetank,lshowplot = TRUE)
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$urine.storagetank,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-#...
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$dehydration.vault,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$septic.tank,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$single.pit,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$double.pit,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$application.urine,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$application.faeces,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$testech,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$application.compost,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))                    
+                    
 #thimi
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$uddt,lshowplot = TRUE)
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$uddt,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist$thimi, techlist$pour.flush,lshowplot = TRUE)
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$dry.toilet,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-#...
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$pour.flush,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$urine.storagetank,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$dehydration.vault,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$septic.tank,lshowplot = TRUE)
+#provides an error as for the attr electricity thimi has dtriangle; while septic.tank has a pcat function
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$single.pit,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$double.pit,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$application.urine,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$application.faeces,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$testech,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))
+app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$application.compost,lshowplot = TRUE)
+applist_demo=append(applist_demo,list(app.item.tmp))      
+
 
 ## ==============================================================================================
 # COMPUTE ENTIRE apppropriateness proiles FOR A LIST OF TECHNOLOGIES AND A LIST OF CASES IN ONE GO
 # Using compute.techapplist 
-applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE) # use lshowplot=F if
+applist_demo<-compute.techapplist(caselist_demo,techlist_demo,lsort=TRUE,lshowplot=T) # use lshowplot=F if
 #you are only interested in the results; the plots (displaying the appropriateness functions for each attribute) only help to understand what happens
 
 ## ==============================================================================================
@@ -194,6 +207,7 @@ techlist_test<- build.list("techdata_test.csv")
 # Test one by one
 compute.techapp(caselist_test$arbaminch,techlist_test$T1.wsp, lshowplot=TRUE)
 compute.techapp(caselist_test$arbaminch,techlist_test$septic.tank, lshowplot=TRUE)
+compute.techapp(caselist_test$thimi,techlist_test$septic.tank, lshowplot=TRUE)
 
 # Compute entire list
 techapplist_test<-compute.techapplist(caselist_test,techlist_test,lsort=TRUE,lshowplot=TRUE)
@@ -226,7 +240,17 @@ techapplist.write(techapplist_daniel)
 techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
 
 
+## ==============================================================================================
+# Test sysappscores
+source("build.syslist.r")  
+caselist<- build.list("casedata_demo.csv")
+techlist<- build.list("techdata_demo.csv")
+sysliste_demo <- build.syslist("sysdata_demo.csv")
+applist_demo=list()
+applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
 
+sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
 
+sysapplist_demo.mean<-compute.sysapp.by.mean(sysliste_demo,applist_demo)
 
 

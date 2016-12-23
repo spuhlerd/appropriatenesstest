@@ -7,9 +7,9 @@ build.list <- function(filename,n.info.row=NULL){
   # info.rows have one item per row, attributes have three rows: name, function, and function variables
   
   dat <- read.table(filename, sep=";", stringsAsFactors=FALSE)
-  
+
   ll <- list()                          # list of technologies or cases
-  
+
   # determine n.inf.row if not specified as argument
   if (is.null(n.info.row)){
     if ("attr1" %in% dat[,1]){
@@ -44,4 +44,3 @@ build.list <- function(filename,n.info.row=NULL){
   ll
   
 }
-
