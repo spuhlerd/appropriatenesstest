@@ -1,6 +1,6 @@
 rm(list=ls())
 ## ==============================================================================================
-setwd("/Users/dorotheespuhler/Dropbox\ (Personal)/PHD\ Dropbox/1\ MODELLING/R/Appropriateness/")
+setwd("C:/Users/Joel/Desktop/Joel model/")
 
 # Load required library packages
 library(triangle) # extra package for triangular distribution
@@ -254,6 +254,40 @@ techapplist.write(techapplist_daniel)
 # Write to file
 techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
 
+
+
+
+
+##@@@@@@@@@@@@@@@@@@@@@@@@ joel test
+library(triangle) 
+library (trapezoid) 
+library(rlist)  
+library(gridExtra)
+library(ColorPalette)
+source("build.list.r")   
+source("appfunctions.r")
+source("mc.integrate.r") 
+source("compute.techapp.r") 
+source("compute.techapplist.r") 
+source("techapplist.write.r") 
+source("build.syslist.r")  
+caselist<- build.list("casedata_demo.csv")
+techlist<- build.list("techdata_demo.csv")
+sysliste_demo <- build.syslist("sysdata_demo.csv")
+applist_demo=list()
+applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
+source("compute.sysapp.by.product.r")
+sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
+source("compute.sysapp.by.mean.r")
+sysapplist_demo.mean<-compute.sysapp.by.mean(sysliste_demo,applist_demo)
+
+
+################   Joel sesitivity
+sensitivity=list()
+for (i in 1:10){
+  sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
+  sensitivity[[i]]=sysapplist_demo.prod
+}
 
 
 
