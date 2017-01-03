@@ -169,6 +169,21 @@ sub.applist=list.filter(applist, tech=="dry.toilet") # if we filter for dry toil
 sub.applist[[1]]$techapp.profile$temp 
 sub.applist[[2]]$techapp.profile$temp
 
+## ==============================================================================================
+# Compute sysappscores
+source("build.syslist.r")  
+
+syslist_demo <- build.syslist("sysdata_demo.csv")
+
+caselist<-caselist_demo
+techlist<-techlist_demo
+
+# by prod
+sysapplist_demo.prod<-compute.sysapp.by.product(syslist_demo,applist_demo)
+# by mean
+sysapplist_demo.mean<-compute.sysapp.by.mean(syslist_demo,applist_demo)
+#sysapplist.write(sysapplist_demo.mean)
+
 
 ## ==============================================================================================
 ## ==============================================================================================
@@ -240,17 +255,5 @@ techapplist.write(techapplist_daniel)
 techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
 
 
-## ==============================================================================================
-# Test sysappscores
-source("build.syslist.r")  
-caselist<- build.list("casedata_demo.csv")
-techlist<- build.list("techdata_demo.csv")
-sysliste_demo <- build.syslist("sysdata_demo.csv")
-applist_demo=list()
-applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
-
-sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
-
-sysapplist_demo.mean<-compute.sysapp.by.mean(sysliste_demo,applist_demo)
 
 
