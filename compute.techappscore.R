@@ -1,4 +1,4 @@
-compute.techapp= function(case, tech, lshowplot=FALSE){
+compute.techappscore= function(case, tech, lshowplot=FALSE){
   # This functions computes the attrapp.scores and the techapp.score for a tech in a given case
   # Usage
   # compute.techapp(case, tech, [lshowplot=FALSE])
@@ -60,7 +60,7 @@ compute.techapp= function(case, tech, lshowplot=FALSE){
   # This loup provides the techapp.profiles using a function to integrate the tech and case app functions by sampling (see mc.integrate.R)
   
   #initiating a pdf plot
-  pdf(file=paste("C:/Users/Joel/Desktop/Joel model/Plots/","techapp.score - ",casename,", ",techname,".pdf"),width=7,height=9)
+  pdf(file=paste0(getwd(),"/plots/","techapp.score - ",casename,", ",techname,".pdf"),width=7,height=9)
   par(mfrow=(c(3,1)), oma=c(2,1,2,4))
   
   for(attr in names(tech$app.fun)){

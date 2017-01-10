@@ -22,9 +22,9 @@ compute.techapplist= function(caselist, techlist, lsort=FALSE,lshowplot=FALSE){
       tech=techlist[[techname]]
       tech$techname=techname #add techname to the list
       if (lshowplot){
-        app.item.tmp <- compute.techapp(case, tech,lshowplot=TRUE)
+        app.item.tmp <- compute.techappscore(case, tech,lshowplot=TRUE)
       } else {
-        app.item.tmp <- compute.techapp(case, tech,lshowplot=FALSE)
+        app.item.tmp <- compute.techappscore(case, tech,lshowplot=FALSE)
       }
       appsublist=append(appsublist,list(app.item.tmp))
     }

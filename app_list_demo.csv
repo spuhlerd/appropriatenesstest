@@ -1,0 +1,8 @@
+case         ; tech  ; techapp.score ; techapp.profile 
+====================== 
+Only arbaminch  
+case           tech    techapp.score   techapp.profile 
+====================== 
+Only arbaminch and score > 0 
+case           tech    techapp.score   techapp.profile 
+case           tech    techapp.score   techapp.profile 

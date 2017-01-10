@@ -1,0 +1,146 @@
+case         ; tech  ; techapp.score ; techapp.profile 
+case           tech    techapp.score   techapp.profile 
+Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
+Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
+case           tech    techapp.score   techapp.profile 
+Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
+Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
+case           tech    techapp.score   techapp.profile 
+arbaminch      testech             1   temp = 1 
+arbaminch      application.compost        1   temp = 1 
+arbaminch      urine.storage.tank     0.99   temp = 0.99 
+arbaminch      dehydration.vault     0.99   temp = 0.99 
+arbaminch      application.faeces     0.95   temp = 0.95 
+arbaminch      double.pit       0.73   bod = 0.36 ,  water = 1 ,  temp = 1 ,  omskil = 0.8 
+arbaminch      uddt             0.67   temp = 1 ,  omskil = 0.45 
+arbaminch      dry.toilet       0.58   water = 1 ,  temp = 0.99 ,  omskil = 0.2 
+arbaminch      pour.flush       0.45   omskil = 0.45 
+arbaminch      single.pit       0.42   bod = 0.22 ,  omskil = 0.8 
+arbaminch      application.urine     0.35   bod = 0.35 
+arbaminch      septic.tank      0.23   bod = 0.0039 ,  water = 0.96 ,  temp = 0.99 ,  electricity = 0.7 
+thimi          testech             1   temp = 1 
+thimi          application.compost        1   temp = 1 
+thimi          urine.storage.tank     0.99   temp = 0.99 
+thimi          dehydration.vault     0.99   temp = 0.99 
+thimi          application.faeces     0.95   temp = 0.95 
+thimi          uddt             0.57   temp = 1 ,  omskil = 0.33 
+thimi          double.pit       0.56   bod = 0.13 ,  water = 1 ,  temp = 1 ,  omskil = 0.75 
+thimi          dry.toilet       0.43   water = 0.99 ,  temp = 0.99 ,  omskil = 0.08 
+thimi          pour.flush       0.33   omskil = 0.33 
+thimi          single.pit       0.19   bod = 0.048 ,  omskil = 0.75 
+thimi          application.urine     0.13   bod = 0.13 
+thimi          septic.tank         0   bod = 0 ,  water = 0.92 ,  temp = 0.99 ,  electricity = 0.9 
+case           tech    techapp.score   techapp.profile 
+arbaminch      testech             1   temp = 1 
+arbaminch      application.compost        1   temp = 1 
+arbaminch      urine.storage.tank     0.99   temp = 0.99 
+arbaminch      dehydration.vault     0.99   temp = 0.99 
+arbaminch      application.faeces     0.95   temp = 0.95 
+arbaminch      double.pit       0.73   bod = 0.36 ,  water = 1 ,  temp = 1 ,  omskil = 0.8 
+arbaminch      uddt             0.67   temp = 1 ,  omskil = 0.45 
+arbaminch      dry.toilet       0.58   water = 1 ,  temp = 0.99 ,  omskil = 0.2 
+arbaminch      pour.flush       0.45   omskil = 0.45 
+arbaminch      single.pit       0.42   bod = 0.22 ,  omskil = 0.8 
+arbaminch      application.urine     0.35   bod = 0.35 
+arbaminch      septic.tank      0.23   bod = 0.0039 ,  water = 0.96 ,  temp = 0.99 ,  electricity = 0.7 
+thimi          testech             1   temp = 1 
+thimi          application.compost        1   temp = 1 
+thimi          urine.storage.tank     0.99   temp = 0.99 
+thimi          dehydration.vault     0.99   temp = 0.99 
+thimi          application.faeces     0.95   temp = 0.95 
+thimi          uddt             0.57   temp = 1 ,  omskil = 0.33 
+thimi          double.pit       0.56   bod = 0.13 ,  water = 1 ,  temp = 1 ,  omskil = 0.75 
+thimi          dry.toilet       0.43   water = 0.99 ,  temp = 0.99 ,  omskil = 0.08 
+thimi          pour.flush       0.33   omskil = 0.33 
+thimi          single.pit       0.19   bod = 0.048 ,  omskil = 0.75 
+thimi          application.urine     0.13   bod = 0.13 
+thimi          septic.tank         0   bod = 0 ,  water = 0.92 ,  temp = 0.99 ,  electricity = 0.9 
+Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
+arbaminch    sys1         0.45   temp = 1 ,  omskil = 0.44                       urine.storage.tank = 0.99 ,  uddt = 0.67 ,  pour.flush = 0.45   
+arbaminch    sys2         0.35   water = 1 ,  temp = 0.99 ,  omskil = 0.2        urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.73 ,  dry.toilet = 0.58 ,  septic.tank = 0.23   
+arbaminch    sys3         0.27   omskil = 0.46                                   uddt = 0.67 ,  dry.toilet = 0.58 ,  pour.flush = 0.45 ,  single.pit = 0.42   
+arbaminch    sys4          0.6   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.23   
+arbaminch    sys5         0.57   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.73 ,  application.urine = 0.35   
+arbaminch    sys6        0.093   bod = 0.0044 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.73 ,  application.urine = 0.35 ,  septic.tank = 0.23   
+thimi        sys1         0.33   temp = 1 ,  omskil = 0.34                       urine.storage.tank = 0.99 ,  uddt = 0.57 ,  pour.flush = 0.33   
+thimi        sys2            0   water = 0.99 ,  temp = 0.99 ,  omskil = 0.081   urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.56 ,  dry.toilet = 0.43 ,  septic.tank = 0   
+thimi        sys3            0   omskil = 0.34                                   uddt = 0.57 ,  dry.toilet = 0.43 ,  pour.flush = 0.33 ,  single.pit = 0.19   
+thimi        sys4            0   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0   
+thimi        sys5            0   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.56 ,  application.urine = 0.13   
+thimi        sys6            0   bod = 0 ,  water = 0.91 ,  temp = 0.99          double.pit = 0.56 ,  application.urine = 0.13 ,  septic.tank = 0   
+Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
+arbaminch    sys1         0.52   temp = 1 ,  omskil = 0.45                       urine.storage.tank = 0.99 ,  uddt = 0.72 ,  pour.flush = 0.44   
+arbaminch    sys2          0.6   water = 1 ,  temp = 0.99 ,  omskil = 0.19       urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.79 ,  dry.toilet = 0.72 ,  septic.tank = 0.66   
+arbaminch    sys3         0.27   omskil = 0.45                                   uddt = 0.73 ,  dry.toilet = 0.73 ,  pour.flush = 0.46 ,  single.pit = 0.51   
+arbaminch    sys4         0.87   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.66   
+arbaminch    sys5         0.71   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.79 ,  application.urine = 0.36   
+arbaminch    sys6         0.39   bod = 0.0032 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.79 ,  application.urine = 0.36 ,  septic.tank = 0.66   
+thimi        sys1         0.44   temp = 1 ,  omskil = 0.34                       urine.storage.tank = 0.99 ,  uddt = 0.67 ,  pour.flush = 0.33   
+thimi        sys2         0.56   water = 0.99 ,  temp = 0.99 ,  omskil = 0.082   urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.72 ,  dry.toilet = 0.68 ,  septic.tank = 0.7   
+thimi        sys3         0.18   omskil = 0.35                                   uddt = 0.67 ,  dry.toilet = 0.69 ,  pour.flush = 0.34 ,  single.pit = 0.4   
+thimi        sys4         0.88   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.7   
+thimi        sys5         0.61   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.72 ,  application.urine = 0.13   
+thimi        sys6         0.32   bod = 1e-04 ,  water = 0.91 ,  temp = 0.99      double.pit = 0.72 ,  application.urine = 0.12 ,  septic.tank = 0.7   
+Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
+arbaminch    sys1         0.45   temp = 1 ,  omskil = 0.44                       urine.storage.tank = 0.99 ,  uddt = 0.67 ,  pour.flush = 0.45   
+arbaminch    sys2         0.35   water = 1 ,  temp = 0.99 ,  omskil = 0.2        urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.73 ,  dry.toilet = 0.58 ,  septic.tank = 0.23   
+arbaminch    sys3         0.27   omskil = 0.46                                   uddt = 0.67 ,  dry.toilet = 0.58 ,  pour.flush = 0.45 ,  single.pit = 0.42   
+arbaminch    sys4          0.6   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.23   
+arbaminch    sys5         0.57   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.73 ,  application.urine = 0.35   
+arbaminch    sys6        0.093   bod = 0.0044 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.73 ,  application.urine = 0.35 ,  septic.tank = 0.23   
+thimi        sys1         0.33   temp = 1 ,  omskil = 0.34                       urine.storage.tank = 0.99 ,  uddt = 0.57 ,  pour.flush = 0.33   
+thimi        sys2            0   water = 0.99 ,  temp = 0.99 ,  omskil = 0.081   urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.56 ,  dry.toilet = 0.43 ,  septic.tank = 0   
+thimi        sys3            0   omskil = 0.34                                   uddt = 0.57 ,  dry.toilet = 0.43 ,  pour.flush = 0.33 ,  single.pit = 0.19   
+thimi        sys4            0   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0   
+thimi        sys5            0   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.56 ,  application.urine = 0.13   
+thimi        sys6            0   bod = 0 ,  water = 0.91 ,  temp = 0.99          double.pit = 0.56 ,  application.urine = 0.13 ,  septic.tank = 0   
+case           tech    techapp.score   techapp.profile 
+arbaminch      testech             1   temp = 1 
+arbaminch      application.compost        1   temp = 1 
+arbaminch      urine.storage.tank     0.99   temp = 0.99 
+arbaminch      dehydration.vault     0.99   temp = 0.99 
+arbaminch      application.faeces     0.95   temp = 0.95 
+arbaminch      double.pit       0.73   bod = 0.36 ,  water = 1 ,  temp = 1 ,  omskil = 0.8 
+arbaminch      uddt             0.67   temp = 1 ,  omskil = 0.45 
+arbaminch      dry.toilet       0.58   water = 1 ,  temp = 0.99 ,  omskil = 0.2 
+arbaminch      pour.flush       0.45   omskil = 0.45 
+arbaminch      single.pit       0.42   bod = 0.22 ,  omskil = 0.8 
+arbaminch      application.urine     0.35   bod = 0.35 
+arbaminch      septic.tank      0.23   bod = 0.0039 ,  water = 0.96 ,  temp = 0.99 ,  electricity = 0.7 
+thimi          testech             1   temp = 1 
+thimi          application.compost        1   temp = 1 
+thimi          urine.storage.tank     0.99   temp = 0.99 
+thimi          dehydration.vault     0.99   temp = 0.99 
+thimi          application.faeces     0.95   temp = 0.95 
+thimi          uddt             0.57   temp = 1 ,  omskil = 0.33 
+thimi          double.pit       0.56   bod = 0.13 ,  water = 1 ,  temp = 1 ,  omskil = 0.75 
+thimi          dry.toilet       0.43   water = 0.99 ,  temp = 0.99 ,  omskil = 0.08 
+thimi          pour.flush       0.33   omskil = 0.33 
+thimi          single.pit       0.19   bod = 0.048 ,  omskil = 0.75 
+thimi          application.urine     0.13   bod = 0.13 
+thimi          septic.tank         0   bod = 0 ,  water = 0.92 ,  temp = 0.99 ,  electricity = 0.9 
+case           tech    techapp.score   techapp.profile 
+arbaminch      testech             1   temp = 1 
+arbaminch      application.compost        1   temp = 1 
+arbaminch      urine.storage.tank     0.99   temp = 0.99 
+arbaminch      dehydration.vault     0.99   temp = 0.99 
+arbaminch      application.faeces     0.95   temp = 0.95 
+arbaminch      double.pit       0.73   bod = 0.36 ,  water = 1 ,  temp = 1 ,  omskil = 0.8 
+arbaminch      uddt             0.67   temp = 1 ,  omskil = 0.45 
+arbaminch      dry.toilet       0.58   water = 1 ,  temp = 0.99 ,  omskil = 0.2 
+arbaminch      pour.flush       0.45   omskil = 0.45 
+arbaminch      single.pit       0.42   bod = 0.22 ,  omskil = 0.8 
+arbaminch      application.urine     0.35   bod = 0.35 
+arbaminch      septic.tank      0.23   bod = 0.0039 ,  water = 0.96 ,  temp = 0.99 ,  electricity = 0.7 
+thimi          testech             1   temp = 1 
+thimi          application.compost        1   temp = 1 
+thimi          urine.storage.tank     0.99   temp = 0.99 
+thimi          dehydration.vault     0.99   temp = 0.99 
+thimi          application.faeces     0.95   temp = 0.95 
+thimi          uddt             0.57   temp = 1 ,  omskil = 0.33 
+thimi          double.pit       0.56   bod = 0.13 ,  water = 1 ,  temp = 1 ,  omskil = 0.75 
+thimi          dry.toilet       0.43   water = 0.99 ,  temp = 0.99 ,  omskil = 0.08 
+thimi          pour.flush       0.33   omskil = 0.33 
+thimi          single.pit       0.19   bod = 0.048 ,  omskil = 0.75 
+thimi          application.urine     0.13   bod = 0.13 
+thimi          septic.tank         0   bod = 0 ,  water = 0.92 ,  temp = 0.99 ,  electricity = 0.9 

@@ -1,4 +1,4 @@
-;uddt;dry.toilet;pour.flush;urine.storagetank;dehydration.vault;septic.tank;single.pit;double.pit;application.urine;application.faeces;testech;application.compost
+;uddt;dry.toilet;pour.flush;urine.storage.tank;dehydration.vault;septic.tank;single.pit;double.pit;application.urine;application.faeces;testech;application.compost
 functional.group;U;U;U;S;S;S;S;S;D;D;D;D
 products; -> urine, faeces; -> excreta; -> blackwater;urine -> storedurine;faeces -> driedfaeces;blackwater, greywater -> sludge, effluent;excreta -> sludge;excreta -> pithumus;storedurine -> ;driedfaeces -> ;sludge, effluent -> ;compost, pithumus -> 
 ;;;;;;blackwater -> sludge, effluent;;;;;sludge -> ;pithumus -> 
