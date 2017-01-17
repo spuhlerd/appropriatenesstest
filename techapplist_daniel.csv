@@ -1,146 +1,2165 @@
-case         ; tech  ; techapp.score ; techapp.profile 
-case           tech    techapp.score   techapp.profile 
+case         ; tech              ; techapp.score ; techapp.profile 
 Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
+arbaminch    sys1            1   temp = 1                                        uddt = 1 ,  pour.flush = 1 ,  urine.storage.tank = 0.99   
+arbaminch    sys2         0.87   water = 1 ,  temp = 0.99                        dry.toilet = 0.99 ,  urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.79 ,  septic.tank = 0.65   
+arbaminch    sys3           NA    = NULL ,   =                                   uddt = 1 ,  pour.flush = 1 ,  dry.toilet = 0.99 ,  single.pit = 0.23   
+arbaminch    sys4         0.87   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.65   
+arbaminch    sys5         0.71   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.79 ,  application.urine = 0.37   
+arbaminch    sys6         0.39   bod = 0.0041 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.79 ,  septic.tank = 0.65 ,  application.urine = 0.37   
+thimi        sys1            1   temp = 1                                        uddt = 1 ,  pour.flush = 1 ,  urine.storage.tank = 0.99   
+thimi        sys2         0.85   water = 0.99 ,  temp = 0.99                     dehydration.vault = 0.99 ,  dry.toilet = 0.99 ,  urine.storage.tank = 0.99 ,  double.pit = 0.71 ,  septic.tank = 0.63   
+thimi        sys3           NA    = NULL ,   =                                   uddt = 1 ,  pour.flush = 1 ,  dry.toilet = 0.99 ,  single.pit = 0.045   
+thimi        sys4         0.86   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.63   
+thimi        sys5          0.6   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.71 ,  application.urine = 0.13   
+thimi        sys6         0.31   bod = 3e-04 ,  water = 0.91 ,  temp = 0.99      double.pit = 0.71 ,  septic.tank = 0.63 ,  application.urine = 0.13   
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ num 1
+ num 0.997
+ num [1:2] 0.997 0.989
+ num 0.987
+ num 0.986
+ num 0.0032
+ num [1:2] 0.0032 0.9619
+ num [1:3] 0.0032 0.9619 0.9878
+ num 0.23
+ num 0.353
+ num [1:2] 0.353 1
+ num [1:3] 0.353 1 1
+ num 0.364
+ num 0.95
+ num 1
+ num 1
+ num 1
+ num 0.988
+ num [1:2] 0.988 0.987
+ num 0.989
+ num 0.987
+ num 0
+ num [1:2] 0 0.916
+ num [1:3] 0 0.916 0.989
+ num 0.0457
+ num 0.127
+ num [1:2] 0.127 0.999
+ num [1:3] 0.127 0.999 1
+ num 0.123
+ num 0.95
+ num 1
+ num 1
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 1
+ int 2
+ int 1
+ int 1
+ int 1
+ int 2
+ int 3
+ int 1
+ int 1
+ int 2
+ int 3
+ int 1
+ int 1
+ int 1
+ int 1
+ int 1
+ int 1
+ int 2
+ int 1
+ int 1
+ int 1
+ int 2
+ int 3
+ int 1
+ int 1
+ int 2
+ int 3
+ int 1
+ int 1
+ int 1
+ int 1
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 2
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 2
+ chr "mean"
+ int 3
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 2
+ chr "mean"
+ int 3
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 2
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 2
+ chr "mean"
+ int 3
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 2
+ chr "mean"
+ int 3
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ chr "mean"
+ int 1
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ chr "mean"
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ chr "mean"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ chr "mean"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ chr "mean"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+ chr "product"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+ chr "mean"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ int 1
+ int 2
+ int 0
+ int 1
+ int 1
+ int 3
+ chr "product"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr [1:2] "-> urine" " faeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001670b3f8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a41de8> 
+ $ techname        : chr "uddt"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> excreta"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 3
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016a76610> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168c3140> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168d1b10> 
+ $ techname        : chr "dry.toilet"
+List of 6
+ $ functional.group: chr "U"
+ $ products        : chr "-> blackwater"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015103120> 
+ $ techname        : chr "pour.flush"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "urine-> storedurine"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000014e274c0> 
+ $ techname        : chr "urine.storage.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "faeces-> driedfaeces"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016370c58> 
+ $ techname        : chr "dehydration.vault"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr [1:3] "blackwater" "greywater -> sludge" " effluent"
+ $                 : chr [1:2] "blackwater-> sludge" " effluent"
+ $                 : chr [1:2] "greywater-> sludge" " effluent"
+ $ app.fun         :List of 4
+  ..$ bod        :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 49 1 49 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016050738> 
+  ..$ water      :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 56 1 56 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000168df048> 
+  ..$ temp       :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000162a4aa8> 
+  ..$ electricity:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 37 1 37 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001592d528> 
+ $ techname        : chr "septic.tank"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> sludge"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 2
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 45 1 45 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b17580> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016b26e08> 
+ $ techname        : chr "single.pit"
+List of 6
+ $ functional.group: chr "S"
+ $ products        : chr "excreta-> pithumus"
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 4
+  ..$ bod   :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015771c68> 
+  ..$ water :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000015780590> 
+  ..$ temp  :function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000160657b8> 
+  ..$ omskil:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x000000001538a568> 
+ $ techname        : chr "double.pit"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "storedurine-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ bod:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 44 1 44 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000167fba70> 
+ $ techname        : chr "application.urine"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr "driedfaeces-> "
+ $                 : chr(0) 
+ $                 : chr(0) 
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 43 1 43 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000012d89128> 
+ $ techname        : chr "application.faeces"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "sludge" "effluent -> "
+ $                 : chr "sludge-> "
+ $                 : chr "effluent-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x0000000016c34d88> 
+ $ techname        : chr "testech"
+List of 6
+ $ functional.group: chr "D"
+ $ products        : chr [1:2] "compost" "pithumus -> "
+ $                 : chr "pithumus-> "
+ $                 : chr "compost-> "
+ $ app.fun         :List of 1
+  ..$ temp:function (x)  
+  .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 1 1 1 42 1 42 1 1
+  .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x00000000151eb2b8> 
+ $ techname        : chr "application.compost"
+ num 1
+ num [1:2] 0.996 0.988
+ NULL
+ num 0.988
+ num 0.987
+ num [1:3] 0.0027 0.9627 0.9881
+ num 1
+ num [1:2] 0.99 0.988
+ NULL
+ num 0.987
+ num 0.989
+ num [1:3] 0.0003 0.9149 0.9857
 Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
-case           tech    techapp.score   techapp.profile 
-Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
-Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
-case           tech    techapp.score   techapp.profile 
-arbaminch      testech             1   temp = 1 
-arbaminch      application.compost        1   temp = 1 
-arbaminch      urine.storage.tank     0.99   temp = 0.99 
-arbaminch      dehydration.vault     0.99   temp = 0.99 
-arbaminch      application.faeces     0.95   temp = 0.95 
-arbaminch      double.pit       0.73   bod = 0.36 ,  water = 1 ,  temp = 1 ,  omskil = 0.8 
-arbaminch      uddt             0.67   temp = 1 ,  omskil = 0.45 
-arbaminch      dry.toilet       0.58   water = 1 ,  temp = 0.99 ,  omskil = 0.2 
-arbaminch      pour.flush       0.45   omskil = 0.45 
-arbaminch      single.pit       0.42   bod = 0.22 ,  omskil = 0.8 
-arbaminch      application.urine     0.35   bod = 0.35 
-arbaminch      septic.tank      0.23   bod = 0.0039 ,  water = 0.96 ,  temp = 0.99 ,  electricity = 0.7 
-thimi          testech             1   temp = 1 
-thimi          application.compost        1   temp = 1 
-thimi          urine.storage.tank     0.99   temp = 0.99 
-thimi          dehydration.vault     0.99   temp = 0.99 
-thimi          application.faeces     0.95   temp = 0.95 
-thimi          uddt             0.57   temp = 1 ,  omskil = 0.33 
-thimi          double.pit       0.56   bod = 0.13 ,  water = 1 ,  temp = 1 ,  omskil = 0.75 
-thimi          dry.toilet       0.43   water = 0.99 ,  temp = 0.99 ,  omskil = 0.08 
-thimi          pour.flush       0.33   omskil = 0.33 
-thimi          single.pit       0.19   bod = 0.048 ,  omskil = 0.75 
-thimi          application.urine     0.13   bod = 0.13 
-thimi          septic.tank         0   bod = 0 ,  water = 0.92 ,  temp = 0.99 ,  electricity = 0.9 
-case           tech    techapp.score   techapp.profile 
-arbaminch      testech             1   temp = 1 
-arbaminch      application.compost        1   temp = 1 
-arbaminch      urine.storage.tank     0.99   temp = 0.99 
-arbaminch      dehydration.vault     0.99   temp = 0.99 
-arbaminch      application.faeces     0.95   temp = 0.95 
-arbaminch      double.pit       0.73   bod = 0.36 ,  water = 1 ,  temp = 1 ,  omskil = 0.8 
-arbaminch      uddt             0.67   temp = 1 ,  omskil = 0.45 
-arbaminch      dry.toilet       0.58   water = 1 ,  temp = 0.99 ,  omskil = 0.2 
-arbaminch      pour.flush       0.45   omskil = 0.45 
-arbaminch      single.pit       0.42   bod = 0.22 ,  omskil = 0.8 
-arbaminch      application.urine     0.35   bod = 0.35 
-arbaminch      septic.tank      0.23   bod = 0.0039 ,  water = 0.96 ,  temp = 0.99 ,  electricity = 0.7 
-thimi          testech             1   temp = 1 
-thimi          application.compost        1   temp = 1 
-thimi          urine.storage.tank     0.99   temp = 0.99 
-thimi          dehydration.vault     0.99   temp = 0.99 
-thimi          application.faeces     0.95   temp = 0.95 
-thimi          uddt             0.57   temp = 1 ,  omskil = 0.33 
-thimi          double.pit       0.56   bod = 0.13 ,  water = 1 ,  temp = 1 ,  omskil = 0.75 
-thimi          dry.toilet       0.43   water = 0.99 ,  temp = 0.99 ,  omskil = 0.08 
-thimi          pour.flush       0.33   omskil = 0.33 
-thimi          single.pit       0.19   bod = 0.048 ,  omskil = 0.75 
-thimi          application.urine     0.13   bod = 0.13 
-thimi          septic.tank         0   bod = 0 ,  water = 0.92 ,  temp = 0.99 ,  electricity = 0.9 
-Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
-arbaminch    sys1         0.45   temp = 1 ,  omskil = 0.44                       urine.storage.tank = 0.99 ,  uddt = 0.67 ,  pour.flush = 0.45   
-arbaminch    sys2         0.35   water = 1 ,  temp = 0.99 ,  omskil = 0.2        urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.73 ,  dry.toilet = 0.58 ,  septic.tank = 0.23   
-arbaminch    sys3         0.27   omskil = 0.46                                   uddt = 0.67 ,  dry.toilet = 0.58 ,  pour.flush = 0.45 ,  single.pit = 0.42   
-arbaminch    sys4          0.6   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.23   
-arbaminch    sys5         0.57   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.73 ,  application.urine = 0.35   
-arbaminch    sys6        0.093   bod = 0.0044 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.73 ,  application.urine = 0.35 ,  septic.tank = 0.23   
-thimi        sys1         0.33   temp = 1 ,  omskil = 0.34                       urine.storage.tank = 0.99 ,  uddt = 0.57 ,  pour.flush = 0.33   
-thimi        sys2            0   water = 0.99 ,  temp = 0.99 ,  omskil = 0.081   urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.56 ,  dry.toilet = 0.43 ,  septic.tank = 0   
-thimi        sys3            0   omskil = 0.34                                   uddt = 0.57 ,  dry.toilet = 0.43 ,  pour.flush = 0.33 ,  single.pit = 0.19   
+arbaminch    sys1            1   temp = 1                                        uddt = 1 ,  pour.flush = 1 ,  urine.storage.tank = 0.99   
+arbaminch    sys2         0.73   water = 1 ,  temp = 0.99                        dry.toilet = 0.99 ,  urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.71 ,  septic.tank = 0.16   
+arbaminch    sys3         0.63    = NULL ,   =                                   uddt = 1 ,  pour.flush = 1 ,  dry.toilet = 0.99 ,  single.pit = 0.22   
+arbaminch    sys4         0.65   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.16   
+arbaminch    sys5         0.62   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.71 ,  application.urine = 0.36   
+arbaminch    sys6        0.098   bod = 0.0041 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.71 ,  application.urine = 0.36 ,  septic.tank = 0.16   
+thimi        sys1            1   temp = 1                                        uddt = 1 ,  pour.flush = 1 ,  urine.storage.tank = 0.99   
+thimi        sys2            0   water = 0.99 ,  temp = 0.99                     dry.toilet = 0.99 ,  urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.51 ,  septic.tank = 0   
+thimi        sys3            0    = NULL ,   =                                   uddt = 1 ,  pour.flush = 1 ,  dry.toilet = 0.99 ,  single.pit = 0.048   
 thimi        sys4            0   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0   
-thimi        sys5            0   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.56 ,  application.urine = 0.13   
-thimi        sys6            0   bod = 0 ,  water = 0.91 ,  temp = 0.99          double.pit = 0.56 ,  application.urine = 0.13 ,  septic.tank = 0   
+thimi        sys5            0   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.51 ,  application.urine = 0.13   
+thimi        sys6            0   bod = 0 ,  water = 0.91 ,  temp = 0.99          double.pit = 0.51 ,  application.urine = 0.13 ,  septic.tank = 0   
 Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
-arbaminch    sys1         0.52   temp = 1 ,  omskil = 0.45                       urine.storage.tank = 0.99 ,  uddt = 0.72 ,  pour.flush = 0.44   
-arbaminch    sys2          0.6   water = 1 ,  temp = 0.99 ,  omskil = 0.19       urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.79 ,  dry.toilet = 0.72 ,  septic.tank = 0.66   
-arbaminch    sys3         0.27   omskil = 0.45                                   uddt = 0.73 ,  dry.toilet = 0.73 ,  pour.flush = 0.46 ,  single.pit = 0.51   
-arbaminch    sys4         0.87   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.66   
-arbaminch    sys5         0.71   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.79 ,  application.urine = 0.36   
-arbaminch    sys6         0.39   bod = 0.0032 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.79 ,  application.urine = 0.36 ,  septic.tank = 0.66   
-thimi        sys1         0.44   temp = 1 ,  omskil = 0.34                       urine.storage.tank = 0.99 ,  uddt = 0.67 ,  pour.flush = 0.33   
-thimi        sys2         0.56   water = 0.99 ,  temp = 0.99 ,  omskil = 0.082   urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.72 ,  dry.toilet = 0.68 ,  septic.tank = 0.7   
-thimi        sys3         0.18   omskil = 0.35                                   uddt = 0.67 ,  dry.toilet = 0.69 ,  pour.flush = 0.34 ,  single.pit = 0.4   
-thimi        sys4         0.88   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.7   
-thimi        sys5         0.61   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.72 ,  application.urine = 0.13   
-thimi        sys6         0.32   bod = 1e-04 ,  water = 0.91 ,  temp = 0.99      double.pit = 0.72 ,  application.urine = 0.12 ,  septic.tank = 0.7   
-Case        System    sysappscore   sysattrapp.profile                              systechapp.profile 
-arbaminch    sys1         0.45   temp = 1 ,  omskil = 0.44                       urine.storage.tank = 0.99 ,  uddt = 0.67 ,  pour.flush = 0.45   
-arbaminch    sys2         0.35   water = 1 ,  temp = 0.99 ,  omskil = 0.2        urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.73 ,  dry.toilet = 0.58 ,  septic.tank = 0.23   
-arbaminch    sys3         0.27   omskil = 0.46                                   uddt = 0.67 ,  dry.toilet = 0.58 ,  pour.flush = 0.45 ,  single.pit = 0.42   
-arbaminch    sys4          0.6   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.23   
-arbaminch    sys5         0.57   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.73 ,  application.urine = 0.35   
-arbaminch    sys6        0.093   bod = 0.0044 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.73 ,  application.urine = 0.35 ,  septic.tank = 0.23   
-thimi        sys1         0.33   temp = 1 ,  omskil = 0.34                       urine.storage.tank = 0.99 ,  uddt = 0.57 ,  pour.flush = 0.33   
-thimi        sys2            0   water = 0.99 ,  temp = 0.99 ,  omskil = 0.081   urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.56 ,  dry.toilet = 0.43 ,  septic.tank = 0   
-thimi        sys3            0   omskil = 0.34                                   uddt = 0.57 ,  dry.toilet = 0.43 ,  pour.flush = 0.33 ,  single.pit = 0.19   
+arbaminch    sys1            1   temp = 1                                        uddt = 1 ,  pour.flush = 1 ,  urine.storage.tank = 0.99   
+arbaminch    sys2         0.73   water = 1 ,  temp = 0.99                        dry.toilet = 0.99 ,  urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.71 ,  septic.tank = 0.16   
+arbaminch    sys3         0.63    = NULL ,   =                                   uddt = 1 ,  pour.flush = 1 ,  dry.toilet = 0.99 ,  single.pit = 0.22   
+arbaminch    sys4         0.65   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0.16   
+arbaminch    sys5         0.62   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.71 ,  application.urine = 0.36   
+arbaminch    sys6        0.098   bod = 0.0041 ,  water = 0.96 ,  temp = 0.99     double.pit = 0.71 ,  application.urine = 0.36 ,  septic.tank = 0.16   
+thimi        sys1            1   temp = 1                                        uddt = 1 ,  pour.flush = 1 ,  urine.storage.tank = 0.99   
+thimi        sys2            0   water = 0.99 ,  temp = 0.99                     dry.toilet = 0.99 ,  urine.storage.tank = 0.99 ,  dehydration.vault = 0.99 ,  double.pit = 0.51 ,  septic.tank = 0   
+thimi        sys3            0    = NULL ,   =                                   uddt = 1 ,  pour.flush = 1 ,  dry.toilet = 0.99 ,  single.pit = 0.048   
 thimi        sys4            0   temp = 0.99                                     application.compost = 1 ,  dehydration.vault = 0.99 ,  septic.tank = 0   
-thimi        sys5            0   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.56 ,  application.urine = 0.13   
-thimi        sys6            0   bod = 0 ,  water = 0.91 ,  temp = 0.99          double.pit = 0.56 ,  application.urine = 0.13 ,  septic.tank = 0   
-case           tech    techapp.score   techapp.profile 
-arbaminch      testech             1   temp = 1 
-arbaminch      application.compost        1   temp = 1 
-arbaminch      urine.storage.tank     0.99   temp = 0.99 
-arbaminch      dehydration.vault     0.99   temp = 0.99 
-arbaminch      application.faeces     0.95   temp = 0.95 
-arbaminch      double.pit       0.73   bod = 0.36 ,  water = 1 ,  temp = 1 ,  omskil = 0.8 
-arbaminch      uddt             0.67   temp = 1 ,  omskil = 0.45 
-arbaminch      dry.toilet       0.58   water = 1 ,  temp = 0.99 ,  omskil = 0.2 
-arbaminch      pour.flush       0.45   omskil = 0.45 
-arbaminch      single.pit       0.42   bod = 0.22 ,  omskil = 0.8 
-arbaminch      application.urine     0.35   bod = 0.35 
-arbaminch      septic.tank      0.23   bod = 0.0039 ,  water = 0.96 ,  temp = 0.99 ,  electricity = 0.7 
-thimi          testech             1   temp = 1 
-thimi          application.compost        1   temp = 1 
-thimi          urine.storage.tank     0.99   temp = 0.99 
-thimi          dehydration.vault     0.99   temp = 0.99 
-thimi          application.faeces     0.95   temp = 0.95 
-thimi          uddt             0.57   temp = 1 ,  omskil = 0.33 
-thimi          double.pit       0.56   bod = 0.13 ,  water = 1 ,  temp = 1 ,  omskil = 0.75 
-thimi          dry.toilet       0.43   water = 0.99 ,  temp = 0.99 ,  omskil = 0.08 
-thimi          pour.flush       0.33   omskil = 0.33 
-thimi          single.pit       0.19   bod = 0.048 ,  omskil = 0.75 
-thimi          application.urine     0.13   bod = 0.13 
-thimi          septic.tank         0   bod = 0 ,  water = 0.92 ,  temp = 0.99 ,  electricity = 0.9 
-case           tech    techapp.score   techapp.profile 
-arbaminch      testech             1   temp = 1 
-arbaminch      application.compost        1   temp = 1 
-arbaminch      urine.storage.tank     0.99   temp = 0.99 
-arbaminch      dehydration.vault     0.99   temp = 0.99 
-arbaminch      application.faeces     0.95   temp = 0.95 
-arbaminch      double.pit       0.73   bod = 0.36 ,  water = 1 ,  temp = 1 ,  omskil = 0.8 
-arbaminch      uddt             0.67   temp = 1 ,  omskil = 0.45 
-arbaminch      dry.toilet       0.58   water = 1 ,  temp = 0.99 ,  omskil = 0.2 
-arbaminch      pour.flush       0.45   omskil = 0.45 
-arbaminch      single.pit       0.42   bod = 0.22 ,  omskil = 0.8 
-arbaminch      application.urine     0.35   bod = 0.35 
-arbaminch      septic.tank      0.23   bod = 0.0039 ,  water = 0.96 ,  temp = 0.99 ,  electricity = 0.7 
-thimi          testech             1   temp = 1 
-thimi          application.compost        1   temp = 1 
-thimi          urine.storage.tank     0.99   temp = 0.99 
-thimi          dehydration.vault     0.99   temp = 0.99 
-thimi          application.faeces     0.95   temp = 0.95 
-thimi          uddt             0.57   temp = 1 ,  omskil = 0.33 
-thimi          double.pit       0.56   bod = 0.13 ,  water = 1 ,  temp = 1 ,  omskil = 0.75 
-thimi          dry.toilet       0.43   water = 0.99 ,  temp = 0.99 ,  omskil = 0.08 
-thimi          pour.flush       0.33   omskil = 0.33 
-thimi          single.pit       0.19   bod = 0.048 ,  omskil = 0.75 
-thimi          application.urine     0.13   bod = 0.13 
-thimi          septic.tank         0   bod = 0 ,  water = 0.92 ,  temp = 0.99 ,  electricity = 0.9 
+thimi        sys5            0   temp = 0.99                                     application.compost = 1 ,  double.pit = 0.51 ,  application.urine = 0.13   
+thimi        sys6            0   bod = 0 ,  water = 0.91 ,  temp = 0.99          double.pit = 0.51 ,  application.urine = 0.13 ,  septic.tank = 0   

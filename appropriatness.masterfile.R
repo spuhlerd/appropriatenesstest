@@ -241,18 +241,6 @@ techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.
 
 
 ## ==============================================================================================
-# Test sysappscores
-source("build.syslist.r")  
-caselist<- build.list("casedata_demo.csv")
-techlist<- build.list("techdata_demo.csv")
-sysliste_demo <- build.syslist("sysdata_demo.csv")
-applist_demo=list()
-applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
-
-sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
-
-sysapplist_demo.mean<-compute.sysapp.by.mean(sysliste_demo,applist_demo)
-
 
 
 ##@@@@@@@@@@@@@@@@@@@@@@@@ joel test
@@ -268,27 +256,34 @@ source("compute.techappscore.r")
 source("compute.techapplist.r") 
 source("techapplist.write.r") 
 source("build.syslist.r")
+source("sysapplist.write.r")  
 caselist<- build.list("casedata_demo.csv")
 techlist<- build.list("techdata_demo.csv")
-syslist_demo <- build.syslist("sysdata_demo.csv")
-applist_demo=list()
-applist_demo<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE)
-source("compute.sysappscore.by.product.r")
-sysapplist_demo.prod<-compute.sysappscore.by.product(syslist_demo,applist_demo)
-source("compute.sysappscore.by.mean.r")
-sysapplist_demo.mean<-compute.sysappscore.by.mean(syslist_demo,applist_demo)
+syslist<- build.syslist("sysdata_demo.csv")
+source("compute.sysapplist.r")
+sysapplist<-compute.sysapplist(syslist,caselist,techlist,lsort=T,lshowplot=FALSE,lpdfplot=TRUE,aggmethod="mean")
+sysapplist.write(sysapplist)
+
 # Write to screen
+techapplist<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE,lpdfplot=TRUE,aggmethod="mean")
 source("techapplist.write.r")  
-techapplist.write(applist_demo)
+techapplist.write(techapplist)
+
+
+## mean/prod getrennt
+source("compute.sysappscore.by.product.r")
+sysapplist_demo.prod<-compute.sysappscore.by.product(syslist,applist)
+source("compute.sysappscore.by.mean.r")
+sysapplist_demo.mean<-compute.sysappscore.by.mean(syslist,applist)
+
 source("sysapplist.write.r")  
 sysapplist.write(sysapplist_demo.prod)
 sysapplist.write(sysapplist_demo.mean)
+
+
+
+compute.techappscore(caselist$arbaminch,techlist$dry.toilet, lshowplot=TRUE,lpdfplot=F,aggmethod = "product")
 ################   Joel sesitivity
-sensitivity=list()
-for (i in 1:10){
-  sysapplist_demo.prod<-compute.sysapp.by.product(sysliste_demo,applist_demo)
-  sensitivity[[i]]=sysapplist_demo.prod
-}
 
 
 

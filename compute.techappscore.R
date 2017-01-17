@@ -1,4 +1,4 @@
-compute.techappscore= function(case, tech, lshowplot=FALSE){
+compute.techappscore= function(case,tech,lshowplot,lpdfplot,aggmethod){
   # This functions computes the attrapp.scores and the techapp.score for a tech in a given case
   # Usage
   # compute.techapp(case, tech, [lshowplot=FALSE])
@@ -49,20 +49,21 @@ compute.techappscore= function(case, tech, lshowplot=FALSE){
   # parameters
   techcolor="darkorange"
   casecolor="dodgerblue"
-  if(lshowplot){
+  
+  if(lshowplot==TRUE){
     # Create multiple plot table
-    par(mfcol=c(n.app.fun,1)) # dimensions of plot, the raw number is equal
-                               # to the number of appropriateness functions
+    par(mfcol=c(n.app.fun,1)) # dimensions of plot, the raw number is equal to the number of appropriateness functions
     par(mar = c(3, 3, 3, 2), oma = c(2, 1, 2, 4)) # margins for plot window
   }
-  
+  if(lpdfplot==TRUE){
+    #initiating a pdf plot
+    pdf(file=paste0(getwd(),"/plots/","techapp.score - ",casename,", ",techname,".pdf"),width=7,height=9)
+    par(mfrow=(c(3,1)), oma=c(2,1,2,4))
+  }
   # ****Finally its gowing to becoming interesting: Compute the attribute appropriateness scores and profiles
   # This loup provides the techapp.profiles using a function to integrate the tech and case app functions by sampling (see mc.integrate.R)
   
-  #initiating a pdf plot
-  pdf(file=paste0(getwd(),"/plots/","techapp.score - ",casename,", ",techname,".pdf"),width=7,height=9)
-  par(mfrow=(c(3,1)), oma=c(2,1,2,4))
-  
+
   for(attr in names(tech$app.fun)){
     # Check that this attribute also exist in case$app.fun, otherwise skip
     if (attr %in% names(case$app.fun)){
@@ -74,57 +75,84 @@ compute.techappscore= function(case, tech, lshowplot=FALSE){
       attrapp.score = mc.integrate(f1,f2)
       techapp.profile = c(techapp.profile, attrapp.score)
 
-      
   # Now create the plots for visual analysis of the results (only if lshowplot=TRUE)
-    if(lshowplot){
-     # define plot xlim using max value
-      maxxlim=40000 # max possible value
-      xval=seq(0,maxxlim,1) # vector of values to evaluate the last non-zero point in the intevall 1:maxxlim
-      # only used for plotting as not precise because uses only integer values
-      # for functions with max smaller than 1, put 0.1 as intervall in seq
-       techval=tech$app.fun[[attr]](xval) # computing tech$app.fun for xval
-      caseval=case$app.fun[[attr]](xval) # computing case$app.fun for xval
-      Xmaxtech=xval[max(which(techval>0))]   # find the highest xval for which techval is nonzero
-      # in case of warning message "In max(which(techval > 0)) : no non-missing arguments to max; returning -Inf", you need to increase maxlim
-      if (Xmaxtech>=maxxlim) Xmaxtech=0.0001 # if tech$app.fun is const until Inf set Xmaxtech to very small in order not to be considered
-      Xmaxcase=xval[max(which(caseval>0))]   # find the highest xval for which caseval is nonzero
-      # in case of warning message "In max(which(caseval > 0)) : no non-missing arguments to max; returning -Inf", you need to increase maxlim
-      if (Xmaxcase>=maxxlim) Xmaxcase=0.0001 # if tech$app.fun is const until Inf set Xmaxcase to very small in order not to be considered
-      Xmaxplot=max(Xmaxtech,Xmaxcase)+1 # set the higher of Xmaxcase and Xmactech as Xmax for plots
-      # plot
-      plot(tech$app.fun[[attr]], main=paste(attr,"-","attrapp.score",attrapp.score), xlab=" ", ylab=" ", xlim=c(0,Xmaxplot), col=techcolor)
-      cex_label= par("cex")*par("cex.lab")
-      axis(side = 2,col=techcolor)
-      par(new = T)
-      plot(case$app.fun[[attr]], col=casecolor, axes = FALSE, xlab = " ", ylab = " ",xlim=c(0,Xmaxplot))
-      axis(side = 4,col=casecolor)
-      legend(x="topleft",legend=c("caseapp.fun","techapp.fun"),col=c(casecolor,techcolor),
-             inset=.02, lwd=4, lty=c(1,1))
-      
-      
+
       # Compute total technology appropriatness score 
+      if(aggmethod=="product"){
       l=length(techapp.profile)
       techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
-      
 
+      }
+      if(aggmethod=="mean"){
+        techapp.score=mean(techapp.profile)
+      }
+      if(lshowplot==TRUE){
+        # define plot xlim using max value
+        maxxlim=40000 # max possible value
+        xval=seq(0,maxxlim,1) # vector of values to evaluate the last non-zero point in the intevall 1:maxxlim
+        # only used for plotting as not precise because uses only integer values
+        # for functions with max smaller than 1, put 0.1 as intervall in seq
+        techval=tech$app.fun[[attr]](xval) # computing tech$app.fun for xval
+        caseval=case$app.fun[[attr]](xval) # computing case$app.fun for xval
+        Xmaxtech=xval[max(which(techval>0))]   # find the highest xval for which techval is nonzero
+        # in case of warning message "In max(which(techval > 0)) : no non-missing arguments to max; returning -Inf", you need to increase maxlim
+        if (Xmaxtech>=maxxlim) Xmaxtech=0.0001 # if tech$app.fun is const until Inf set Xmaxtech to very small in order not to be considered
+        Xmaxcase=xval[max(which(caseval>0))]   # find the highest xval for which caseval is nonzero
+        # in case of warning message "In max(which(caseval > 0)) : no non-missing arguments to max; returning -Inf", you need to increase maxlim
+        if (Xmaxcase>=maxxlim) Xmaxcase=0.0001 # if tech$app.fun is const until Inf set Xmaxcase to very small in order not to be considered
+        Xmaxplot=max(Xmaxtech,Xmaxcase)+1 # set the higher of Xmaxcase and Xmactech as Xmax for plots
+        # plot
+        plot(tech$app.fun[[attr]], main=paste(attr,"-","attrapp.score",attrapp.score), xlab=" ", ylab=" ", xlim=c(0,Xmaxplot), col=techcolor)
+        cex_label= par("cex")*par("cex.lab")
+        axis(side = 2,col=techcolor)
+        par(new = T)
+        plot(case$app.fun[[attr]], col=casecolor, axes = FALSE, xlab = " ", ylab = " ",xlim=c(0,Xmaxplot))
+        axis(side = 4,col=casecolor)
+        legend(x="topleft",legend=c("caseapp.fun","techapp.fun"),col=c(casecolor,techcolor),
+               inset=.02, lwd=4, lty=c(1,1))
+      }
+      if(lpdfplot==TRUE){
+        
+        # define plot xlim using max value
+        maxxlim=40000 # max possible value
+        xval=seq(0,maxxlim,1) # vector of values to evaluate the last non-zero point in the intevall 1:maxxlim
+        # only used for plotting as not precise because uses only integer values
+        # for functions with max smaller than 1, put 0.1 as intervall in seq
+        techval=tech$app.fun[[attr]](xval) # computing tech$app.fun for xval
+        caseval=case$app.fun[[attr]](xval) # computing case$app.fun for xval
+        Xmaxtech=xval[max(which(techval>0))]   # find the highest xval for which techval is nonzero
+        # in case of warning message "In max(which(techval > 0)) : no non-missing arguments to max; returning -Inf", you need to increase maxlim
+        if (Xmaxtech>=maxxlim) Xmaxtech=0.0001 # if tech$app.fun is const until Inf set Xmaxtech to very small in order not to be considered
+        Xmaxcase=xval[max(which(caseval>0))]   # find the highest xval for which caseval is nonzero
+        # in case of warning message "In max(which(caseval > 0)) : no non-missing arguments to max; returning -Inf", you need to increase maxlim
+        if (Xmaxcase>=maxxlim) Xmaxcase=0.0001 # if tech$app.fun is const until Inf set Xmaxcase to very small in order not to be considered
+        Xmaxplot=max(Xmaxtech,Xmaxcase)+1 # set the higher of Xmaxcase and Xmactech as Xmax for plots
+        # plot
+        plot(tech$app.fun[[attr]], main=paste(attr,"-","attrapp.score",attrapp.score), xlab=" ", ylab=" ", xlim=c(0,Xmaxplot), col=techcolor)
+        cex_label= par("cex")*par("cex.lab")
+        axis(side = 2,col=techcolor)
+        par(new = T)
+        plot(case$app.fun[[attr]], col=casecolor, axes = FALSE, xlab = " ", ylab = " ",xlim=c(0,Xmaxplot))
+        axis(side = 4,col=casecolor)
+        legend(x="topleft",legend=c("caseapp.fun","techapp.fun"),col=c(casecolor,techcolor),
+               inset=.02, lwd=4, lty=c(1,1))
+        
+    }  
     }
-    
-    }
+
+  }
+  if(length(techapp.profile)==0) {
+    techapp.score=1     # defines the techapp.score to be 1 if no attribute from this technology is listed in the casedata.
+    plot(1,1)
+    } 
+  if(lpdfplot==TRUE){
+    title(paste(techname,", ",casename,"- techapp.score",techapp.score), outer=TRUE)
+    dev.off() #beenden des pdf plots
   }
 
-  
-  title(paste(techname,", ",casename,"- techapp.score",techapp.score), outer=TRUE)
-  dev.off() #beenden des pdf plots
-  
-#  # Compute total technology appropriatness score 
-#  l=length(techapp.profile)
-#  techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
-  
   ## Create a list with the results
   techapp.profile=setNames(techapp.profile,attr.names)
   techapp.data=list(case=casename, tech=techname, techapp.score=techapp.score, techapp.profile=as.list(techapp.profile))
   techapp.data
-  
-
 }
 
