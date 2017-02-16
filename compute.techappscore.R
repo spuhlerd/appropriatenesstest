@@ -1,4 +1,4 @@
-compute.techappscore= function(case,tech,lshowplot,lpdfplot,aggmethod){
+compute.techappscore= function(case,tech,lshowplot,lpdfplot,aggmethod,n.sample){
   # This functions computes the attrapp.scores and the techapp.score for a tech in a given case
   # Usage
   # compute.techapp(case, tech, [lshowplot=FALSE])
@@ -58,13 +58,14 @@ compute.techappscore= function(case,tech,lshowplot,lpdfplot,aggmethod){
   if(lpdfplot==TRUE){
     #initiating a pdf plot
     pdf(file=paste0(getwd(),"/plots/","techapp.score - ",casename,", ",techname,".pdf"),width=7,height=9)
-    par(mfrow=(c(3,1)), oma=c(2,1,2,4))
+    par(mfrow=(c(4,2)), oma=c(2,1,2,4)) # margins for plot window
   }
   # ****Finally its gowing to becoming interesting: Compute the attribute appropriateness scores and profiles
   # This loup provides the techapp.profiles using a function to integrate the tech and case app functions by sampling (see mc.integrate.R)
   
 
   for(attr in names(tech$app.fun)){
+
     # Check that this attribute also exist in case$app.fun, otherwise skip
     if (attr %in% names(case$app.fun)){
       # Store attribute names
@@ -72,19 +73,19 @@ compute.techappscore= function(case,tech,lshowplot,lpdfplot,aggmethod){
       # Calculate app.score
       f1 = tech$app.fun[[attr]]
       f2 = case$app.fun[[attr]]
-      attrapp.score = mc.integrate(f1,f2)
+      attrapp.score = mc.integrate(f1,f2,n.sample)
       techapp.profile = c(techapp.profile, attrapp.score)
 
   # Now create the plots for visual analysis of the results (only if lshowplot=TRUE)
 
       # Compute total technology appropriatness score 
       if(aggmethod=="product"){
-      l=length(techapp.profile)
-      techapp.score=(prod(techapp.profile))^(1/l) # the normlized product of all attrapp.scores
+      l=length(na.omit(techapp.profile))
+      techapp.score=(prod(na.omit(techapp.profile)))^(1/l) # the normlized product of all attrapp.scores
 
       }
       if(aggmethod=="mean"){
-        techapp.score=mean(techapp.profile)
+        techapp.score=mean(na.omit(techapp.profile))
       }
       if(lshowplot==TRUE){
         # define plot xlim using max value
@@ -108,8 +109,8 @@ compute.techappscore= function(case,tech,lshowplot,lpdfplot,aggmethod){
         par(new = T)
         plot(case$app.fun[[attr]], col=casecolor, axes = FALSE, xlab = " ", ylab = " ",xlim=c(0,Xmaxplot))
         axis(side = 4,col=casecolor)
-        legend(x="topleft",legend=c("caseapp.fun","techapp.fun"),col=c(casecolor,techcolor),
-               inset=.02, lwd=4, lty=c(1,1))
+        legend(x="topleft",legend=c(paste("caseapp.fun=",c(case$app.fun[[attr]])),paste("techapp.fun=",c(tech$app.fun[[attr]]))),col=c(casecolor,techcolor),
+               inset=.02, lwd=3, lty=c(1,1),cex = 0.7,text.width = NULL, bty="n")
       }
       if(lpdfplot==TRUE){
         
@@ -134,16 +135,20 @@ compute.techappscore= function(case,tech,lshowplot,lpdfplot,aggmethod){
         par(new = T)
         plot(case$app.fun[[attr]], col=casecolor, axes = FALSE, xlab = " ", ylab = " ",xlim=c(0,Xmaxplot))
         axis(side = 4,col=casecolor)
-        legend(x="topleft",legend=c("caseapp.fun","techapp.fun"),col=c(casecolor,techcolor),
-               inset=.02, lwd=4, lty=c(1,1))
+        legend(x="topleft",legend=c(paste("caseapp.fun=",c(case$app.fun[[attr]])),paste("techapp.fun=",c(tech$app.fun[[attr]]))),col=c(casecolor,techcolor),
+               inset=.02, lwd=3, lty=c(1,1),cex = 0.7,text.width = NULL, bty="n")
         
     }  
     }
+    else{ 
+    techapp.profile = c(techapp.profile, NA)
+    attr.names=c(attr.names,attr)
+    }
 
   }
-  if(length(techapp.profile)==0) {
+  if(length(na.omit(techapp.profile))==0) {
     techapp.score=1     # defines the techapp.score to be 1 if no attribute from this technology is listed in the casedata.
-    plot(1,1)
+    plot.new()
     } 
   if(lpdfplot==TRUE){
     title(paste(techname,", ",casename,"- techapp.score",techapp.score), outer=TRUE)

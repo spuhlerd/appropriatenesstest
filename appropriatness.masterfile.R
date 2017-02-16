@@ -257,33 +257,25 @@ source("compute.techapplist.r")
 source("techapplist.write.r") 
 source("build.syslist.r")
 source("sysapplist.write.r")  
-caselist<- build.list("casedata_demo.csv")
-techlist<- build.list("techdata_demo.csv")
+caselist<- build.list("AppCase_Maria.csv")
+techlist<- build.list("TechOp_Maria.csv")
 syslist<- build.syslist("sysdata_demo.csv")
 source("compute.sysapplist.r")
-sysapplist<-compute.sysapplist(syslist,caselist,techlist,lsort=T,lshowplot=FALSE,lpdfplot=TRUE,aggmethod="mean")
+sysapplist<-compute.sysapplist(syslist,caselist,techlist,lsort=T,lshowplot=F,lpdfplot=F,aggmethod="mean")
 sysapplist.write(sysapplist)
 
 # Write to screen
-techapplist<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=TRUE,lpdfplot=TRUE,aggmethod="mean")
+techapplist<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=F,lpdfplot=F,aggmethod="mean")
 source("techapplist.write.r")  
-techapplist.write(techapplist)
+techapplist.write(techapplist, listsep=";", filename="techapplist_maria.csv")
 
 
-## mean/prod getrennt
-source("compute.sysappscore.by.product.r")
-sysapplist_demo.prod<-compute.sysappscore.by.product(syslist,applist)
-source("compute.sysappscore.by.mean.r")
-sysapplist_demo.mean<-compute.sysappscore.by.mean(syslist,applist)
+compute.techappscore(caselist$arbaminch,techlist$dry.toilet, lshowplot=F,lpdfplot=F,aggmethod = "product")
 
-source("sysapplist.write.r")  
-sysapplist.write(sysapplist_demo.prod)
-sysapplist.write(sysapplist_demo.mean)
-
-
-
-compute.techappscore(caselist$arbaminch,techlist$dry.toilet, lshowplot=TRUE,lpdfplot=F,aggmethod = "product")
 ################   Joel sesitivity
+source("compute_sensitivity.R") 
+
+sensitivity_100 <- compute_sensitivity(num_of_runs=1,aggmethod="mean",case="arbaminch1", n.sample=100)
 
 
 

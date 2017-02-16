@@ -10,7 +10,7 @@ techapplist.write=function(techapplist, listsep=" ", filename=""){
   
   # auxiliar values
   profilesep=", " #separator for techapp.profile
-  ndigit=2     #number of digits
+  ndigit=5     #number of digits
   
   #Set output mode
   if (filename!="") sink(file=filename, append=FALSE) #redirect cat to file

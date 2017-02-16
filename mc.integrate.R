@@ -1,4 +1,7 @@
-mc.integrate<-function(case.app.fun, tech.app.fun, n.sample=10000){
+mc.integrate<-function(case.app.fun, tech.app.fun, n.sample){
+  
+  n.sample=1000  #deactivate for sensitivity analyses 
+  
   # This functions computes a monte carlo integration (integration by sampling) of two continous functions
     # it samples the density function and then computes the probability functions with the sampled values
     # the returned value is score=mean(probability functions of (samples))
