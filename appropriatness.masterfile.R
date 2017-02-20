@@ -1,6 +1,6 @@
 rm(list=ls())
 ## ==============================================================================================
-setwd("/Users/dorotheespuhler/Dropbox\ (Personal)/PHD\ Dropbox/1\ MODELLING/R/Appropriateness/")
+setwd("/Users/dorotheespuhler/Dropbox\ (Personal)/PHD\ Dropbox/1\ MODELLING/R/AppropriatenessDorothee/Appropriateness/")
 
 # Load required library packages
 library(triangle) # extra package for triangular distribution
