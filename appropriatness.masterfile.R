@@ -26,15 +26,15 @@ source("appfunctions.r") # contains functions that are not provided in R but can
   # rcat(x, probs)
 source("mc.integrate.r") # This functions computes a monte carlo integration of two continous functions
   # mc.integrate(case.app.fun, tech.app.fun, n.sample=10000)
-source("compute.techapp.r") # Returns app.profile and app.score (aggregated profile)
+source("compute.techappscore.r") # Returns app.profile and app.score (aggregated profile)
   # compute.techapp(tech, case,lshowplot=FALSE)
   # plots provide a graphical representaiton of the two functions and the overall
 source("compute.techapplist.r") # Returns a list of app.profiles & app.score for all the techs and caes of a techlist and caseplist
   # compute.techapplist(techlist, caselist, listsep=" ", filename="")
 source("techapplist.write.r") # writes applist either to screen or to a file if listsep and filename are provided
  # function(applist, listsep=" ", filename="") 
-source("compute.sysapp.by.product.r")
-source("compute.sysapp.by.mean.r")
+source("compute.sysapplist.r")
+
 
 
 ## ==============================================================================================
@@ -135,7 +135,7 @@ applist_demo=append(applist_demo,list(app.item.tmp))
 ## ==============================================================================================
 # COMPUTE ENTIRE apppropriateness proiles FOR A LIST OF TECHNOLOGIES AND A LIST OF CASES IN ONE GO
 # Using compute.techapplist 
-applist_demo<-compute.techapplist(caselist_demo,techlist_demo,lsort=TRUE,lshowplot=T) # use lshowplot=F if
+applist_demo<-compute.techapplist(caselist_demo,techlist_demo, lpdfplot = T) # use lshowplot=F if
 #you are only interested in the results; the plots (displaying the appropriateness functions for each attribute) only help to understand what happens
 
 ## ==============================================================================================

@@ -1,4 +1,4 @@
-compute.techappscore= function(case,tech,lshowplot,lpdfplot,aggmethod,n.sample){
+compute.techappscore= function(case,tech,lshowplot=FALSE,lpdfplot=FALSE,aggmethod="product",n.sample=1000){
   # This functions computes the attrapp.scores and the techapp.score for a tech in a given case
   # Usage
   # compute.techapp(case, tech, [lshowplot=FALSE])
