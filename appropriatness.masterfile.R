@@ -255,5 +255,45 @@ techapplist.write(techapplist_daniel)
 techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
 
 
+<<<<<<< HEAD
+=======
+## ==============================================================================================
+
+
+##@@@@@@@@@@@@@@@@@@@@@@@@ joel test
+library(triangle) 
+library (trapezoid) 
+library(rlist)  
+library(gridExtra)
+library(ColorPalette)
+source("build.list.r")   
+source("appfunctions.r")
+source("mc.integrate.r") 
+source("compute.techappscore.r") 
+source("compute.techapplist.r") 
+source("techapplist.write.r") 
+source("build.syslist.r")
+source("sysapplist.write.r")  
+caselist<- build.list("AppCase_Maria.csv")
+techlist<- build.list("TechOp_Maria.csv")
+syslist<- build.syslist("sysdata_demo.csv")
+source("compute.sysapplist.r")
+sysapplist<-compute.sysapplist(syslist,caselist,techlist,lsort=T,lshowplot=F,lpdfplot=F,aggmethod="mean")
+sysapplist.write(sysapplist)
+
+# Write to screen
+techapplist<-compute.techapplist(caselist,techlist,lsort=TRUE,lshowplot=F,lpdfplot=F,aggmethod="mean")
+source("techapplist.write.r")  
+techapplist.write(techapplist, listsep=";", filename="techapplist_maria.csv")
+
+
+compute.techappscore(caselist$arbaminch,techlist$dry.toilet, lshowplot=F,lpdfplot=F,aggmethod = "product")
+
+################   Joel sesitivity
+source("compute_sensitivity.R") 
+
+sensitivity_100 <- compute_sensitivity(num_of_runs=1,aggmethod="mean",case="arbaminch1", n.sample=100)
+
+>>>>>>> d657d32a098ea0d020f79d9604f7c1efc8040ef9
 
 
