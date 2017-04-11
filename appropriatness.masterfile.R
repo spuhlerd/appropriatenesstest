@@ -27,7 +27,7 @@ source("appfunctions.r") # contains functions that are not provided in R but can
 source("mc.integrate.r") # This functions computes a monte carlo integration of two continous functions
   # mc.integrate(case.app.fun, tech.app.fun, n.sample=10000)
 source("compute.techappscore.r") # Returns app.profile and app.score (aggregated profile)
-  # compute.techapp(tech, case,lshowplot=FALSE)
+  # compute.techappscore(tech, case,lshowplot=FALSE)
   # plots provide a graphical representaiton of the two functions and the overall
 source("compute.techapplist.r") # Returns a list of app.profiles & app.score for all the techs and caes of a techlist and caseplist
   # compute.techapplist(techlist, caselist, listsep=" ", filename="")
@@ -79,56 +79,56 @@ techlist_demo<- build.list("techdata_demo.csv")
 # Using compute.techapp
 applist_demo=list()
 #arbaminch
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$uddt,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$uddt,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$dry.toilet,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$dry.toilet,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$pour.flush,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$pour.flush,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$urine.storagetank,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$urine.storagetank,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$dehydration.vault,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$dehydration.vault,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$septic.tank,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$septic.tank,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$single.pit,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$single.pit,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$double.pit,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$double.pit,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$application.urine,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$application.urine,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$application.faeces,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$application.faeces,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$testech,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$testech,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$arbaminch, techlist_demo$application.compost,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$application.compost,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))                    
                     
 #thimi
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$uddt,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$uddt,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$dry.toilet,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$dry.toilet,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$pour.flush,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$pour.flush,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$urine.storagetank,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$urine.storagetank,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$dehydration.vault,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$dehydration.vault,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$septic.tank,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$septic.tank,lshowplot = TRUE)
 #provides an error as for the attr electricity thimi has dtriangle; while septic.tank has a pcat function
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$single.pit,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$single.pit,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$double.pit,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$double.pit,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$application.urine,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$application.urine,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$application.faeces,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$application.faeces,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$testech,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$testech,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techapp(caselist_demo$thimi, techlist_demo$application.compost,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$thimi, techlist_demo$application.compost,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))      
 
 
@@ -205,10 +205,9 @@ sysapplist_demo.mean<-compute.sysapp.by.mean(syslist_demo,applist_demo)
 caselist_test<- build.list("casedata_test.csv")
 techlist_test<- build.list("techdata_test.csv")
 # Test one by one
-compute.techapp(caselist_test$arbaminch,techlist_test$uddt, lshowplot=FALSE)
-compute.techapp(caselist_test$arbaminch,techlist_test$dry.toilet, lshowplot=FALSE)
+compute.techappscore(caselist_test$arbaminch,techlist_test$uddt, lshowplot=FALSE)
+compute.techappscore(caselist_test$arbaminch,techlist_test$dry.toilet, lshowplot=FALSE)
 # Test entire lists
-techapplist_test<-compute.techapplist(caselist_test,techlist_test,lsort=FALSE) # use lshowplot=TRUE for visual analysis of the results
 # Write to see
 techapplist.write(techapplist_test)
 techapplist.write(techapplist_test, listsep=";", filename="techapplist_daniel.csv")
@@ -220,9 +219,9 @@ caselist_test<- build.list("casedata_test.csv")
 techlist_test<- build.list("techdata_test.csv")
 
 # Test one by one
-compute.techapp(caselist_test$arbaminch,techlist_test$T1.wsp, lshowplot=TRUE)
-compute.techapp(caselist_test$arbaminch,techlist_test$septic.tank, lshowplot=TRUE)
-compute.techapp(caselist_test$thimi,techlist_test$septic.tank, lshowplot=TRUE)
+compute.techappscore(caselist_test$arbaminch,techlist_test$T1.wsp, lshowplot=TRUE)
+compute.techappscore(caselist_test$arbaminch,techlist_test$septic.tank, lshowplot=TRUE)
+compute.techappscore(caselist_test$thimi,techlist_test$septic.tank, lshowplot=TRUE)
 
 # Compute entire list
 techapplist_test<-compute.techapplist(caselist_test,techlist_test,lsort=TRUE,lshowplot=TRUE)
@@ -241,18 +240,42 @@ caselist_daniel<- build.list("casedata_daniel-250116.csv",2)
 techlist_daniel<- build.list("techdata_daniel-250116.csv",3)
 
 # Test one by one
-compute.techapp(caselist_daniel$arbaminch,techlist_daniel$pour.flush, lshowplot=TRUE)
-compute.techapp(caselist_daniel$arbaminch,techlist_daniel$UDDT, lshowplot=TRUE)
-compute.techapp(caselist_daniel$arbaminch,techlist_daniel$septic.tank, lshowplot=TRUE)
-compute.techapp(caselist_daniel$arbaminch,techlist_daniel$single.pit, lshowplot=TRUE)
-compute.techapp(caselist_daniel$arbaminch,techlist_daniel$wsp, lshowplot=TRUE)
-compute.techapp(caselist_daniel$arbaminch,techlist_daniel$surface.flow.CW, lshowplot=TRUE)
+compute.techappscore(caselist_daniel$arbaminch,techlist_daniel$pour.flush, lshowplot=TRUE)
+compute.techappscore(caselist_daniel$arbaminch,techlist_daniel$UDDT, lshowplot=TRUE)
+compute.techappscore(caselist_daniel$arbaminch,techlist_daniel$septic.tank, lshowplot=TRUE)
+compute.techappscore(caselist_daniel$arbaminch,techlist_daniel$single.pit, lshowplot=TRUE)
+compute.techappscore(caselist_daniel$arbaminch,techlist_daniel$wsp, lshowplot=TRUE)
+compute.techappscore(caselist_daniel$arbaminch,techlist_daniel$surface.flow.CW, lshowplot=TRUE)
 # Compute entire list
 techapplist_daniel<-compute.techapplist(caselist_daniel,techlist_daniel,lsort=TRUE)
 # Write to screen
 techapplist.write(techapplist_daniel)
 # Write to file
 techapplist.write(techapplist_daniel, listsep=";", filename="techapplist_daniel.csv")
+
+## ==============================================================================================
+#KATARNYIA
+
+caselist_katarnyia<- build.list("casedata_katarnyia.csv")
+techlist_katarnyia<- build.list("techdata_katarnyia.csv")
+
+applist_katarnyia<-compute.techapplist(caselist_katarnyia,techlist_katarnyia, lpdfplot = T) # use lshowplot=F if
+
+techapplist.write(applist_katarnyia)
+
+
+techapplist.write(applist_katarnyia, listsep=";", filename="app_list_katarnyia.csv") 
+
+
+
+
+
+
+
+
+
+
+
 
 
 <<<<<<< HEAD
