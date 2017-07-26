@@ -268,12 +268,18 @@ techapplist.write(applist_katarnyia, listsep=";", filename="app_list_katarnyia.c
 
 
 
+## ==============================================================================================
+# ARBA MINCH
+
+caselist_arbaminch<- build.list("casedata_arbaminch.csv")
+techlist_arbaminch<- build.list("techdata_arbaminch.csv")
+
+applist_arbaminch<-compute.techapplist(caselist_arbaminch,techlist_arbaminch, lpdfplot = F) # use lshowplot=F if
+
+techapplist.write(applist_arbaminch)
 
 
-
-
-
-
+techapplist.write(applist_arbaminch, listsep=";", filename="app_list_arbamincha.csv") 
 
 
 
