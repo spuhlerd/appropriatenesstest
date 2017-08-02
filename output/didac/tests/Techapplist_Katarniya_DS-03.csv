@@ -1,0 +1,44 @@
+case         ; tech              ; techapp.score ; techapp.profile 
+Katarniya    ; uddt                 ;    0.97916 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Construction.skills  = 0.9192 ,  O&M.skills = 1 
+Katarniya    ; drytoilet            ;          1 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; pour.flush           ;          1 ; Water.supply = 1 ,  Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; udft                 ;          1 ; Water.supply = 1 ,  Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; tab                  ;    0.89727 ; Water.supply = 0.633 ,  Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Construction.skills  = 0.91878 ,  O&M.skills = 1 
+Katarniya    ; drainage             ;    0.98979 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Slope = 0.93066 ,  Groundwater.depth = 1 ,  Excavation = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; organic.solidwaste   ;    0.97766 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Vehicular.access  = 0.93446 
+Katarniya    ; urine.storagetank    ;    0.96012 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.86542 ,  Vehicular.access  = 0.94276 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; dehydration.vault    ;     0.9514 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.79002 ,  Flooding = 1 ,  Vehicular.access  = 0.9387 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; faecesstorage.chamber ;    0.95364 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.79223 ,  Flooding = 1 ,  Vehicular.access  = 0.94943 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; single.pit           ;    0.96489 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.80547 ,  Flooding = 1 ,  Vehicular.access  = 0.94441 ,  Soil.type/hydraulic.conductivity = 0.9755 ,  Groundwater.depth = 0.97694 ,  Excavation = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; double.pit           ;    0.96144 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.79749 ,  Flooding = 1 ,  Vehicular.access  = 0.92915 ,  Soil.type/hydraulic.conductivity = 0.97 ,  Groundwater.depth = 0.97658 ,  Excavation = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; twin.pits            ;    0.92587 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Flooding = 1 ,  Soil.type/hydraulic.conductivity = 0.54 ,  Groundwater.depth = 1 ,  Excavation = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; composting.chamber   ;    0.95148 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.79084 ,  Flooding = 1 ,  Vehicular.access  = 0.93825 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; vermi.composter      ;    0.88405 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.50723 ,  Flooding = 1 ,  Vehicular.access  = 0.94116 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; septic.tank          ;    0.98171 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.95495 ,  Flooding = 1 ,  Vehicular.access  = 0.93739 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; motorized.transport.urine ;    0.96085 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Vehicular.access  = 0.819 ,  Slope = 1 ,  O&M.skills = 1 
+Katarniya    ; humanpowered.transport.urine ;    0.99978 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Vehicular.access  = 0.99888 ,  Slope = 1 ,  O&M.skills = 1 
+Katarniya    ; motorized.transport.dry ;    0.97119 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Vehicular.access  = 0.864 ,  Slope = 1 ,  O&M.skills = 1 
+Katarniya    ; humanpowered.transport.dry ;    0.99987 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Vehicular.access  = 0.99935 ,  Slope = 1 ,  O&M.skills = 1 
+Katarniya    ; conventional.sewer   ;    0.85821 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Flooding = 1 ,  Vehicular.access  = 0.88135 ,  Slope = 0.97322 ,  Groundwater.depth = 0.99657 ,  Excavation = 1 ,  Construction.skills  = 0.48672 ,  O&M.skills = 0.60699 
+Katarniya    ; solidsfree.sewer     ;    0.90586 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Flooding = 1 ,  Vehicular.access  = 0.93648 ,  Slope = 0.99809 ,  Groundwater.depth = 1 ,  Excavation = 1 ,  Construction.skills  = 0.47865 ,  O&M.skills = 0.91806 
+Katarniya    ; urine.bank           ;    0.98591 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.98 ,  Flooding = 1 ,  Vehicular.access  = 0.9371 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; struvite.production  ;    0.94399 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.86273 ,  Vehicular.access  = 0.95203 ,  Construction.skills  = 0.91267 ,  O&M.skills = 1 
+Katarniya    ; drying.bed           ;    0.98251 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.90153 ,  Flooding = 1 ,  Vehicular.access  = 0.94635 ,  Slope = 1 ,  Groundwater.depth = 1 ,  Excavation = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; faecesdrying.bed     ;    0.98218 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.89963 ,  Flooding = 1 ,  Vehicular.access  = 0.94551 ,  Slope = 1 ,  Groundwater.depth = 1 ,  Excavation = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; sedimentation.pond   ;    0.98661 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.978 ,  Flooding = 1 ,  Vehicular.access  = 0.93045 ,  Slope = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; abr                  ;    0.96314 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.89624 ,  Flooding = 1 ,  Vehicular.access  = 0.93273 ,  Slope = 1 ,  Construction.skills  = 0.91973 ,  O&M.skills = 1 
+Katarniya    ; sbr                  ;    0.89664 ; Energy.supply = 0.92015 ,  Frequency.of.O&M = 1 ,  Temperature.range = 0.97076 ,  Flooding = 1 ,  Vehicular.access  = 0.9403 ,  Slope = 1 ,  Construction.skills  = 0.4974 ,  O&M.skills = 1 
+Katarniya    ; activated.sludge     ;     0.9789 ; Energy.supply = 0.91681 ,  Frequency.of.O&M = 1 ,  Temperature.range = 0.97626 ,  Flooding = 1 ,  Vehicular.access  = 0.94203 ,  Slope = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; cocomposting         ;    0.95949 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.79069 ,  Flooding = 1 ,  Vehicular.access  = 0.94682 ,  Slope = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; biogas.reactor       ;     0.8981 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.5384 ,  Flooding = 1 ,  Vehicular.access  = 0.94996 ,  Slope = 1 ,  Construction.skills  = 0.92144 ,  O&M.skills = 1 
+Katarniya    ; wsp                  ;    0.97976 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.92997 ,  Flooding = 1 ,  Vehicular.access  = 0.94788 ,  Slope = 1 ,  Construction.skills  = 1 ,  O&M.skills = 0.98317 
+Katarniya    ; constructedwetland   ;    0.97907 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.90809 ,  Flooding = 1 ,  Vehicular.access  = 0.93154 ,  Slope = 0.99813 ,  Groundwater.depth = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; application.urine    ;    0.96335 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.86125 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; application.struvite ;    0.96506 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.86739 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; application.faeces   ;    0.96549 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.86893 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; application.compost  ;      0.963 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.86002 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; application.stabilizedsludge ;    0.96432 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.86475 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; biogas.combustion    ;    0.97752 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Construction.skills  = 0.91308 ,  O&M.skills = 1 
+Katarniya    ; leach.field          ;    0.92648 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Flooding = 1 ,  Slope = 1 ,  Soil.type/hydraulic.conductivity = 0.547 ,  Groundwater.depth = 1 ,  Excavation = 1 ,  Construction.skills  = 0.91943 ,  O&M.skills = 1 
+Katarniya    ; soak.pit             ;    0.93807 ; Frequency.of.O&M = 1 ,  Temperature.range = 1 ,  Flooding = 1 ,  Slope = 1 ,  Soil.type/hydraulic.conductivity = 0.5625 ,  Groundwater.depth = 1 ,  Excavation = 1 ,  Construction.skills  = 1 ,  O&M.skills = 1 
+Katarniya    ; irrigation           ;    0.99825 ; Frequency.of.O&M = 1 ,  Temperature.range = 0.99304 ,  Slope = 1 ,  O&M.skills = 1 
