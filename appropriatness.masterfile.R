@@ -8,6 +8,7 @@ library (trapezoid) # extra package for trapezoidial distribution
 library(rlist)  # extra package to manupulate/filter app list
 library(gridExtra)
 library(ColorPalette)
+library(ggplot2)
 
 # Load required functions
 source("build.list.r")   # This function reads the technology and case input data stored in a csv file...
@@ -35,7 +36,7 @@ source("techapplist.write.r") # writes applist either to screen or to a file if 
  # function(applist, listsep=" ", filename="") 
 source("compute.sysapplist.r")
 
-
+source("techapplist.frame.R")
 
 ## ==============================================================================================
 # SOME GUIDELINES TO FILL IN DATA LIST FILES (techdata and casedata)
@@ -280,6 +281,45 @@ techapplist.write(applist_arbaminch)
 
 
 techapplist.write(applist_arbaminch, listsep=";", filename="app_list_arbamincha.csv") 
+
+
+## ==============================================================================================
+#KATARNYIA PAPER
+
+techlist_katarnyia_DS<- build.list("input/didac/Techdata_Katarniya_DS-01.csv")
+caselist_katarnyia_DS<- build.list("input/didac/Casedata_Katarnyia_DS-full.csv")
+
+#create techapplist
+techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS) 
+#techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS, lshowplot = T)
+#techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS, lpdfplot = T)
+
+#write techapplist to screen or csv
+techapplist.write(techapplist_katarnyia_DS)
+techapplist.write(techapplist_katarnyia_DS, listsep=";", filename="output/didac/Techapplist_Katarniya_DS-03.csv") 
+
+#convert to dataframe and write to csv
+techappframe_katarnyia_DS=techapplist.frame(techapplist_katarnyia_DS,techlist_katarnyia_DS, caselist_katarnyia_DS)
+View(techappframe_katarnyia_DS)
+write.table(techappframe_katarnyia_DS, file = "output/didac/Techappframe_katarnyia_DS-01.csv", sep = ";",row.names=F)
+
+
+# using ggplot
+techappframe_katarnyia_DS$functional.group_f = factor(techappframe_katarnyia_DS$functional.group, levels=c('U','Uadd','S','C','T','D'))
+ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group)) + geom_histogram(show.legend=F) + facet_wrap( ~ functional.group_f)
+
+ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group, order=functional.group)) + geom_histogram()
+
+
+# histogram using an intermediate variable
+techappscores<- techappframe_katarnyia_DS$techapp.score
+hist(techappscores,xlim=c(0,1)) 
+
+# boxplot using directly the techappframe
+boxplot(techapp.score ~ functional.group,data=techappframe_katarnyia_DS )
+
+
+
 
 
 

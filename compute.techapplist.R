@@ -22,6 +22,8 @@ compute.techapplist= function(caselist, techlist, lsort=FALSE,lshowplot=FALSE,lp
     for (techname in names(techlist)){
       tech=techlist[[techname]]
       tech$techname=techname #add techname to the list
+      #fu=techlist[[techname]]
+      #tech$fu=fu
       if (lshowplot){
         app.item.tmp <- compute.techappscore(case, tech,lshowplot=TRUE,lpdfplot,aggmethod,n.sample)
       } else {
