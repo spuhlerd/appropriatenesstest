@@ -282,53 +282,7 @@ techapplist.write(applist_arbaminch)
 
 techapplist.write(applist_arbaminch, listsep=";", filename="app_list_arbamincha.csv") 
 
-
 ## ==============================================================================================
-#KATARNYIA PAPER
-
-techlist_katarnyia_DS<- build.list("input/didac/Techdata_Katarniya_DS-01.csv")
-caselist_katarnyia_DS<- build.list("input/didac/Casedata_Katarnyia_DS-full.csv")
-
-#create techapplist
-techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS) 
-#techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS, lshowplot = T)
-#techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS, lpdfplot = T)
-
-#write techapplist to screen or csv
-techapplist.write(techapplist_katarnyia_DS)
-techapplist.write(techapplist_katarnyia_DS, listsep=";", filename="output/didac/Techapplist_Katarniya_DS-03.csv") 
-
-#convert to dataframe and write to csv
-techappframe_katarnyia_DS=techapplist.frame(techapplist_katarnyia_DS,techlist_katarnyia_DS, caselist_katarnyia_DS)
-View(techappframe_katarnyia_DS)
-write.table(techappframe_katarnyia_DS, file = "output/didac/Techappframe_katarnyia_DS-01.csv", sep = ";",row.names=F)
-
-
-# using ggplot
-techappframe_katarnyia_DS$functional.group_f = factor(techappframe_katarnyia_DS$functional.group, levels=c('U','Uadd','S','C','T','D'))
-ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group)) + geom_histogram(show.legend=F) + facet_wrap( ~ functional.group_f)
-
-ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group, order=functional.group)) + geom_histogram()
-
-
-# histogram using an intermediate variable
-techappscores<- techappframe_katarnyia_DS$techapp.score
-hist(techappscores,xlim=c(0,1)) 
-
-# boxplot using directly the techappframe
-boxplot(techapp.score ~ functional.group,data=techappframe_katarnyia_DS )
-
-
-
-
-
-
-
-<<<<<<< HEAD
-=======
-## ==============================================================================================
-
-
 ##@@@@@@@@@@@@@@@@@@@@@@@@ joel test
 library(triangle) 
 library (trapezoid) 
@@ -365,4 +319,59 @@ sensitivity_100 <- compute_sensitivity(num_of_runs=1,aggmethod="mean",case="arba
 
 >>>>>>> d657d32a098ea0d020f79d9604f7c1efc8040ef9
 
+
+## ==============================================================================================
+#KATARNYIA PAPER
+
+techlist_katarnyia_DS<- build.list("input/didac/Techdata_Katarniya_DS-01.csv")
+caselist_katarnyia_DS<- build.list("input/didac/Casedata_Katarnyia_DS-small.csv")
+
+#create techapplist
+techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS) 
+#techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS, lshowplot = T)
+#techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS, lpdfplot = T)
+
+#write techapplist to screen or csv
+techapplist.write(techapplist_katarnyia_DS)
+techapplist.write(techapplist_katarnyia_DS, listsep=";", filename="output/didac/Techapplist_Katarniya_DS-03.csv") 
+
+#convert to dataframe and write to csv
+techappframe_katarnyia_DS=techapplist.frame(techapplist_katarnyia_DS,techlist_katarnyia_DS, caselist_katarnyia_DS)
+View(techappframe_katarnyia_DS)
+write.table(techappframe_katarnyia_DS, file = "output/didac/Techappframe_katarnyia_DS-01.csv", sep = ";",row.names=F)
+#techappframe_katarnyia_DS2=read.csv("output/didac/Techappframe_katarnyia_DS-01.csv", sep = ";")
+#View(techappframe_katarnyia_DS2)
+
+# plots
+# -- histo per tech of all scores
+ggplot(techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "U", ],
+       aes(x=techappframe_katarnyia_DS[,4:19],y=techapp.score, fill=tech)) +
+  geom_boxplot()
+
+par(mfcol=c(2,3))
+boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "U", ], col="orange", main="U")
+boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "Uadd", ], col="darkorange", main="Uadd")
+boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "S", ], col="green", main="S")
+boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "C", ], col="lightblue", main="C")
+boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "T", ], col="blue", main="T")
+boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "D", ], col="pink", main="D")
+
+# -- define order of functional groups
+techappframe_katarnyia_DS$functional.group_f = factor(techappframe_katarnyia_DS$functional.group, levels=c('U','Uadd','S','C','T','D'))
+# -- plot histogram of tech app scores per functional group
+ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group)) + geom_histogram(show.legend=F) + facet_wrap( ~ functional.group_f)
+# -- plot histogram of all tech app scores (coloured per functional group)
+ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group_f, order=functional.group_f)) + geom_histogram()
+# -- boxplot of scores per functional group
+ggplot(techappframe_katarnyia_DS, aes(y=techapp.score, x=functional.group_f, fill=functional.group_f)) +
+  geom_boxplot()
+
+
+# --simple plots
+hist(techappframe_katarnyia_DS$techapp.score,xlim=c(0,1)) 
+boxplot(techapp.score ~ functional.group_f,data=techappframe_katarnyia_DS)
+
+
+
+boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "U", ], col="pink")
 
