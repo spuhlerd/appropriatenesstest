@@ -343,10 +343,14 @@ write.table(techappframe_katarnyia_DS, file = "output/didac/Techappframe_katarny
 #View(techappframe_katarnyia_DS2)
 
 # plots
-# -- histo per tech of all scores
-ggplot(techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "U", ],
-       aes(x=techappframe_katarnyia_DS[,4:19],y=techapp.score, fill=tech)) +
-  geom_boxplot()
+## -- define order of functional groups
+techappframe_katarnyia_DS$functional.group_f = factor(techappframe_katarnyia_DS$functional.group, levels=c('U','Uadd','S','C','T','D'))
+## -- histo per tech of all scores
+ggplot(techappframe_katarnyia_DS, aes(x=techappframe_katarnyia_DS[,4:19])) +
+  geom_boxplot() +
+  facet_wrap( ~ functional.group_f)
+
+
 
 par(mfcol=c(2,3))
 boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "U", ], col="orange", main="U")
@@ -356,8 +360,6 @@ boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techap
 boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "T", ], col="blue", main="T")
 boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "D", ], col="pink", main="D")
 
-# -- define order of functional groups
-techappframe_katarnyia_DS$functional.group_f = factor(techappframe_katarnyia_DS$functional.group, levels=c('U','Uadd','S','C','T','D'))
 # -- plot histogram of tech app scores per functional group
 ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group)) + geom_histogram(show.legend=F) + facet_wrap( ~ functional.group_f)
 # -- plot histogram of all tech app scores (coloured per functional group)
@@ -366,12 +368,7 @@ ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group_f, 
 ggplot(techappframe_katarnyia_DS, aes(y=techapp.score, x=functional.group_f, fill=functional.group_f)) +
   geom_boxplot()
 
-
 # --simple plots
 hist(techappframe_katarnyia_DS$techapp.score,xlim=c(0,1)) 
 boxplot(techapp.score ~ functional.group_f,data=techappframe_katarnyia_DS)
-
-
-
-boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techappframe_katarnyia_DS$functional.group== "U", ], col="pink")
 
