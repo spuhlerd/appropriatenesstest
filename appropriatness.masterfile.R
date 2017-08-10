@@ -289,6 +289,7 @@ library (trapezoid)
 library(rlist)  
 library(gridExtra)
 library(ColorPalette)
+library(reshape2)
 source("build.list.r")   
 source("appfunctions.r")
 source("mc.integrate.r") 
@@ -322,7 +323,10 @@ sensitivity_100 <- compute_sensitivity(num_of_runs=1,aggmethod="mean",case="arba
 
 ## ==============================================================================================
 #KATARNYIA PAPER
+#  ----------------
+# BASELINE
 
+# read lists
 techlist_katarnyia_DS<- build.list("input/didac/Techdata_Katarniya_DS-01.csv")
 caselist_katarnyia_DS<- build.list("input/didac/Casedata_Katarnyia_DS-small.csv")
 
@@ -333,7 +337,7 @@ techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_kat
 
 #write techapplist to screen or csv
 techapplist.write(techapplist_katarnyia_DS)
-techapplist.write(techapplist_katarnyia_DS, listsep=";", filename="output/didac/Techapplist_Katarniya_DS-03.csv") 
+# techapplist.write(techapplist_katarnyia_DS, listsep=";", filename="output/didac/Techapplist_Katarniya_DS-03.csv") 
 
 #convert to dataframe and write to csv
 techappframe_katarnyia_DS=techapplist.frame(techapplist_katarnyia_DS,techlist_katarnyia_DS, caselist_katarnyia_DS)
@@ -342,13 +346,50 @@ write.table(techappframe_katarnyia_DS, file = "output/didac/Techappframe_katarny
 #techappframe_katarnyia_DS2=read.csv("output/didac/Techappframe_katarnyia_DS-01.csv", sep = ";")
 #View(techappframe_katarnyia_DS2)
 
-# plots
+#  ----------------
+# RUN 2 (without management)
+techlist_katarnyia_DS_02<- build.list("input/didac/Techdata_Katarniya_DS-02.csv")
+caselist_katarnyia_DS_02<- build.list("input/didac/Casedata_Katarnyia_DS-small.csv")
+techapplist_katarnyia_DS_02<-compute.techapplist(caselist_katarnyia_DS_02,techlist_katarnyia_DS_02) 
+techappframe_katarnyia_DS_02=techapplist.frame(techapplist_katarnyia_DS_02,techlist_katarnyia_DS_02, caselist_katarnyia_DS_02)
+View(techappframe_katarnyia_DS_02)
+write.table(techappframe_katarnyia_DS_02, file = "output/didac/Techappframe_katarnyia_DS-02.csv", sep = ";",row.names=F)
+
+#  ----------------
+# RUN 3 (without attribute related to available skills)
+techlist_katarnyia_DS_03<- build.list("input/didac/Techdata_Katarniya_DS-03.csv")
+caselist_katarnyia_DS_03<- build.list("input/didac/Casedata_Katarnyia_DS-small.csv")
+techapplist_katarnyia_DS_03<-compute.techapplist(caselist_katarnyia_DS_03,techlist_katarnyia_DS_03) 
+techappframe_katarnyia_DS_03=techapplist.frame(techapplist_katarnyia_DS_03,techlist_katarnyia_DS_03, caselist_katarnyia_DS_03)
+View(techappframe_katarnyia_DS_03)
+write.table(techappframe_katarnyia_DS_03, file = "output/didac/Techappframe_katarnyia_DS-03.csv", sep = ";",row.names=F)
+
+#  ----------------
+# RUN 4 (without attribute related to O&M)
+techlist_katarnyia_DS_04<- build.list("input/didac/Techdata_Katarniya_DS-04.csv")
+caselist_katarnyia_DS_04<- build.list("input/didac/Casedata_Katarnyia_DS-small.csv")
+techapplist_katarnyia_DS_04<-compute.techapplist(caselist_katarnyia_DS_04,techlist_katarnyia_DS_04) 
+techappframe_katarnyia_DS_04=techapplist.frame(techapplist_katarnyia_DS_04,techlist_katarnyia_DS_04, caselist_katarnyia_DS_04)
+View(techappframe_katarnyia_DS_04)
+write.table(techappframe_katarnyia_DS_04, file = "output/didac/Techappframe_katarnyia_DS-04.csv", sep = ";",row.names=F)
+
+
+
+
+
+
+
+#  ----------------
+# PLOTS
 ## -- define order of functional groups
-techappframe_katarnyia_DS$functional.group_f = factor(techappframe_katarnyia_DS$functional.group, levels=c('U','Uadd','S','C','T','D'))
+techappframe_katarnyia_DS$functional.group = factor(techappframe_katarnyia_DS$functional.group, levels=c('U','Uadd','S','C','T','D'))
+techappframe_katarnyia_DS_long = melt(techappframe_katarnyia_DS, id=c("case", "tech", "functional.group"))
 ## -- histo per tech of all scores
-ggplot(techappframe_katarnyia_DS, aes(x=techappframe_katarnyia_DS[,4:19])) +
+ggplot(techappframe_katarnyia_DS_long, aes(x=variable, y=value, fill=functional.group)) +
   geom_boxplot() +
-  facet_wrap( ~ functional.group_f)
+  facet_wrap( ~ functional.group) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
 
 
 
