@@ -115,8 +115,6 @@ ggplot(appframe_demo, aes(y=techapp.score, x=functional.group, fill=functional.g
 ## =======================================================
 ## GUDIELINES ON THE PREPARATION OF INPUT DATA
 ## =======================================================
-#------------------------------------------
-### Some guidelines how to prepare the input data files 
 # Each data files contains a list of items (either techs or cases in the columns)
 # Each items has a few information attributes (info.rows), build.list automatically detects the number of info rows, so you do not need to provide this.
 # This is followed by a list of appropriateness attributes (attr1,...., attrn).
