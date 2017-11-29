@@ -58,16 +58,19 @@ source("techapplist.frame.R")
 ## =======================================================
 
 ### Read data input files using build.list to generate a caselist and techlist
-caselist_demo<- build.list("casedata_demo.csv")
-techlist_demo<- build.list("techdata_demo.csv")
+caselist_demo<- build.list("casedata_demo2.csv")
+techlist_demo<- build.list("techdata_demo2.csv")
+# alternatively use:
+# caselist_demo<- build.list("casedata_demo.csv")
+# techlist_demo<- build.list("techdata_demo.csv")
 
 ### Usinge compute.techapp.r to compute app.proiles for a pair of case and tech (caselist$case, techlist$tech)
 applist_demo=list()
-app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$uddt,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$Katarniya, techlist_demo$uddt,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$dry.toilet,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$Katarniya, techlist_demo$dry.toilet,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))
-app.item.tmp <- compute.techappscore(caselist_demo$arbaminch, techlist_demo$application.compost,lshowplot = TRUE)
+app.item.tmp <- compute.techappscore(caselist_demo$Katarniya, techlist_demo$application.compost,lshowplot = TRUE)
 applist_demo=append(applist_demo,list(app.item.tmp))                    
 # Write the list to the screen
 techapplist.write(applist_demo)      
