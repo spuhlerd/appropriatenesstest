@@ -1,4 +1,4 @@
-compute.techappscore= function(case,tech,lshowplot=FALSE,lpdfplot=FALSE,aggmethod="product",n.sample=1000){
+compute.techappscore= function(case,tech,lshowplot=FALSE,lpdfplot=FALSE,aggmethod="geomean",n.sample=1000){
   # This functions computes the attrapp.scores and the techapp.score for a tech in a given case
   # Usage
   # compute.techapp(case, tech, [lshowplot=FALSE])
@@ -9,7 +9,7 @@ compute.techappscore= function(case,tech,lshowplot=FALSE,lpdfplot=FALSE,aggmetho
   # Variables:
   # attrapp.score: the mc.intrgrate(tech$app.fun, case$app.fun)
   # techapp.profile: all the attrapp.core of a given tech & case
-  # techapp.score: normalized product of all attrapp.scores
+  # techapp.score: geometric mean of all attrapp.scores
   # lshowplot: if TRUE plots are generated to illustrate the overall of the case and tech$app.fun
   # Output:
   # tech.app.data: list containing tech, case, techapp.score, techapp.profile (containing names(tech$app.fun), values)
@@ -79,9 +79,9 @@ compute.techappscore= function(case,tech,lshowplot=FALSE,lpdfplot=FALSE,aggmetho
   # Now create the plots for visual analysis of the results (only if lshowplot=TRUE)
 
       # Compute total technology appropriatness score 
-      if(aggmethod=="product"){
+      if(aggmethod=="geomean"){
       l=length(na.omit(techapp.profile))
-      techapp.score=(prod(na.omit(techapp.profile)))^(1/l) # the normlized product of all attrapp.scores
+      techapp.score=(prod(na.omit(techapp.profile)))^(1/l) 
 
       }
       if(aggmethod=="mean"){

@@ -9,9 +9,11 @@ library(rlist)  # extra package to manupulate/filter app list
 library(gridExtra)
 library(ColorPalette)
 library(ggplot2)
+library(reshape2)
 
-# Load required functions
-source("build.list.r")   # This function reads the technology and case input data stored in a csv file...
+### Load required functions
+source("build.list.r")   # This function reads input data. The file format is csv. The model requires one techdata.csv and one casedata.csv. 
+# See below for more details on the format of the input data files.
 # build.list(filename,n.info.row)
 source("build.syslist.r") 
 source("appfunctions.r") # contains functions that are not provided in R but can be used to compute attribute values
@@ -22,8 +24,7 @@ source("appfunctions.r") # contains functions that are not provided in R but can
   # dtrapez(x, a, b=(d-a)/2+a, c=b, d)
   # rtrapez(x, a, b=(d-a)/2+a, c=b, d)
   # pcat(x, probs)
-  # dcat(x, probs), probs is the vector of categories and respective probabilities. E.g. c(no=0.4,yes=0.6)
-    # !!! the sum of probs has to be =1
+  # dcat(x, probs), probs is the vector of categories and respective probabilities. E.g. c(no=0.4,yes=0.6) !NB. the sum of probs has to be =1
   # rcat(x, probs)
 source("mc.integrate.r") # This functions computes a monte carlo integration of two continous functions
   # mc.integrate(case.app.fun, tech.app.fun, n.sample=10000)
@@ -324,27 +325,27 @@ sensitivity_100 <- compute_sensitivity(num_of_runs=1,aggmethod="mean",case="arba
 ## ==============================================================================================
 #KATARNYIA PAPER
 #  ----------------
-# BASELINE
+# RUN 1 (Baseline)
 
-# read lists
+### read lists
 techlist_katarnyia_DS<- build.list("input/didac/Techdata_Katarniya_DS-01.csv")
 caselist_katarnyia_DS<- build.list("input/didac/Casedata_Katarnyia_DS-small.csv")
 
-#create techapplist
+### Create techapplist
 techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS) 
-#techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS, lshowplot = T)
+# Use lshowplot = T to plot the the 
 #techapplist_katarnyia_DS<-compute.techapplist(caselist_katarnyia_DS,techlist_katarnyia_DS, lpdfplot = T)
-
 #write techapplist to screen or csv
 techapplist.write(techapplist_katarnyia_DS)
 # techapplist.write(techapplist_katarnyia_DS, listsep=";", filename="output/didac/Techapplist_Katarniya_DS-03.csv") 
 
-#convert to dataframe and write to csv
+### Convert to dataframe 
 techappframe_katarnyia_DS=techapplist.frame(techapplist_katarnyia_DS,techlist_katarnyia_DS, caselist_katarnyia_DS)
 View(techappframe_katarnyia_DS)
+
+### Write to csv
 write.table(techappframe_katarnyia_DS, file = "output/didac/Techappframe_katarnyia_DS-01.csv", sep = ";",row.names=F)
-#techappframe_katarnyia_DS2=read.csv("output/didac/Techappframe_katarnyia_DS-01.csv", sep = ";")
-#View(techappframe_katarnyia_DS2)
+
 
 #  ----------------
 # RUN 2 (without management)
@@ -404,10 +405,9 @@ boxplot(x=techappframe_katarnyia_DS[,4:19],data=techappframe_katarnyia_DS[techap
 # -- plot histogram of tech app scores per functional group
 ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group)) + geom_histogram(show.legend=F) + facet_wrap( ~ functional.group_f)
 # -- plot histogram of all tech app scores (coloured per functional group)
-ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group_f, order=functional.group_f)) + geom_histogram()
+ggplot(techappframe_katarnyia_DS, aes(x=techapp.score, fill=functional.group, order=functional.group)) + geom_histogram()
 # -- boxplot of scores per functional group
-ggplot(techappframe_katarnyia_DS, aes(y=techapp.score, x=functional.group_f, fill=functional.group_f)) +
-  geom_boxplot()
+ggplot(techappframe_katarnyia_DS, aes(y=techapp.score, x=functional.group, fill=functional.group)) +  geom_boxplot()
 
 # --simple plots
 hist(techappframe_katarnyia_DS$techapp.score,xlim=c(0,1)) 

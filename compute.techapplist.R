@@ -1,4 +1,4 @@
-compute.techapplist= function(caselist, techlist, lsort=FALSE,lshowplot=FALSE,lpdfplot=FALSE,aggmethod="product",n.sample=1000){
+compute.techapplist= function(caselist, techlist, lsort=FALSE,lshowplot=FALSE,lpdfplot=FALSE,aggmethod="geomean",n.sample=1000){
   # This function computes for each pair of caselist$case and techlist$case:
   # Usage
   # compute.techapplist(caselist,techlist, [lshowplot=FALSE])
