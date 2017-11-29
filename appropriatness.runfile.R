@@ -22,7 +22,6 @@ library(rlist)  # extra package to manupulate/filter app list
 library(gridExtra)
 library(ColorPalette)
 library(ggplot2)
-library(reshape2)
 
 ### Load required functions (all part of the Appropriateness folder)
 source("build.list.r")   # This function reads input data. The file format is csv. The model requires one techdata.csv and one casedata.csv. 

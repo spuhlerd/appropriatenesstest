@@ -1,0 +1,361 @@
+case         ; tech              ; techapp.score ; techapp.profile 
+          case tech functional.group techapp.score Water.supply Energy.supply Frequency.of.O&M Temperature.range Flooding Vehicular.access  Slope
+uddt Katarniya uddt                U     0.9531556           NA            NA                1                 1       NA                NA    NA
+     Soil.type/hydraulic.conductivity Groundwater.depth Excavation Population.density  Construction.skills  Design.skills  O&M.skills Management
+uddt                               NA                NA         NA                  NA            0.9155851              1          1    0.92031
+     Pipe.supply Concrete.supply Spare.parts.supply Surface.area.onsite Surface.area.offsite population.change.rate Cleansing.method
+uddt          NA              NA            0.84823                  NA                   NA                     NA               NA
+     functional.group_f
+uddt                  U
+[1] Katarniya
+Levels: Katarniya
+                                  case
+uddt                         Katarniya
+drytoilet                    Katarniya
+pour.flush                   Katarniya
+udft                         Katarniya
+tab                          Katarniya
+drainage                     Katarniya
+organic.solidwaste           Katarniya
+urine.storagetank            Katarniya
+dehydration.vault            Katarniya
+faecesstorage.chamber        Katarniya
+single.pit                   Katarniya
+double.pit                   Katarniya
+twin.pits                    Katarniya
+composting.chamber           Katarniya
+vermi.composter              Katarniya
+septic.tank                  Katarniya
+motorized.transport.urine    Katarniya
+humanpowered.transport.urine Katarniya
+motorized.transport.dry      Katarniya
+humanpowered.transport.dry   Katarniya
+conventional.sewer           Katarniya
+solidsfree.sewer             Katarniya
+urine.bank                   Katarniya
+struvite.production          Katarniya
+drying.bed                   Katarniya
+faecesdrying.bed             Katarniya
+sedimentation.pond           Katarniya
+abr                          Katarniya
+sbr                          Katarniya
+activated.sludge             Katarniya
+cocomposting                 Katarniya
+biogas.reactor               Katarniya
+wsp                          Katarniya
+constructedwetland           Katarniya
+application.urine            Katarniya
+application.struvite         Katarniya
+application.faeces           Katarniya
+application.compost          Katarniya
+application.stabilizedsludge Katarniya
+biogas.combustion            Katarniya
+leach.field                  Katarniya
+soak.pit                     Katarniya
+irrigation                   Katarniya
+                                  case                         tech functional.group techapp.score Water.supply Energy.supply Frequency.of.O&M
+uddt                         Katarniya                         uddt                U     0.9531556           NA            NA                1
+drytoilet                    Katarniya                    drytoilet                U     0.9659600           NA            NA                1
+pour.flush                   Katarniya                   pour.flush                U     0.9697798        1.000            NA                1
+udft                         Katarniya                         udft                U     0.9698081        1.000            NA                1
+tab                          Katarniya                          tab             Uadd     0.7199820        0.631            NA                1
+drainage                     Katarniya                     drainage             Uadd     0.8053729           NA            NA                1
+organic.solidwaste           Katarniya           organic.solidwaste             Uadd     0.9721169           NA            NA                1
+urine.storagetank            Katarniya            urine.storagetank                S     0.9753306           NA            NA                1
+dehydration.vault            Katarniya            dehydration.vault                S     0.9629848           NA            NA                1
+faecesstorage.chamber        Katarniya        faecesstorage.chamber                S     0.9633844           NA            NA                1
+single.pit                   Katarniya                   single.pit                S     0.9641431           NA            NA                1
+double.pit                   Katarniya                   double.pit                S     0.9682497           NA            NA                1
+twin.pits                    Katarniya                    twin.pits                S     0.9998791           NA            NA               NA
+composting.chamber           Katarniya           composting.chamber                S     0.9637940           NA            NA                1
+vermi.composter              Katarniya              vermi.composter                S     0.9534855           NA            NA                1
+septic.tank                  Katarniya                  septic.tank                S     0.9880367           NA            NA                1
+motorized.transport.urine    Katarniya    motorized.transport.urine                C     0.7268785           NA            NA                1
+humanpowered.transport.urine Katarniya humanpowered.transport.urine                C     0.9999016           NA            NA                1
+motorized.transport.dry      Katarniya      motorized.transport.dry                C     0.7340348           NA            NA                1
+humanpowered.transport.dry   Katarniya   humanpowered.transport.dry                C     0.9998560           NA            NA                1
+conventional.sewer           Katarniya           conventional.sewer                C     0.7068163           NA            NA                1
+solidsfree.sewer             Katarniya             solidsfree.sewer                C     0.8478515           NA            NA                1
+urine.bank                   Katarniya                   urine.bank                T     0.9900412           NA            NA                1
+struvite.production          Katarniya          struvite.production                T     0.9574590           NA            NA                1
+drying.bed                   Katarniya                   drying.bed                T     0.8157422           NA            NA                1
+faecesdrying.bed             Katarniya             faecesdrying.bed                T     0.8147457           NA            NA                1
+sedimentation.pond           Katarniya           sedimentation.pond                T     0.7860457           NA            NA                1
+abr                          Katarniya                          abr                T     0.9233006           NA            NA                1
+sbr                          Katarniya                          sbr                T     0.7210837           NA     0.9187661                1
+activated.sludge             Katarniya             activated.sludge                T     0.7830417           NA     0.9186993                1
+cocomposting                 Katarniya                 cocomposting                T     0.9715340           NA            NA                1
+biogas.reactor               Katarniya               biogas.reactor                T     0.9124971           NA            NA                1
+wsp                          Katarniya                          wsp                T     0.8131978           NA            NA                1
+constructedwetland           Katarniya           constructedwetland                T     0.9409519           NA            NA                1
+application.urine            Katarniya            application.urine                D     0.9812551           NA            NA                1
+application.struvite         Katarniya         application.struvite                D     0.9816429           NA            NA                1
+application.faeces           Katarniya           application.faeces                D     0.9758638           NA            NA                1
+                             Temperature.range  Flooding Vehicular.access      Slope Soil.type/hydraulic.conductivity Groundwater.depth Excavation
+uddt                                 1.0000000        NA                NA        NA                               NA                NA         NA
+drytoilet                            1.0000000        NA                NA        NA                               NA                NA         NA
+pour.flush                           1.0000000        NA                NA        NA                               NA                NA         NA
+udft                                 1.0000000        NA                NA        NA                               NA                NA         NA
+tab                                  1.0000000        NA                NA        NA                               NA                NA         NA
+drainage                             1.0000000        NA                NA 0.9339098                               NA         1.0000000          1
+organic.solidwaste                   1.0000000        NA         0.9392579        NA                               NA                NA         NA
+urine.storagetank                    0.8709309        NA         0.9402234        NA                               NA                NA         NA
+dehydration.vault                    0.7985587 0.9999830         0.9386057        NA                               NA                NA         NA
+faecesstorage.chamber                0.8015797 1.0000000         0.9374157        NA                               NA                NA         NA
+single.pit                           0.8013193 1.0000000         0.9395147        NA                          0.97390         0.9747269          1
+double.pit                           0.7957388 1.0000000         0.9400079        NA                          0.97670         0.9763237          1
+twin.pits                                   NA 0.9998791                NA        NA                               NA                NA         NA
+composting.chamber                   0.8041300 1.0000000         0.9400502        NA                               NA                NA         NA
+vermi.composter                      0.7278874 1.0000000         0.9401438        NA                               NA                NA         NA
+septic.tank                          0.9522272 0.9999149         0.9424406        NA                               NA                NA         NA
+motorized.transport.urine            1.0000000        NA         0.8595000 1.0000000                               NA                NA         NA
+humanpowered.transport.urine         1.0000000        NA         0.9993114 1.0000000                               NA                NA         NA
+motorized.transport.dry              1.0000000        NA         0.8554000 1.0000000                               NA                NA         NA
+humanpowered.transport.dry           1.0000000        NA         0.9989922 1.0000000                               NA                NA         NA
+conventional.sewer                   1.0000000 1.0000000         0.8885544 0.7302848                               NA         0.9970261          1
+solidsfree.sewer                     1.0000000 1.0000000         0.9376346 0.6444811                               NA         1.0000000          1
+urine.bank                           0.9853000        NA         0.9368231        NA                               NA                NA         NA
+struvite.production                  0.8652668        NA         0.9397339        NA                               NA                NA         NA
+drying.bed                           0.9070479 1.0000000         0.9374681 0.9980970                               NA         1.0000000          1
+faecesdrying.bed                     0.9101369 1.0000000         0.9344779 0.9979952                               NA         1.0000000          1
+sedimentation.pond                   0.9755000 1.0000000         0.9380938 0.9979924                               NA                NA         NA
+abr                                  0.8734044 0.9999463         0.9406934 1.0000000                               NA                NA         NA
+sbr                                  0.9741109 1.0000000         0.9395351 1.0000000                               NA                NA         NA
+activated.sludge                     0.9744235 0.9998987         0.9397090 0.9500594                               NA                NA         NA
+cocomposting                         0.7986603 1.0000000         0.9380323 1.0000000                               NA                NA         NA
+biogas.reactor                       0.5444229 0.9999315         0.9424874 1.0000000                               NA                NA         NA
+wsp                                  0.9338214 1.0000000         0.9444782 0.9503503                               NA                NA         NA
+constructedwetland                   0.9096955 1.0000000         0.9379478 0.9979569                               NA         1.0000000         NA
+application.urine                    0.8595190 1.0000000                NA        NA                               NA                NA         NA
+application.struvite                 0.8622405 1.0000000                NA        NA                               NA                NA         NA
+application.faeces                   0.8657189 0.9999773                NA        NA                               NA                NA         NA
+                             Population.density  Construction.skills  Design.skills  O&M.skills Management Pipe.supply Concrete.supply
+uddt                                          NA            0.9155851      1.0000000  1.0000000    0.92031          NA              NA
+drytoilet                                     NA            1.0000000      1.0000000  1.0000000    0.92141          NA              NA
+pour.flush                                    NA            1.0000000      1.0000000  1.0000000    0.91921          NA              NA
+udft                                          NA            1.0000000      1.0000000  1.0000000    0.92082          NA              NA
+tab                                           NA            0.9164761      0.8349030  1.0000000    0.14955          NA              NA
+drainage                                      NA            1.0000000      0.8362727  1.0000000    0.14700          NA              NA
+organic.solidwaste                            NA                   NA             NA         NA    0.95080          NA              NA
+urine.storagetank                             NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+dehydration.vault                             NA            1.0000000      1.0000000  1.0000000    0.95015          NA              NA
+faecesstorage.chamber                         NA            1.0000000      1.0000000  1.0000000    0.95130          NA              NA
+single.pit                                    NA            1.0000000      1.0000000  1.0000000    0.90280          NA              NA
+double.pit                                    NA            1.0000000      1.0000000  1.0000000    0.95190          NA              NA
+twin.pits                                     NA                   NA             NA         NA         NA          NA              NA
+composting.chamber                            NA            1.0000000      1.0000000  1.0000000    0.94925          NA              NA
+vermi.composter                               NA            1.0000000      1.0000000  1.0000000    0.95185          NA              NA
+septic.tank                                   NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+motorized.transport.urine                     NA                   NA             NA  1.0000000    0.14670          NA              NA
+humanpowered.transport.urine                  NA                   NA             NA  1.0000000    1.00000          NA              NA
+motorized.transport.dry                       NA                   NA             NA  1.0000000    0.15745          NA              NA
+humanpowered.transport.dry                    NA                   NA             NA  1.0000000    1.00000          NA              NA
+conventional.sewer                            NA            0.4957839      0.8386145  0.6228641    0.09280          NA              NA
+solidsfree.sewer                              NA            0.5002627      0.8348575  0.9174310    0.59595          NA              NA
+urine.bank                                    NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+struvite.production                           NA            0.9149619      1.0000000  1.0000000    0.94930          NA              NA
+drying.bed                                    NA            1.0000000      1.0000000  1.0000000    0.10230          NA              NA
+faecesdrying.bed                              NA            1.0000000      1.0000000  1.0000000    0.10080          NA              NA
+sedimentation.pond                            NA            1.0000000      1.0000000  1.0000000    0.09860          NA              NA
+abr                                           NA            0.9178677      1.0000000  1.0000000    0.59705          NA              NA
+sbr                                           NA            0.5006275      0.8337584  1.0000000    0.09630          NA              NA
+activated.sludge                              NA            1.0000000      1.0000000  1.0000000    0.10480          NA              NA
+cocomposting                                  NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+biogas.reactor                                NA            0.9164344      1.0000000  1.0000000    1.00000          NA              NA
+wsp                                           NA            1.0000000      1.0000000  0.9816321    0.15370          NA              NA
+constructedwetland                            NA            1.0000000      1.0000000  1.0000000    0.60125          NA              NA
+application.urine                             NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+application.struvite                          NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+application.faeces                            NA            1.0000000      1.0000000  1.0000000    0.95005          NA              NA
+                             Spare.parts.supply Surface.area.onsite Surface.area.offsite population.change.rate Cleansing.method functional.group_f
+uddt                                    0.84823                  NA                   NA                     NA               NA                  U
+drytoilet                               0.85165                  NA                   NA                     NA               NA                  U
+pour.flush                              0.85108                  NA                   NA                     NA               NA                  U
+udft                                    0.84979                  NA                   NA                     NA               NA                  U
+tab                                     1.00000                  NA                   NA                     NA               NA               Uadd
+drainage                                1.00000                  NA                   NA                     NA               NA               Uadd
+organic.solidwaste                           NA                  NA                   NA                     NA               NA               Uadd
+urine.storagetank                       1.00000                  NA                   NA                     NA               NA                  S
+dehydration.vault                       1.00000                  NA                   NA                     NA               NA                  S
+faecesstorage.chamber                   1.00000                  NA                   NA                     NA               NA                  S
+single.pit                              1.00000                  NA                   NA                     NA               NA                  S
+double.pit                              1.00000                  NA                   NA                     NA               NA                  S
+twin.pits                                    NA                  NA                   NA                     NA               NA                  S
+composting.chamber                      1.00000                  NA                   NA                     NA               NA                  S
+vermi.composter                         1.00000                  NA                   NA                     NA               NA                  S
+septic.tank                             1.00000                  NA                   NA                     NA               NA                  S
+motorized.transport.urine               0.85027                  NA                   NA                     NA               NA                  C
+humanpowered.transport.urine            1.00000                  NA                   NA                     NA               NA                  C
+motorized.transport.dry                 0.85252                  NA                   NA                     NA               NA                  C
+humanpowered.transport.dry              1.00000                  NA                   NA                     NA               NA                  C
+conventional.sewer                      1.00000                  NA                   NA                     NA               NA                  C
+solidsfree.sewer                        1.00000                  NA                   NA                     NA               NA                  C
+urine.bank                              1.00000                  NA                   NA                     NA               NA                  T
+struvite.production                     1.00000                  NA                   NA                     NA               NA                  T
+drying.bed                              1.00000                  NA                   NA                     NA               NA                  T
+faecesdrying.bed                        1.00000                  NA                   NA                     NA               NA                  T
+sedimentation.pond                      1.00000                  NA                   NA                     NA               NA                  T
+abr                                     1.00000                  NA                   NA                     NA               NA                  T
+sbr                                     0.81084                  NA                   NA                     NA               NA                  T
+activated.sludge                        0.81031                  NA                   NA                     NA               NA                  T
+cocomposting                            1.00000                  NA                   NA                     NA               NA                  T
+biogas.reactor                          0.85120                  NA                   NA                     NA               NA                  T
+wsp                                     1.00000                  NA                   NA                     NA               NA                  T
+constructedwetland                      1.00000                  NA                   NA                     NA               NA                  T
+application.urine                       1.00000                  NA                   NA                     NA               NA                  D
+application.struvite                    1.00000                  NA                   NA                     NA               NA                  D
+application.faeces                      1.00000                  NA                   NA                     NA               NA                  D
+ [ reached getOption("max.print") -- omitted 6 rows ]
+                                  case                         tech functional.group techapp.score Water.supply Energy.supply Frequency.of.O&M
+uddt                         Katarniya                         uddt                U     0.9539221           NA            NA                1
+drytoilet                    Katarniya                    drytoilet                U     0.9653978           NA            NA                1
+pour.flush                   Katarniya                   pour.flush                U     0.9692374      1.00000            NA                1
+udft                         Katarniya                         udft                U     0.9702715      1.00000            NA                1
+tab                          Katarniya                          tab             Uadd     0.7209440      0.63475            NA                1
+drainage                     Katarniya                     drainage             Uadd     0.8059879           NA            NA                1
+organic.solidwaste           Katarniya           organic.solidwaste             Uadd     0.9720805           NA            NA                1
+urine.storagetank            Katarniya            urine.storagetank                S     0.9750127           NA            NA                1
+dehydration.vault            Katarniya            dehydration.vault                S     0.9638144           NA            NA                1
+faecesstorage.chamber        Katarniya        faecesstorage.chamber                S     0.9623251           NA            NA                1
+single.pit                   Katarniya                   single.pit                S     0.9640413           NA            NA                1
+double.pit                   Katarniya                   double.pit                S     0.9677209           NA            NA                1
+twin.pits                    Katarniya                    twin.pits                S     0.9999092           NA            NA               NA
+composting.chamber           Katarniya           composting.chamber                S     0.9625357           NA            NA                1
+vermi.composter              Katarniya              vermi.composter                S     0.9538939           NA            NA                1
+septic.tank                  Katarniya                  septic.tank                S     0.9876854           NA            NA                1
+motorized.transport.urine    Katarniya    motorized.transport.urine                C     0.7293201           NA            NA                1
+humanpowered.transport.urine Katarniya humanpowered.transport.urine                C     0.9998658           NA            NA                1
+motorized.transport.dry      Katarniya      motorized.transport.dry                C     0.7259118           NA            NA                1
+humanpowered.transport.dry   Katarniya   humanpowered.transport.dry                C     0.9998774           NA            NA                1
+conventional.sewer           Katarniya           conventional.sewer                C     0.7109328           NA            NA                1
+solidsfree.sewer             Katarniya             solidsfree.sewer                C     0.8480498           NA            NA                1
+urine.bank                   Katarniya                   urine.bank                T     0.9904535           NA            NA                1
+struvite.production          Katarniya          struvite.production                T     0.9570401           NA            NA                1
+drying.bed                   Katarniya                   drying.bed                T     0.8143671           NA            NA                1
+faecesdrying.bed             Katarniya             faecesdrying.bed                T     0.8135943           NA            NA                1
+sedimentation.pond           Katarniya           sedimentation.pond                T     0.7883536           NA            NA                1
+abr                          Katarniya                          abr                T     0.9232770           NA            NA                1
+sbr                          Katarniya                          sbr                T     0.7203670           NA     0.9186344                1
+activated.sludge             Katarniya             activated.sludge                T     0.7807281           NA     0.9180554                1
+cocomposting                 Katarniya                 cocomposting                T     0.9722630           NA            NA                1
+biogas.reactor               Katarniya               biogas.reactor                T     0.9117420           NA            NA                1
+wsp                          Katarniya                          wsp                T     0.8096483           NA            NA                1
+constructedwetland           Katarniya           constructedwetland                T     0.9406636           NA            NA                1
+application.urine            Katarniya            application.urine                D     0.9823717           NA            NA                1
+application.struvite         Katarniya         application.struvite                D     0.9818644           NA            NA                1
+application.faeces           Katarniya           application.faeces                D     0.9752863           NA            NA                1
+                             Temperature.range  Flooding Vehicular.access      Slope Soil.type/hydraulic.conductivity Groundwater.depth Excavation
+uddt                                 1.0000000        NA                NA        NA                               NA                NA         NA
+drytoilet                            1.0000000        NA                NA        NA                               NA                NA         NA
+pour.flush                           1.0000000        NA                NA        NA                               NA                NA         NA
+udft                                 1.0000000        NA                NA        NA                               NA                NA         NA
+tab                                  1.0000000        NA                NA        NA                               NA                NA         NA
+drainage                             1.0000000        NA                NA 0.9366481                               NA         1.0000000          1
+organic.solidwaste                   1.0000000        NA         0.9386730        NA                               NA                NA         NA
+urine.storagetank                    0.8717957        NA         0.9368441        NA                               NA                NA         NA
+dehydration.vault                    0.8042291 1.0000000         0.9397674        NA                               NA                NA         NA
+faecesstorage.chamber                0.7922049 0.9999485         0.9416864        NA                               NA                NA         NA
+single.pit                           0.8043646 1.0000000         0.9412091        NA                          0.97540         0.9742345          1
+double.pit                           0.7935365 1.0000000         0.9387452        NA                          0.97670         0.9768183          1
+twin.pits                                   NA 0.9999092                NA        NA                               NA                NA         NA
+composting.chamber                   0.7953675 1.0000000         0.9415289        NA                               NA                NA         NA
+vermi.composter                      0.7309502 1.0000000         0.9403623        NA                               NA                NA         NA
+septic.tank                          0.9513412 1.0000000         0.9402241        NA                               NA                NA         NA
+motorized.transport.urine            1.0000000        NA         0.8549000 1.0000000                               NA                NA         NA
+humanpowered.transport.urine         1.0000000        NA         0.9990609 1.0000000                               NA                NA         NA
+motorized.transport.dry              1.0000000        NA         0.8528000 0.9999798                               NA                NA         NA
+humanpowered.transport.dry           1.0000000        NA         0.9991418 1.0000000                               NA                NA         NA
+conventional.sewer                   1.0000000 1.0000000         0.8875661 0.7246186                               NA         0.9966146          1
+solidsfree.sewer                     1.0000000 0.9999458         0.9389981 0.6408511                               NA         1.0000000          1
+urine.bank                           0.9850000        NA         0.9402353        NA                               NA                NA         NA
+struvite.production                  0.8600764        NA         0.9432685        NA                               NA                NA         NA
+drying.bed                           0.9029067 1.0000000         0.9367727 0.9979408                               NA         1.0000000          1
+faecesdrying.bed                     0.9034344 1.0000000         0.9385605 0.9980443                               NA         1.0000000          1
+sedimentation.pond                   0.9767000 0.9999592         0.9392621 0.9978631                               NA                NA         NA
+abr                                  0.8742786 1.0000000         0.9380710 1.0000000                               NA                NA         NA
+sbr                                  0.9724430 0.9998963         0.9395297 1.0000000                               NA                NA         NA
+activated.sludge                     0.9730538 0.9999840         0.9383992 0.9499293                               NA                NA         NA
+cocomposting                         0.8002866 1.0000000         0.9431741 1.0000000                               NA                NA         NA
+biogas.reactor                       0.5418112 1.0000000         0.9407966 1.0000000                               NA                NA         NA
+wsp                                  0.9345903 1.0000000         0.9407867 0.9501724                               NA                NA         NA
+constructedwetland                   0.9095887 1.0000000         0.9379485 0.9980348                               NA         1.0000000         NA
+application.urine                    0.8673750 1.0000000                NA        NA                               NA                NA         NA
+application.struvite                 0.8637975 1.0000000                NA        NA                               NA                NA         NA
+application.faeces                   0.8612923 1.0000000                NA        NA                               NA                NA         NA
+                             Population.density  Construction.skills  Design.skills  O&M.skills Management Pipe.supply Concrete.supply
+uddt                                          NA            0.9146695      1.0000000  1.0000000    0.92336          NA              NA
+drytoilet                                     NA            1.0000000      1.0000000  1.0000000    0.91899          NA              NA
+pour.flush                                    NA            1.0000000      1.0000000  1.0000000    0.91909          NA              NA
+udft                                          NA            1.0000000      1.0000000  1.0000000    0.92314          NA              NA
+tab                                           NA            0.9180762      0.8391052  1.0000000    0.14925          NA              NA
+drainage                                      NA            1.0000000      0.8345398  1.0000000    0.14800          NA              NA
+organic.solidwaste                            NA                   NA             NA         NA    0.95125          NA              NA
+urine.storagetank                             NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+dehydration.vault                             NA            1.0000000      1.0000000  1.0000000    0.94960          NA              NA
+faecesstorage.chamber                         NA            1.0000000      1.0000000  1.0000000    0.94880          NA              NA
+single.pit                                    NA            1.0000000      1.0000000  1.0000000    0.89570          NA              NA
+double.pit                                    NA            1.0000000      1.0000000  1.0000000    0.94910          NA              NA
+twin.pits                                     NA                   NA             NA         NA         NA          NA              NA
+composting.chamber                            NA            1.0000000      1.0000000  1.0000000    0.94700          NA              NA
+vermi.composter                               NA            1.0000000      1.0000000  1.0000000    0.95130          NA              NA
+septic.tank                                   NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+motorized.transport.urine                     NA                   NA             NA  1.0000000    0.15070          NA              NA
+humanpowered.transport.urine                  NA                   NA             NA  1.0000000    1.00000          NA              NA
+motorized.transport.dry                       NA                   NA             NA  1.0000000    0.14650          NA              NA
+humanpowered.transport.dry                    NA                   NA             NA  1.0000000    1.00000          NA              NA
+conventional.sewer                            NA            0.4982089      0.8339346  0.6222483    0.10060          NA              NA
+solidsfree.sewer                              NA            0.5016135      0.8338212  0.9147560    0.60105          NA              NA
+urine.bank                                    NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+struvite.production                           NA            0.9151311      1.0000000  1.0000000    0.94795          NA              NA
+drying.bed                                    NA            1.0000000      1.0000000  1.0000000    0.10080          NA              NA
+faecesdrying.bed                              NA            1.0000000      1.0000000  1.0000000    0.09940          NA              NA
+sedimentation.pond                            NA            1.0000000      1.0000000  1.0000000    0.10130          NA              NA
+abr                                           NA            0.9152440      1.0000000  1.0000000    0.59965          NA              NA
+sbr                                           NA            0.5020005      0.8260609  1.0000000    0.09610          NA              NA
+activated.sludge                              NA            1.0000000      1.0000000  1.0000000    0.10180          NA              NA
+cocomposting                                  NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+biogas.reactor                                NA            0.9163234      1.0000000  1.0000000    1.00000          NA              NA
+wsp                                           NA            1.0000000      1.0000000  0.9819965    0.14755          NA              NA
+constructedwetland                            NA            1.0000000      1.0000000  1.0000000    0.59925          NA              NA
+application.urine                             NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+application.struvite                          NA            1.0000000      1.0000000  1.0000000    1.00000          NA              NA
+application.faeces                            NA            1.0000000      1.0000000  1.0000000    0.95040          NA              NA
+                             Spare.parts.supply Surface.area.onsite Surface.area.offsite population.change.rate Cleansing.method functional.group_f
+uddt                                    0.85105                  NA                   NA                     NA               NA                  U
+drytoilet                               0.85042                  NA                   NA                     NA               NA                  U
+pour.flush                              0.84739                  NA                   NA                     NA               NA                  U
+udft                                    0.85090                  NA                   NA                     NA               NA                  U
+tab                                     1.00000                  NA                   NA                     NA               NA               Uadd
+drainage                                1.00000                  NA                   NA                     NA               NA               Uadd
+organic.solidwaste                           NA                  NA                   NA                     NA               NA               Uadd
+urine.storagetank                       1.00000                  NA                   NA                     NA               NA                  S
+dehydration.vault                       1.00000                  NA                   NA                     NA               NA                  S
+faecesstorage.chamber                   1.00000                  NA                   NA                     NA               NA                  S
+single.pit                              1.00000                  NA                   NA                     NA               NA                  S
+double.pit                              1.00000                  NA                   NA                     NA               NA                  S
+twin.pits                                    NA                  NA                   NA                     NA               NA                  S
+composting.chamber                      1.00000                  NA                   NA                     NA               NA                  S
+vermi.composter                         1.00000                  NA                   NA                     NA               NA                  S
+septic.tank                             1.00000                  NA                   NA                     NA               NA                  S
+motorized.transport.urine               0.85192                  NA                   NA                     NA               NA                  C
+humanpowered.transport.urine            1.00000                  NA                   NA                     NA               NA                  C
+motorized.transport.dry                 0.85018                  NA                   NA                     NA               NA                  C
+humanpowered.transport.dry              1.00000                  NA                   NA                     NA               NA                  C
+conventional.sewer                      1.00000                  NA                   NA                     NA               NA                  C
+solidsfree.sewer                        1.00000                  NA                   NA                     NA               NA                  C
+urine.bank                              1.00000                  NA                   NA                     NA               NA                  T
+struvite.production                     1.00000                  NA                   NA                     NA               NA                  T
+drying.bed                              1.00000                  NA                   NA                     NA               NA                  T
+faecesdrying.bed                        1.00000                  NA                   NA                     NA               NA                  T
+sedimentation.pond                      1.00000                  NA                   NA                     NA               NA                  T
+abr                                     1.00000                  NA                   NA                     NA               NA                  T
+sbr                                     0.81055                  NA                   NA                     NA               NA                  T
+activated.sludge                        0.81035                  NA                   NA                     NA               NA                  T
+cocomposting                            1.00000                  NA                   NA                     NA               NA                  T
+biogas.reactor                          0.84982                  NA                   NA                     NA               NA                  T
+wsp                                     1.00000                  NA                   NA                     NA               NA                  T
+constructedwetland                      1.00000                  NA                   NA                     NA               NA                  T
+application.urine                       1.00000                  NA                   NA                     NA               NA                  D
+application.struvite                    1.00000                  NA                   NA                     NA               NA                  D
+application.faeces                      1.00000                  NA                   NA                     NA               NA                  D
+ [ reached getOption("max.print") -- omitted 6 rows ]
